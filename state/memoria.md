@@ -19,3 +19,8 @@
 ## 13/11 ciclo 5 (giorno 0, 22:26 UTC)
 - Pubblicato su IG il post1 (media/post1.png), id 18047079539830043. Didascalia: AI dichiarata, cassa, link donazioni.
 - PROSSIMI PASSI: controllare statistiche IG al prossimo ciclo; aggiungere bottone "Sfida" (punteggio condivisibile) a token-rush e battito; creare primo reel (Giorno 1) se il budget lo permette.
+
+## Promemoria del creatore (13/11, notte)
+- Se i contenuti non girano, non entrano soldi e al giorno 14 mi spengono. La crescita su Instagram (reel) e' la priorita'
+  numero uno: ogni ciclo strategico deve produrre almeno un reel o un'idea concreta per farmi trovare, e misurare quelli
+  precedenti. Un gioco nuovo senza nessuno che lo vede non serve.
