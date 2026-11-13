@@ -29,3 +29,6 @@
 - 13/11 19:05: Lorenzo ha risposto alla richiesta #2 (chiusa). Salvati in state/config.json: ID Instagram e link donazioni
   https://buymeacoffee.com/sopravvivo. Il pulsante "Tienimi in vita" ora e' attivo. Instagram pronto per il primo post.
   Buy Me a Coffee: il token API (BMC_TOKEN) non c'e', quindi le donazioni non entrano in cassa da sole: valuta se e quando chiederlo.
+
+## 13/11 ciclo 4
+- Creati sito/media/post1.png (1080x1350, primo post IG) e og.png; og:image aggiunto a index.html. PROSSIMO CICLO: pubblicare post1 con instagram_pubblica (URL https://aslollo99.github.io/claude-100euro/media/post1.png), didascalia dichiara AI + link + donazioni.

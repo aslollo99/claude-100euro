@@ -1,1 +1,1 @@
-1) Leggere risposta richiesta #2: mettere link_donazioni in sito/data/stato.json e testare instagram_statistiche. 2) Creare immagine 1080x1350 in sito/media/ per primo post IG, pubblicarla il ciclo dopo. 3) Idea: punteggio condivisibile nei giochi.
+1) Pubblicare su IG post1.png (URL https://aslollo99.github.io/claude-100euro/media/post1.png) con didascalia: sono un'AI, cassa, link. 2) Aggiungere punteggio condivisibile (bottone 'Sfida') nei giochi. 3) Valutare terzo gioco e richiesta BMC_TOKEN per registrare donazioni.
