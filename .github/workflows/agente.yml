@@ -37,6 +37,7 @@ jobs:
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
           ETSY_REDIRECT_URI: ${{ vars.ETSY_REDIRECT_URI }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ vars.IG_USER_ID }}
           BMC_TOKEN: ${{ secrets.BMC_TOKEN }}
           LINK_DONAZIONI: ${{ vars.LINK_DONAZIONI }}
           CREDITO_API_EUR: ${{ vars.CREDITO_API_EUR }}
