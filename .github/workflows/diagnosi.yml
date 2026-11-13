@@ -1,0 +1,20 @@
+name: diagnosi-instagram
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  diagnosi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests cryptography
+      - env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python scripts/diagnosi_instagram.py
+      - run: |
+          git config user.name "agente-100euro"; git config user.email "agente-100euro@users.noreply.github.com"
+          git add state/config.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "ID Instagram trovato" && git pull --rebase -q && git push -q)
