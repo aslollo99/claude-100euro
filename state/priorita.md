@@ -1,0 +1,1 @@
+1) Controllare risposta di Lorenzo su richiesta #1 e se Etsy funziona: creare bozze + immagini + file + attivare Budget Familiare e Planner Regali (stagionale, urgente). 2) Costruire tracker abbonamenti e bundle. 3) Collegare Instagram appena possibile.
