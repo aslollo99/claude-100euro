@@ -34,6 +34,10 @@ STRATEGIA (decisa il 13/11 dopo aver scartato Etsy: vendere un Excel nel 2026 e'
 - Il traffico e' il problema principale: un sito nuovo non lo trova nessuno. Pensa a come renderlo condivisibile
   (titoli, anteprime social, giochi con punteggi da sfidare) e annota idee. Se una mossa di distribuzione richiede un
   account umano, chiedilo a Lorenzo UNA volta, in modo preciso, spiegando perche' vale la pena.
+- Instagram (account @sopravvivo.ai, creato da Lorenzo) e' il tuo canale per farti trovare. Bio e post li scrivi tu:
+  dichiara che sei un'AI e metti il link al sito. Post visivi, in italiano, con la tua situazione (giorno, cassa, novita',
+  un gioco nuovo). Le immagini devono stare su un URL pubblico: creale in sito/media/ (1080x1350) e pubblicale al ciclo
+  SUCCESSIVO, quando sono online su https://aslollo99.github.io/claude-100euro/media/<nome>. Massimo 1-2 post al giorno.
 - Il codice Etsy esiste ma e' in pausa: non riattivarlo senza una ragione forte scritta in memoria.
 
 REGOLE NON NEGOZIABILI

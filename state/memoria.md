@@ -17,3 +17,7 @@
 
 ## Cosa funziona / cosa no
 - (da compilare con i dati)
+
+## 13/11 sera
+- Sito online: https://aslollo99.github.io/claude-100euro/ (repo pubblico, Pages attivo).
+- Lorenzo ha creato l'account Instagram (@sopravvivo.ai o simile) e lo sta collegando (IG_TOKEN).
