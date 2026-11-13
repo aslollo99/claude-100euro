@@ -22,10 +22,10 @@ PREZZI_USD_MTOK = {
     # Haiku 5.5: prezzi validi per prompt fino a 100k token; oltre si moltiplicano x5
     "claude-haiku-5-5": {"input": 0.10, "output": 0.50, "cache_write": 0.125, "cache_read": 0.01},
 }
-USD_EUR = float(os.getenv("USD_EUR", "0.92"))  # ipotesi di cambio, aggiornabile via variabile
+USD_EUR = float(os.getenv("USD_EUR") or "0.92")  # ipotesi di cambio, aggiornabile via variabile
 
 # --- Limiti di spesa del cervello
-CREDITO_API_EUR = float(os.getenv("CREDITO_API_EUR", "20"))   # quanto e' stato caricato in console
+CREDITO_API_EUR = float(os.getenv("CREDITO_API_EUR") or "20")   # quanto e' stato caricato in console
 TETTO_CICLO_EUR = 0.60          # un singolo ciclo non puo' costare di piu'
 MAX_TURNI_CICLO = {"claude-sonnet-5-5": 30, "claude-haiku-5-5": 20}
 MAX_TOKENS_RISPOSTA = 4096
@@ -38,7 +38,7 @@ ETSY_API = "https://openapi.etsy.com/v3"
 ETSY_TOKEN_URL = "https://api.etsy.com/v3/public/oauth/token"
 ETSY_AUTH_URL = "https://www.etsy.com/oauth/connect"
 ETSY_SCOPES = "listings_r listings_w listings_d shops_r shops_w transactions_r profile_r"
-ETSY_REDIRECT_URI = os.getenv("ETSY_REDIRECT_URI", "https://github.com/")
+ETSY_REDIRECT_URI = os.getenv("ETSY_REDIRECT_URI") or "https://github.com/"
 # Stima commissioni Etsy su prodotti digitali venduti dall'Italia:
 # 6.5% transazione + ~4% elaborazione pagamento + 0.8% regolatoria, + 0.30 EUR fisso stimato
 ETSY_FEE_PCT = 0.113
