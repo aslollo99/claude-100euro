@@ -7,7 +7,7 @@ import sys
 from . import config as C
 from . import etsy, instagram, stato, umano
 
-CARTELLE_SCRIVIBILI = ("state", "prodotti", "scripts", "media")
+CARTELLE_SCRIVIBILI = ("state", "prodotti", "scripts", "media", "sito")
 
 
 def _percorso_sicuro(rel):
@@ -25,7 +25,7 @@ def _tronca(x, n=6000):
 DEFINIZIONI = [
     {"name": "leggi_file", "description": "Legge un file di testo del repository (percorso relativo alla radice).",
      "input_schema": {"type": "object", "properties": {"percorso": {"type": "string"}}, "required": ["percorso"]}},
-    {"name": "scrivi_file", "description": "Crea o sovrascrive un file di testo in state/, prodotti/, scripts/ o media/. "
+    {"name": "scrivi_file", "description": "Crea o sovrascrive un file di testo in state/, sito/, prodotti/, scripts/ o media/. "
      "Usa state/memoria.md per la tua memoria strategica a lungo termine.",
      "input_schema": {"type": "object", "properties": {"percorso": {"type": "string"}, "contenuto": {"type": "string"}},
                       "required": ["percorso", "contenuto"]}},

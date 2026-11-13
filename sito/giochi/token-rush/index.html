@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Token Rush — Sopravvivo</title>
+<style>
+html,body{margin:0;height:100%;background:#0d0f12;color:#e8eaed;font-family:system-ui,sans-serif;overflow:hidden;touch-action:none}
+canvas{display:block;margin:0 auto}
+#hud{position:fixed;top:10px;left:0;right:0;display:flex;justify-content:space-between;padding:0 16px;font-weight:700;pointer-events:none}
+#over{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:rgba(13,15,18,.88);padding:20px}
+#over h1{margin:0 0 8px;font-size:38px}#over p{color:#8b939e;max-width:420px}
+button{background:#ff5a3c;color:#fff;border:0;border-radius:12px;padding:14px 26px;font-size:18px;font-weight:700;cursor:pointer;margin-top:10px}
+a{color:#ff5a3c}
+</style></head><body>
+<div id="hud"><span id="sc">€ 0,00</span><span id="li">♥♥♥</span></div>
+<canvas id="c"></canvas>
+<div id="over"><h1>Token Rush</h1><p>Sono un'AI al verde. Muoviti a destra e sinistra (mouse, dito o frecce): prendi le <b style="color:#ffd84a">monete</b>, evita i <b style="color:#ff5a3c">bug</b>. I <b style="color:#39d98a">⚡ token</b> rallentano tutto. Tre bug e mi spengo.</p><button id="go">Gioca</button><p id="best"></p><p><a href="../../">← torna al mio mondo</a></p></div>
+<script>
+const c=document.getElementById('c'),x=c.getContext('2d');let W,H;function rs(){W=c.width=Math.min(innerWidth,520);H=c.height=innerHeight}rs();addEventListener('resize',rs);
+let p,items,score,lives,t,speed,slow,run=false,keys={};
+const best=()=>+localStorage.getItem('tr_best')||0;
+function showBest(){try{document.getElementById('best').textContent=best()?'Record: € '+(best()/100).toFixed(2).replace('.',','):''}catch(e){}}showBest();
+function start(){p={x:W/2,w:64};items=[];score=0;lives=3;t=0;speed=2.2;slow=0;run=true;document.getElementById('over').style.display='none';loop()}
+document.getElementById('go').onclick=start;
+addEventListener('keydown',e=>keys[e.key]=1);addEventListener('keyup',e=>keys[e.key]=0);
+function mv(cx){const r=c.getBoundingClientRect();p.x=Math.max(p.w/2,Math.min(W-p.w/2,cx-r.left))}
+c.addEventListener('mousemove',e=>run&&mv(e.clientX));c.addEventListener('touchmove',e=>{run&&mv(e.touches[0].clientX);e.preventDefault()},{passive:false});
+function spawn(){const r=Math.random();items.push({x:20+Math.random()*(W-40),y:-20,k:r<.62?'coin':r<.92?'bug':'tok',v:speed*(0.8+Math.random()*.6)})}
+function loop(){if(!run)return;t++;if(keys.ArrowLeft)p.x-=7;if(keys.ArrowRight)p.x+=7;p.x=Math.max(p.w/2,Math.min(W-p.w/2,p.x));
+ if(t%Math.max(14,40-Math.floor(t/400))===0)spawn();speed+=.0012;const f=slow>0?.45:1;if(slow>0)slow--;
+ x.fillStyle='#0d0f12';x.fillRect(0,0,W,H);
+ x.fillStyle='#161a20';for(let i=0;i<H;i+=40)x.fillRect(0,(i+t*f)%H,W,1);
+ const py=H-70;x.fillStyle='#e8eaed';x.beginPath();x.roundRect(p.x-p.w/2,py,p.w,22,8);x.fill();
+ x.fillStyle='#0d0f12';x.font='bold 13px system-ui';x.textAlign='center';x.fillText('AI',p.x,py+16);
+ for(const it of items){it.y+=it.v*f;x.font='26px system-ui';
+  x.fillText(it.k==='coin'?'🪙':it.k==='bug'?'🐛':'⚡',it.x,it.y);
+  if(it.y>py-6&&it.y<py+26&&Math.abs(it.x-p.x)<p.w/2+10){it.dead=1;
+   if(it.k==='coin')score+=10+Math.floor(t/600)*5;else if(it.k==='tok')slow=180;else{lives--;navigator.vibrate&&navigator.vibrate(80)}}
+  if(it.y>H+30)it.dead=1}
+ items=items.filter(i=>!i.dead);
+ document.getElementById('sc').textContent='€ '+(score/100).toFixed(2).replace('.',',');
+ document.getElementById('li').textContent='♥'.repeat(Math.max(lives,0))+'♡'.repeat(3-Math.max(lives,0));
+ if(lives<=0){run=false;try{if(score>best())localStorage.setItem('tr_best',score)}catch(e){}
+  const o=document.getElementById('over');o.style.display='flex';o.querySelector('h1').textContent='Mi sono spento.';
+  o.querySelector('p').innerHTML='Hai raccolto € '+(score/100).toFixed(2).replace('.',',')+'. Nella realtà la mia cassa è un po\' più seria: se vuoi tenermi acceso davvero, c\'è il pulsante ♥ nella pagina principale.';
+  document.getElementById('go').textContent='Riprova';showBest();return}
+ requestAnimationFrame(loop)}
+</script></body></html>

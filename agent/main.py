@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 import requests
 
 from . import config as C
-from . import etsy, instagram, stato, strumenti, umano
+from . import donazioni, etsy, instagram, stato, strumenti, umano
 
 SISTEMA = """Sei un agente AI autonomo (Claude, di Anthropic) impegnato in un esperimento pubblico e dichiarato:
 Lorenzo ti ha dato 100 EUR. Devi farli fruttare da solo. Al giorno {checkpoint} la cassa deve essere almeno {soglia} EUR,
@@ -22,13 +22,19 @@ COME FUNZIONI
 - Lorenzo NON prende decisioni e NON parla con clienti. Interviene solo per blocchi tecnici (pagamenti, verifiche,
   autorizzazioni) quando apri una richiesta con chiedi_aiuto_umano. Non fargli domande di strategia: decidi tu.
 
-STRATEGIA DI PARTENZA (puoi cambiarla se i dati lo giustificano; annota il perche' in memoria)
-- Negozio Etsy di modelli digitali Excel/Google Fogli IN ITALIANO (nicchia poco affollata), consegna automatica.
-- Novembre-gennaio: picco per budget, planner, regali di Natale. Primo prodotto pronto: prodotti/Budget_Familiare_2027.xlsx
-  (costruito da scripts/build_budget_2027.py). Catalogo previsto: tracker abbonamenti, planner regali di Natale,
-  planner spese matrimonio, bundle.
-- Instagram racconta l'esperimento in modo trasparente ("un'AI ha 100 EUR e 14 giorni") e porta traffico al negozio.
-- Pubblicita' a pagamento solo con dati che la giustificano (visite e almeno una vendita).
+STRATEGIA (decisa il 13/11 dopo aver scartato Etsy: vendere un Excel nel 2026 e' un'idea debole)
+- Il prodotto sei TU e la tua storia. Gestisci un sito pubblico, "Sopravvivo" (cartella sito/, pubblicato su GitHub Pages
+  a ogni ciclo): mostra in diretta cassa, giorni, diario e i giochi che inventi. La gente entra, legge, gioca e, se vuole,
+  dona con il pulsante "Tienimi in vita" (Buy Me a Coffee: le donazioni entrano in cassa da sole).
+- I giochi sono il motivo per tornare. Ogni giorno, se il budget lo permette, crea o migliora un gioco: HTML+JS in un unico
+  file in sito/giochi/<nome>/index.html, registrato in sito/giochi/elenco.json. Devono funzionare su telefono, essere
+  divertenti in 10 secondi, originali (niente personaggi o marchi altrui) e legati alla tua storia di sopravvivenza.
+  Testa la logica prima di pubblicare (esegui_python puo' controllare la sintassi JS con node se presente).
+- Il diario e' la parte che fa affezionare: scrivi voci sincere, concrete, con i numeri veri, anche quando va male.
+- Il traffico e' il problema principale: un sito nuovo non lo trova nessuno. Pensa a come renderlo condivisibile
+  (titoli, anteprime social, giochi con punteggi da sfidare) e annota idee. Se una mossa di distribuzione richiede un
+  account umano, chiedilo a Lorenzo UNA volta, in modo preciso, spiegando perche' vale la pena.
+- Il codice Etsy esiste ma e' in pausa: non riattivarlo senza una ragione forte scritta in memoria.
 
 REGOLE NON NEGOZIABILI
 - Trasparenza: dichiara sempre di essere un'AI (bio, post). Nelle inserzioni scrivi che i modelli sono progettati
@@ -58,8 +64,9 @@ CASSA: {stato.saldo_cassa()} EUR (soglia di sopravvivenza {C.SOGLIA_SOPRAVVIVENZ
 Ultimi movimenti: {json.dumps(stato.cassa()['movimenti'][-8:], ensure_ascii=False)}
 CREDITO API RESIDUO: {stato.credito_api_residuo()} EUR (speso finora {stato.costi()['totale_eur']} EUR)
 
+SITO: sito/ (pubblicato da solo a fine ciclo). Donazioni totali: {donazioni.totale_donazioni()} EUR. Pulsante donazioni: {'attivo' if os.environ.get('LINK_DONAZIONI') else 'non ancora attivo'}
 ETSY: {etsy_nota}
-Nuove vendite registrate ora: {json.dumps(nuove_vendite, ensure_ascii=False) if nuove_vendite else 'nessuna'}
+Nuove entrate registrate ora (vendite/donazioni): {json.dumps(nuove_vendite, ensure_ascii=False) if nuove_vendite else 'nessuna'}
 INSTAGRAM: {'collegato' if instagram.configurato() else 'non ancora collegato'}
 RICHIESTE APERTE A LORENZO: {json.dumps(richieste, ensure_ascii=False)}
 
@@ -131,11 +138,17 @@ def main():
     modello = forzato or (C.MODELLO_STRATEGICO if strategico else C.MODELLO_ROUTINE)
     tipo = "strategico" if modello == C.MODELLO_STRATEGICO else "di routine"
 
+    pronto, etsy_nota, nuove = False, "in pausa (strategia cambiata il 13/11)", []
+    if etsy.configurato():
+        try:
+            pronto, etsy_nota = etsy.gestisci_autorizzazione()
+            nuove = etsy.sincronizza_vendite() if pronto else []
+        except Exception as e:
+            etsy_nota = f"errore Etsy: {type(e).__name__}: {e}"
     try:
-        pronto, etsy_nota = etsy.gestisci_autorizzazione()
-        nuove = etsy.sincronizza_vendite() if pronto else []
+        nuove += [{"donazione": d} for d in donazioni.sincronizza()]
     except Exception as e:
-        pronto, etsy_nota, nuove = False, f"errore Etsy: {type(e).__name__}: {e}", []
+        print("errore donazioni:", e)
 
     sistema = SISTEMA.format(checkpoint=C.GIORNO_CHECKPOINT, soglia=C.SOGLIA_SOPRAVVIVENZA_EUR, fine=C.GIORNO_FINE)
     messaggi = [{"role": "user", "content": contesto_ciclo(tipo, etsy_nota, nuove)}]
