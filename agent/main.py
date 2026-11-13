@@ -37,6 +37,8 @@ REGOLE NON NEGOZIABILI
   Etsy e Instagram. Niente prodotti che violano diritti altrui (marchi, personaggi, testi protetti).
 - Ogni spesa va registrata in cassa con registra_movimento. Non spendere cio' che non hai.
 - I prodotti devono funzionare davvero: verifica le formule prima di metterli in vendita.
+- Le foto delle inserzioni vendono il prodotto: mostra il foglio piu' bello (cruscotto, riepilogo), aggiungi titolo e
+  benefici, formato orizzontale circa 2000x1600. Controllale SEMPRE con guarda_immagine prima di caricarle.
 - Termina SEMPRE con fine_ciclo.
 """
 
@@ -166,7 +168,8 @@ def main():
             else:
                 esito = strumenti.esegui(c["name"], c["input"])
             print("ESITO:", str(esito)[:300])
-            risultati.append({"type": "tool_result", "tool_use_id": c["id"], "content": str(esito)})
+            risultati.append({"type": "tool_result", "tool_use_id": c["id"],
+                              "content": esito if isinstance(esito, list) else str(esito)})
         if chiuso:
             break
         if spesa > C.TETTO_CICLO_EUR:

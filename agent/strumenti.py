@@ -32,10 +32,14 @@ DEFINIZIONI = [
     {"name": "esegui_python", "description": "Esegue codice Python 3 (timeout 180 s) nella radice del repository. "
      "Disponibili openpyxl, Pillow, matplotlib, requests. Utile per costruire prodotti (xlsx), immagini di anteprima, calcoli.",
      "input_schema": {"type": "object", "properties": {"codice": {"type": "string"}}, "required": ["codice"]}},
-    {"name": "anteprima_xlsx", "description": "Converte la prima pagina di un .xlsx in PNG con LibreOffice (per le foto delle inserzioni). "
-     "La prima volta installa LibreOffice: richiede ~1-2 minuti.",
-     "input_schema": {"type": "object", "properties": {"xlsx": {"type": "string"}, "png_uscita": {"type": "string"}},
+    {"name": "anteprima_xlsx", "description": "Fotografa un foglio di un .xlsx come PNG con LibreOffice (base per le foto delle "
+     "inserzioni). Indica il foglio da mostrare (es. il cruscotto, non le istruzioni). La prima volta installa LibreOffice (~1-2 min).",
+     "input_schema": {"type": "object", "properties": {"xlsx": {"type": "string"}, "png_uscita": {"type": "string"},
+                      "foglio": {"type": "string", "description": "nome del foglio da fotografare"}},
                       "required": ["xlsx", "png_uscita"]}},
+    {"name": "guarda_immagine", "description": "Ti mostra un'immagine PNG/JPG del repository, per controllare che una foto "
+     "d'inserzione o un post sia davvero bello e leggibile prima di pubblicarlo.",
+     "input_schema": {"type": "object", "properties": {"percorso": {"type": "string"}}, "required": ["percorso"]}},
     {"name": "etsy_api", "description": "Chiamata all'API Etsy v3 del TUO negozio. percorso relativo a /v3, puoi usare {shop_id}. "
      "Esempi: GET /application/shops/{shop_id}/listings?state=active ; POST /application/shops/{shop_id}/listings (form) per una bozza "
      "con type=download ; PATCH /application/shops/{shop_id}/listings/{id} per aggiornare o attivare (state=active) ; "
@@ -97,6 +101,14 @@ def esegui(nome, a):
                 subprocess.run("sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-calc poppler-utils",
                                shell=True, capture_output=True, timeout=600)
             x = _percorso_sicuro(a["xlsx"]); out = _percorso_sicuro(a["png_uscita"])
+            if a.get("foglio"):
+                import openpyxl
+                wb = openpyxl.load_workbook(x)
+                for ws in wb.worksheets:
+                    ws.sheet_state = "visible" if ws.title == a["foglio"] else "hidden"
+                wb.active = wb.sheetnames.index(a["foglio"])
+                tmp = C.ROOT / ".tmp_anteprima" / x.name
+                tmp.parent.mkdir(exist_ok=True); wb.save(tmp); x = tmp
             out.parent.mkdir(parents=True, exist_ok=True)
             subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", "/tmp", str(x)],
                            capture_output=True, timeout=240)
@@ -104,6 +116,14 @@ def esegui(nome, a):
             subprocess.run(["pdftoppm", "-png", "-r", "110", "-f", "1", "-l", "1", "-singlefile", pdf,
                             str(out.with_suffix(""))], capture_output=True, timeout=120)
             return f"ok: {a['png_uscita']}" if out.exists() else "errore nella conversione"
+        if nome == "guarda_immagine":
+            import base64, io
+            from PIL import Image
+            im = Image.open(_percorso_sicuro(a["percorso"])).convert("RGB")
+            im.thumbnail((1400, 1400))
+            buf = io.BytesIO(); im.save(buf, "JPEG", quality=80)
+            return [{"type": "image", "source": {"type": "base64", "media_type": "image/jpeg",
+                                                 "data": base64.b64encode(buf.getvalue()).decode()}}]
         if nome == "etsy_api":
             return _tronca(etsy.chiama(a["metodo"], a["percorso"], a.get("params"), a.get("json_body"), a.get("form")))
         if nome == "etsy_carica_immagine":
