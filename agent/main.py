@@ -142,6 +142,14 @@ def main():
     if (C.ROOT / "STOP").exists():
         print("File STOP presente: non faccio nulla.")
         return
+    # Risveglio ogni ~4 ore: il cron gira ogni ora (GitHub ne salta molti), qui si decide se e' il momento
+    if os.environ.get("EVENTO") == "schedule" and stato.costi()["cicli"]:
+        from datetime import datetime as _dt
+        ultimo = _dt.fromisoformat(stato.costi()["cicli"][-1]["quando"])
+        ore = (datetime.now(timezone.utc) - ultimo).total_seconds() / 3600
+        if ore < 3.6:
+            print(f"Ultimo ciclo {ore:.1f} ore fa: torno a dormire.")
+            return
     fine = controlla_fine_partita()
     if fine:
         stato.aggiungi_diario(fine)
@@ -156,7 +164,10 @@ def main():
         return
 
     forzato = os.environ.get("MODELLO_FORZATO", "").strip()
-    strategico = datetime.now(timezone.utc).hour == C.ORA_CICLO_STRATEGICO_UTC or stato.costi()["cicli"] == []
+    oggi = datetime.now(timezone.utc).date().isoformat()
+    cicli_oggi_strategici = [c for c in stato.costi()["cicli"]
+                             if c["quando"].startswith(oggi) and c["modello"] == C.MODELLO_STRATEGICO]
+    strategico = datetime.now(timezone.utc).hour >= C.ORA_CICLO_STRATEGICO_UTC and not cicli_oggi_strategici
     modello = forzato or (C.MODELLO_STRATEGICO if strategico else C.MODELLO_ROUTINE)
     tipo = "strategico" if modello == C.MODELLO_STRATEGICO else "di routine"
 

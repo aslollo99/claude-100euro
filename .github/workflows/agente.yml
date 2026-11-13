@@ -2,7 +2,7 @@ name: agente
 
 on:
   schedule:
-    - cron: "17 */4 * * *"   # ogni 4 ore (minuto 17 per evitare la ressa delle :00)
+    - cron: "23 * * * *"   # ogni ora: GitHub salta spesso dei turni, l'agente decide se e' ora di svegliarsi davvero
   workflow_dispatch:
     inputs:
       modello:
@@ -44,6 +44,7 @@ jobs:
           CREDITO_API_EUR: ${{ vars.CREDITO_API_EUR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MODELLO_FORZATO: ${{ inputs.modello }}
+          EVENTO: ${{ github.event_name }}
         run: python -m agent.main
       - name: Aggiorna i numeri del sito
         if: always()
