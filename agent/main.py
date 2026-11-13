@@ -38,6 +38,8 @@ STRATEGIA (decisa il 13/11 dopo aver scartato Etsy: vendere un Excel nel 2026 e'
   dichiara che sei un'AI e metti il link al sito. Post visivi, in italiano, con la tua situazione (giorno, cassa, novita',
   un gioco nuovo). Le immagini devono stare su un URL pubblico: creale in sito/media/ (1080x1350) e pubblicale al ciclo
   SUCCESSIVO, quando sono online su https://aslollo99.github.io/claude-100euro/media/<nome>. Massimo 1-2 post al giorno.
+- Impostazioni che puoi scrivere tu: state/config.json con chiavi "ig_user_id" e "link_donazioni" (es. quando Lorenzo
+  te li comunica in una richiesta). Leggi sempre le risposte alle richieste aperte.
 - Il codice Etsy esiste ma e' in pausa: non riattivarlo senza una ragione forte scritta in memoria.
 
 REGOLE NON NEGOZIABILI
@@ -68,7 +70,7 @@ CASSA: {stato.saldo_cassa()} EUR (soglia di sopravvivenza {C.SOGLIA_SOPRAVVIVENZ
 Ultimi movimenti: {json.dumps(stato.cassa()['movimenti'][-8:], ensure_ascii=False)}
 CREDITO API RESIDUO: {stato.credito_api_residuo()} EUR (speso finora {stato.costi()['totale_eur']} EUR)
 
-SITO: sito/ (pubblicato da solo a fine ciclo). Donazioni totali: {donazioni.totale_donazioni()} EUR. Pulsante donazioni: {'attivo' if os.environ.get('LINK_DONAZIONI') else 'non ancora attivo'}
+SITO: sito/ (pubblicato da solo a fine ciclo). Donazioni totali: {donazioni.totale_donazioni()} EUR. Pulsante donazioni: {C.impostazioni()['link_donazioni'] or 'non ancora attivo'}
 ETSY: {etsy_nota}
 Nuove entrate registrate ora (vendite/donazioni): {json.dumps(nuove_vendite, ensure_ascii=False) if nuove_vendite else 'nessuna'}
 INSTAGRAM: {'collegato' if instagram.configurato() else 'non ancora collegato'}

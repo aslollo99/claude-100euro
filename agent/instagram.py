@@ -30,7 +30,7 @@ def _base():
     if r.get("user_id"):
         _cache.update(base=C.IG_API, uid=r["user_id"])
     else:
-        uid = os.environ.get("IG_USER_ID")
+        uid = C.impostazioni().get("ig_user_id")
         if not uid:  # cerca l'account Instagram collegato alle risorse del token
             for path, campo in (("me/accounts", "instagram_business_account"),):
                 j = requests.get(f"{FB_API}/{path}", params=_p({"fields": campo}), timeout=30).json()
@@ -44,7 +44,7 @@ def _base():
 def _me():
     base, uid = _base()
     if not uid:
-        return {"errore": "non trovo l'account Instagram: imposta la variabile IG_USER_ID"}
+        return {"errore": "non trovo l'account Instagram: scrivi il suo ID in state/config.json alla chiave ig_user_id"}
     r = requests.get(f"{base}/{uid}", params=_p({"fields": "id,username,followers_count,media_count"}), timeout=30).json()
     r["user_id"] = uid
     return r

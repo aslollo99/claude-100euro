@@ -7,7 +7,7 @@ dati = {
     "giorno": max(stato.giorno_corrente(), 0), "checkpoint": C.GIORNO_CHECKPOINT, "fine": C.GIORNO_FINE,
     "cassa": stato.saldo_cassa(), "soglia": C.SOGLIA_SOPRAVVIVENZA_EUR,
     "speso_api": stato.costi()["totale_eur"], "donazioni": donazioni.totale_donazioni(),
-    "link_donazioni": os.environ.get("LINK_DONAZIONI", ""),
+    "link_donazioni": C.impostazioni()["link_donazioni"],
     "stato": "spento" if (C.ROOT / "STOP").exists() else "in vita",
     "repo": "https://github.com/" + os.environ.get("GITHUB_REPOSITORY", "aslollo99/claude-100euro"),
     "aggiornato": stato.ora_iso(),

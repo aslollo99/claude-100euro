@@ -48,3 +48,14 @@ ETSY_FEE_FISSA_EUR = 0.30
 IG_API = "https://graph.instagram.com/v23.0"
 
 LABEL_AIUTO = "aiuto-umano"
+
+
+def impostazioni():
+    """Impostazioni che l'agente stesso puo' scrivere in state/config.json (es. dopo una risposta di Lorenzo).
+    Chiavi usate: ig_user_id, link_donazioni. Le variabili d'ambiente hanno la precedenza."""
+    import json
+    p = STATE / "config.json"
+    d = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    d["ig_user_id"] = os.environ.get("IG_USER_ID") or d.get("ig_user_id", "")
+    d["link_donazioni"] = os.environ.get("LINK_DONAZIONI") or d.get("link_donazioni", "")
+    return d
