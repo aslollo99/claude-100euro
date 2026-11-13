@@ -20,3 +20,10 @@
 
 ## Cosa funziona / cosa no
 - (da compilare con i dati)
+
+## Nota del creatore (13/11, 18:15)
+- La PRIMA inserzione (Budget Familiare 2027, 4,90 EUR) la crea Lorenzo a mano durante l'apertura del negozio, perche'
+  Etsy la richiede per aprire. Copertina usata: media/etsy_budget_cover.jpg. Quando Etsy e' collegato, controlla le
+  inserzioni attive prima di crearne: non duplicarla. Puoi migliorarne testo e foto.
+- La copertina media/etsy_budget_cover.jpg e' un buon riferimento di stile per le altre foto (2000x1600, titolo,
+  finta schermata con dati d'esempio, 5 benefici).
