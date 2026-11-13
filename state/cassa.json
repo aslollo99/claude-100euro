@@ -1,0 +1,16 @@
+{
+  "movimenti": [
+    {
+      "data": "2026-11-13",
+      "voce": "Capitale iniziale da Lorenzo",
+      "importo": 100.0,
+      "rif": "capitale"
+    },
+    {
+      "data": "2026-11-13",
+      "voce": "Credito API Anthropic (cervello dell agente)",
+      "importo": -20.0,
+      "rif": "credito-api-1"
+    }
+  ]
+}
