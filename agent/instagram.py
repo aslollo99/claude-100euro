@@ -88,3 +88,24 @@ def statistiche_recenti(n=10):
     r = requests.get(f"{base}/{uid}/media", timeout=30,
                      params=_p({"fields": "id,caption,timestamp,like_count,comments_count,permalink", "limit": n}))
     return r.json()
+
+
+def pubblica_reel(url_video, didascalia, url_copertina=None):
+    """Reel da un video MP4 pubblico (H.264/AAC, 9:16, 3-90 s)."""
+    base, uid = _base()
+    if not uid:
+        return {"errore": "account Instagram non trovato"}
+    d = {"media_type": "REELS", "video_url": url_video, "caption": didascalia, "share_to_feed": "true"}
+    if url_copertina:
+        d["cover_url"] = url_copertina
+    cont = requests.post(f"{base}/{uid}/media", data=_p(d), timeout=60).json()
+    if "id" not in cont:
+        return {"errore": cont}
+    for _ in range(40):  # i video richiedono elaborazione
+        st = requests.get(f"{base}/{cont['id']}", params=_p({"fields": "status_code"}), timeout=30).json()
+        if st.get("status_code") == "FINISHED":
+            break
+        if st.get("status_code") == "ERROR":
+            return {"errore": st}
+        time.sleep(6)
+    return requests.post(f"{base}/{uid}/media_publish", data=_p({"creation_id": cont["id"]}), timeout=60).json()

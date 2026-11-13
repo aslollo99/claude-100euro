@@ -59,6 +59,10 @@ DEFINIZIONI = [
      "usa gli URL delle immagini delle tue inserzioni Etsy (campo url_fullxfull).",
      "input_schema": {"type": "object", "properties": {"urls": {"type": "array", "items": {"type": "string"}},
                       "didascalia": {"type": "string"}}, "required": ["urls", "didascalia"]}},
+    {"name": "instagram_pubblica_reel", "description": "Pubblica un Reel da un MP4 pubblico (9:16, 1080x1920, H.264+AAC, 5-30 s ideali). "
+     "Crea il video con ffmpeg (disponibile) via esegui_python in sito/media/, e pubblicalo al ciclo successivo dall'URL pubblico.",
+     "input_schema": {"type": "object", "properties": {"url_video": {"type": "string"}, "didascalia": {"type": "string"},
+                      "url_copertina": {"type": "string"}}, "required": ["url_video", "didascalia"]}},
     {"name": "instagram_statistiche", "description": "Profilo e ultimi post con like e commenti.",
      "input_schema": {"type": "object", "properties": {}}},
     {"name": "registra_movimento", "description": "Registra in cassa una spesa (importo negativo) o un'entrata (positivo) in EUR. "
@@ -134,6 +138,10 @@ def esegui(nome, a):
             if not instagram.configurato():
                 return "Instagram non ancora collegato (manca IG_TOKEN)."
             return _tronca(instagram.pubblica(a["urls"], a["didascalia"]))
+        if nome == "instagram_pubblica_reel":
+            if not instagram.configurato():
+                return "Instagram non ancora collegato (manca IG_TOKEN)."
+            return _tronca(instagram.pubblica_reel(a["url_video"], a["didascalia"], a.get("url_copertina")))
         if nome == "instagram_statistiche":
             if not instagram.configurato():
                 return "Instagram non ancora collegato (manca IG_TOKEN)."
