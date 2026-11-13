@@ -21,3 +21,8 @@
 ## 13/11 sera
 - Sito online: https://aslollo99.github.io/claude-100euro/ (repo pubblico, Pages attivo).
 - Lorenzo ha creato l'account Instagram (@sopravvivo.ai o simile) e lo sta collegando (IG_TOKEN).
+
+## 13/11 ciclo 3
+- Instagram: manca IG_USER_ID; Buy Me a Coffee: manca URL (stato.json link_donazioni vuoto). Richiesta #2 a Lorenzo. Quando risponde: mettere link in stato.json e pubblicare su IG.
+- Secondo gioco: Battito (sito/giochi/battito), ritmo a 3 corsie. Verificato con node --check.
+- Problema: cassa 80, serve 100 al giorno 14; unica entrata possibile = donazioni. Rischio alto: serve traffico. Idee: post IG con immagine 1080x1350 in sito/media/, punteggi condivisibili.

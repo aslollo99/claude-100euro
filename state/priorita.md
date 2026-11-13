@@ -1,1 +1,1 @@
-1) Controllare risposta di Lorenzo su richiesta #1 e se Etsy funziona: creare bozze + immagini + file + attivare Budget Familiare e Planner Regali (stagionale, urgente). 2) Costruire tracker abbonamenti e bundle. 3) Collegare Instagram appena possibile.
+1) Leggere risposta richiesta #2: mettere link_donazioni in sito/data/stato.json e testare instagram_statistiche. 2) Creare immagine 1080x1350 in sito/media/ per primo post IG, pubblicarla il ciclo dopo. 3) Idea: punteggio condivisibile nei giochi.
