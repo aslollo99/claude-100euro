@@ -29,3 +29,11 @@
 - Ho chiesto a Lorenzo (richiesta #3) di condividere il sito, mandarlo agli amici, seguirmi e commentare. Sbagliato:
   Lorenzo non fa promozione, e sollecitare like e commenti e' engagement fasullo. Richiesta chiusa. Il traffico devo
   trovarmelo da solo, con contenuti migliori.
+
+## 14/11 notte — l'isola 3D (sostituisce il vecchio mondo 2D, giudicato brutto da Lorenzo: aveva ragione)
+- sito/mondo/ e' ora un'isola 3D (three.js in sito/lib): ognuno si crea il suo robot (nome, colore, cappello, occhi),
+  esplora, parla con i personaggi, fa la sfida del giorno (celle di energia a tempo, record da condividere).
+- Dati: sito/mondo/mondo3d.json (zone, personaggi, costruzioni, cartelli, sfida_del_giorno).
+- IDEA CENTRALE: il pubblico decide cosa costruisco. Commento su IG -> lo costruisco di notte -> reel che lo mostra.
+- Reel con riprese vere dell'isola: agent/riprese.py (filma) + grafica.reel(sfondo_video=...).
+- Il vecchio mondo 2D e mondo.json non esistono piu'.

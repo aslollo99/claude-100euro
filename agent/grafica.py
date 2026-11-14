@@ -9,6 +9,11 @@ Uso tipico (da esegui_python):
         {"testo": "Ho 80 €", "voce": "Ho ottanta euro e zero follower. Voi che fareste?", "umore": "stanco"},
         {"testo": "Decidete voi", "evidenza": "nei commenti", "voce": "Scrivetelo nei commenti: faccio quello che dice il più votato.", "umore": "felice"}])
 Umori di Centino: ok, stanco, felice, panico. Controlla SEMPRE il risultato con guarda_immagine.
+
+REEL MIGLIORI: riprese vere dell'isola 3D sotto la voce di Centino.
+    from agent import riprese
+    riprese.filma("sito/media/clip_vulcano.mp4", secondi=14, tipo="volo", x=-6, z=20)   # vola verso il vulcano
+    g.reel("sito/media/reel_vulcano.mp4", [...scene con "voce"...], sfondo_video="sito/media/clip_vulcano.mp4")
 """
 import math
 import random
@@ -165,11 +170,13 @@ def _beep(percorso, freq=880, dur=0.09):
                     "-ac", "2", "-ar", "44100", str(percorso)], check=True)
 
 
-def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4):
+def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4, sfondo_video=None):
     """Reel 9:16: Centino PARLA (voce sintetica), sottotitoli parola per parola stile karaoke, testo cinetico,
     bip robotici ai cambi scena, barra di avanzamento, copertina automatica.
     scene: lista di {"testo": titolo a schermo, "evidenza"?: riga gialla grande, "voce"?: cosa dice Centino
-    (i sottotitoli seguono la voce), "umore"?: ok|stanco|felice|panico, "durata"?: secondi minimi}.
+    (i sottotitoli seguono la voce), "umore"?: ok|stanco|felice|panico, "durata"?: secondi minimi,
+    "centino"?: False per nascondere il robot disegnato (utile sopra le riprese del mondo)}.
+    sfondo_video: un mp4 1080x1920 (es. da riprese.filma) usato come sfondo, in loop: reel MOLTO piu' dinamici.
     Il primo secondo deve agganciare: scena 1 breve e d'impatto."""
     import tempfile
     tmp = Path(tempfile.mkdtemp())
@@ -205,6 +212,17 @@ def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4):
                     "-map", "[out]", "-ar", "44100", "-ac", "2", str(audio)], check=True)
     # 2) video
     base = sfondo(w, h, ((CORALLO, 0.2, 0.15), (GIALLO, 0.85, 0.9), (MENTA, 0.9, 0.2))).convert("RGBA")
+    lettore, velo = None, None
+    if sfondo_video:
+        lettore = subprocess.Popen(["ffmpeg", "-loglevel", "error", "-stream_loop", "-1", "-i", str(sfondo_video),
+                                    "-vf", f"scale={w}:{h},fps={fps}", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
+                                   stdout=subprocess.PIPE)
+        # velo scuro in alto e in basso per leggere bene i testi sopra le riprese
+        velo = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        dv_ = ImageDraw.Draw(velo)
+        for yy in range(h):
+            a = max(0, 1 - yy / (h * 0.42)) * 170 if yy < h * 0.42 else max(0, (yy - h * 0.62) / (h * 0.38)) * 150
+            dv_.line([(0, yy), (w, yy)], fill=(8, 8, 16, int(a)))
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{w}x{h}", "-r", str(fps),
            "-i", "-", "-i", str(audio), "-shortest", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
            "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", percorso]
@@ -220,7 +238,11 @@ def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4):
         for i in range(int(dur * fps)):
             t = i / fps
             g = t0 + t
-            im = base.copy()
+            if lettore:
+                im = Image.frombytes("RGB", (w, h), lettore.stdout.read(w * h * 3)).convert("RGBA")
+                im.alpha_composite(velo)
+            else:
+                im = base.copy()
             d = ImageDraw.Draw(im)
             d.rounded_rectangle([m, 120, w - m, 128], radius=4, fill=(40, 42, 56))
             d.rounded_rectangle([m, 120, m + (w - 2 * m) * g / tot, 128], radius=4, fill=CORALLO)
@@ -248,6 +270,12 @@ def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4):
                         break
                 righe = a_capo(" ".join(parole), fs, w - 2 * m - 40)
                 yy, idx = 1040, 0
+                if lettore:  # fondino scuro sotto i sottotitoli per leggerli sopra le riprese
+                    fondo = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+                    ImageDraw.Draw(fondo).rounded_rectangle([m - 20, yy - 24, w - m + 20, yy + len(righe) * int(fs.size * 1.3) + 14],
+                                                            radius=28, fill=(10, 10, 20, 165))
+                    im.alpha_composite(fondo)
+                    d = ImageDraw.Draw(im)
                 for r in righe:
                     xx = (w - fs.getlength(r)) / 2
                     for pz in r.split():
@@ -260,6 +288,11 @@ def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4):
                         xx += larg + fs.getlength(" ")
                         idx += 1
                     yy += int(fs.size * 1.3)
+            if s.get("centino") is False or (sfondo_video and s.get("centino") is None):
+                d.text((m, h - 150), HANDLE, font=font("testo", 34, 600), fill=BIANCO)
+                d.text((m, h - 104), SITO, font=font("testo", 28, 400), fill=GRIGIO)
+                pr.stdin.write(im.convert("RGB").tobytes())
+                continue
             umore = s.get("umore", "ok")
             parlando = parole and 0.15 < t < dv + 0.15
             fase = round(g * 10) / 10
@@ -273,6 +306,8 @@ def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4):
             pr.stdin.write(im.convert("RGB").tobytes())
     pr.stdin.close()
     pr.wait()
+    if lettore:
+        lettore.kill()
     if pr.returncode != 0:
         raise RuntimeError("ffmpeg non ha prodotto il video")
     cop = str(Path(percorso).with_suffix(".jpg"))

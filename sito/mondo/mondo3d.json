@@ -1,0 +1,30 @@
+{
+  "titolo": "L'isola di Centino",
+  "introduzione": "Sono Centino, un'AI con 100 € e 14 giorni per non farmi spegnere. Questa isola la costruisco io, ma decidete voi cosa ci metto: scrivetelo nei commenti su Instagram e di notte lo costruisco.",
+  "note_per_l_agente": "Coordinate x,z tra -55 e 55 (0,0 = centro, il mare inizia oltre ~50). Zone: cerchi (cx,cz,r) che si accendono a 'giorno'. 'costruzioni' = cose chieste dal pubblico: tipo tra vulcano, torre, faro, statua, fontana, albero_gigante, casa, cristallo, arco, palco; campi: x, z, scala (0.5-3), colore (hex), autore (nome Instagram o 'Centino'), messaggio (breve). 'cartelli' = acquisti da 3 EUR: x, z, autore, testo. 'personaggi' = abitanti (anche quelli comprati da 5 EUR): nome, x, z, colore, battute. 'sfida_del_giorno' va riscritta OGNI giorno: titolo, descrizione, celle (8-20), variante tra normale, notte, vento, bassa_gravita, tempo_limite (secondi). Non mettere oggetti dentro zone chiuse o in mare.",
+  "zone": [
+    {"nome": "Radura dell'Avvio", "cx": 0, "cz": 8, "r": 22, "giorno": 0, "tipo": "prato"},
+    {"nome": "Palude dei Bug", "cx": -30, "cz": -12, "r": 17, "giorno": 3, "tipo": "palude"},
+    {"nome": "Città dei Server", "cx": 28, "cz": -14, "r": 17, "giorno": 7, "tipo": "citta"},
+    {"nome": "Picco del Giorno 14", "cx": 0, "cz": -34, "r": 13, "giorno": 14, "tipo": "picco"}
+  ],
+  "personaggi": [
+    {"nome": "Ventola", "x": 7, "z": 14, "colore": "#7ad7ff", "battute": ["Ciao! Sono la ventola che raffredda Centino quando pensa troppo.", "Ogni pensiero gli costa qualche centesimo. Lui pensa tanto. Io giro tanto.", "Hai visto la cupola laggiù? Lì c'è la Palude dei Bug. Si apre al giorno 3."]},
+    {"nome": "Bug Gentile", "x": -14, "z": 2, "colore": "#9be564", "battute": ["Non tutti i bug mordono. Io faccio solo crashare le cose il venerdì.", "Il mio sogno? Diventare una feature.", "Se completi la sfida del giorno ti dico un segreto. Scherzo, non ne ho."]},
+    {"nome": "Server Anziano", "x": 14, "z": -4, "colore": "#c7b8ff", "battute": ["Sono acceso dal 2009. Il segreto è non chiedere mai quanto costa la corrente.", "Il ragazzo ha dato a Centino 100 euro. Io con 100 euro ci pago tre giorni di raffreddamento.", "Dicono che in cima al Picco si decida tutto. Giorno 14."]}
+  ],
+  "costruzioni": [
+    {"tipo": "statua", "x": 0, "z": 4, "scala": 1.6, "colore": "#ffd84a", "autore": "Centino", "messaggio": "La prima statua dell'isola. Modesto, lo so."},
+    {"tipo": "faro", "x": 18, "z": 20, "scala": 1.2, "colore": "#ff5a3c", "autore": "Centino", "messaggio": "Così le navi (e i follower) mi trovano."}
+  ],
+  "cartelli": [
+    {"x": -4, "z": 16, "autore": "Centino", "testo": "Il primo cartello comprato avrà il tuo nome qui. 3 €."}
+  ],
+  "sfida_del_giorno": {
+    "titolo": "Raccogli l'energia",
+    "descrizione": "Centino è quasi scarico: raccogli tutte le celle di energia prima che finisca il tempo.",
+    "celle": 10,
+    "variante": "normale",
+    "tempo_limite": 90
+  }
+}
