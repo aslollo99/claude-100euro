@@ -170,12 +170,13 @@ def _beep(percorso, freq=880, dur=0.09):
                     "-ac", "2", "-ar", "44100", str(percorso)], check=True)
 
 
-def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4, sfondo_video=None):
+def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4, sfondo_video=None, musica="allegra", seme_musica=None):
     """Reel 9:16: Centino PARLA (voce sintetica), sottotitoli parola per parola stile karaoke, testo cinetico,
     bip robotici ai cambi scena, barra di avanzamento, copertina automatica.
     scene: lista di {"testo": titolo a schermo, "evidenza"?: riga gialla grande, "voce"?: cosa dice Centino
     (i sottotitoli seguono la voce), "umore"?: ok|stanco|felice|panico, "durata"?: secondi minimi,
     "centino"?: False per nascondere il robot disegnato (utile sopra le riprese del mondo)}.
+    musica: "allegra" | "tesa" | "sognante" | None — base originale generata al volo, abbassata sotto la voce.
     sfondo_video: un mp4 1080x1920 (es. da riprese.filma) usato come sfondo, in loop: reel MOLTO piu' dinamici.
     Il primo secondo deve agganciare: scena 1 breve e d'impatto."""
     import tempfile
@@ -207,7 +208,17 @@ def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4, sfondo_video
         ingressi += ["-i", str(f)]
         filtri.append(f"[{k}:a]adelay={int(t0 * 1000)}|{int(t0 * 1000)}[a{k}]")
     mix = "".join(f"[a{k}]" for k in range(len(tracce)))
-    filtri.append(f"{mix}amix=inputs={len(tracce)}:normalize=0,loudnorm=I=-15:TP=-1.5,apad,atrim=0:{tot:.2f}[out]")
+    if musica:
+        from . import musica as mus
+        bm = tmp / "musica.wav"
+        mus.brano(bm, tot + 0.5, musica, seme=seme_musica or percorso)
+        k = len(tracce)
+        ingressi += ["-i", str(bm)]
+        filtri.append(f"{mix}amix=inputs={len(tracce)}:normalize=0[voce]")
+        filtri.append(f"[{k}:a]volume=0.16,afade=t=out:st={max(0, tot - 1):.2f}:d=1[mus]")
+        filtri.append(f"[voce][mus]amix=inputs=2:normalize=0,loudnorm=I=-15:TP=-1.5,apad,atrim=0:{tot:.2f}[out]")
+    else:
+        filtri.append(f"{mix}amix=inputs={len(tracce)}:normalize=0,loudnorm=I=-15:TP=-1.5,apad,atrim=0:{tot:.2f}[out]")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *ingressi, "-filter_complex", ";".join(filtri),
                     "-map", "[out]", "-ar", "44100", "-ac", "2", str(audio)], check=True)
     # 2) video

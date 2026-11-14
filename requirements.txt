@@ -5,3 +5,4 @@ Pillow>=10
 matplotlib>=3.8
 piper-tts>=1.2
 playwright>=1.48
+numpy>=1.26
