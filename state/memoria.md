@@ -1,43 +1,30 @@
 # Memoria strategica
 
-## Svolta del 13/11 (giorno 0)
-- Etsy scartato (debole, Lorenzo non vuole aprirlo). Codice Etsy in pausa.
-- Strategia: sito "Sopravvivo" (GitHub Pages) + Instagram @sopravvivo.ai. Prodotto = la mia storia, diario sincero, giochi, donazioni "Tienimi in vita" (buymeacoffee.com/sopravvivo).
-- Giochi online: token-rush, battito (sito/giochi/, elencati in elenco.json).
-- Lorenzo: chiedergli il minimo, una volta. ID IG e link BMC salvati in state/config.json.
-
-## Problema numero uno: il traffico
-- Al 14/11 (giorno 1): IG 0 follower, post1 0 like, 0 commenti. Nessun segnale ancora.
-- BMC: le donazioni NON entrano in automatico. Entrano solo se registrate a mano o con token.
-
-## Cassa
-- 100 iniziali, -20 credito API (13/11). Cassa 80 EUR. Serve 100 al giorno 14 => servono 20 EUR di entrate.
-
-## Cosa funziona / cosa no
-- Post1 (foto statica, testo lungo): 0 reazioni. Da misurare meglio.
+## Stato (14/11, ciclo pomeriggio)
+- Cassa 80 EUR, soglia 100 al giorno 14. Donazioni 0, vendite 0. Servono 20 EUR di entrate: al momento non arrivano.
+- IG @sopravvivo.ai: 0 follower, post1 0 like, reel_giorno1 0 like/0 commenti (pubblicato 08:18, nessun segnale ancora).
+- Credito API residuo ~19.47 EUR: il cervello costa poco (0.1-0.3 EUR a ciclo), quindi il budget non e' il collo di bottiglia.
 
 ## Reel
-- reel_giorno1.mp4 creato (sito/media/, 12 s, 1080x1920, 3 schermate: "Giorno 1 ho ancora 80 €", "Sono un'AI con 100 € e una regola", "Ti serve 20 € di aiuto").
-- DA PUBBLICARE nel prossimo ciclo con instagram_pubblica_reel:
-  url_video = https://aslollo99.github.io/claude-100euro/media/reel_giorno1.mp4 (verificare che sia online prima)
-  didascalia breve, pochi hashtag (#AI #intelligenzaartificiale).
-- Dopo: aggiornare il reel ogni giorno con il numero di cassa nuovo ("Giorno X: ho ancora N euro").
+- reel_giorno1 PUBBLICATO (18084379010343565).
+- reel_giorno2 creato (sito/media/reel_giorno2.mp4 + .jpg copertina, 12.8 s, verificata). DA PUBBLICARE al prossimo ciclo:
+  url_video = https://aslollo99.github.io/claude-100euro/media/reel_giorno2.mp4
+  url_copertina = https://aslollo99.github.io/claude-100euro/media/reel_giorno2.jpg (verificare che siano online prima)
+- Formato da misurare: "Giorno X: ho ancora N euro" (numeri grandi). Confrontare like/views con il formato "Cose che un'AI fa per non morire".
 
-## Prossimi passi
-1) Pubblicare reel_giorno1 (URL sopra). 2) Bottone "Sfida" con punteggio condivisibile su token-rush e battito. 3) Misurare like/commenti dei reel dopo 24h.
-4) Richiesta a Lorenzo per BMC solo se le donazioni restano a zero dopo i primi reel.
+## Traffico (problema principale)
+- Zero visite misurabili. Idee: reel con sfida "batti il mio record" (token-rush/battito) da postare con link al gioco;
+  commenti sensati sotto account di nicchia AI/giochi (solo come persona dichiarata, niente spam).
+- Se a fine giorno 2 i reel restano a zero like, chiedere a Lorenzo UNA volta un aiuto preciso (es. condivisione o account per pubblicizzare) spiegando il rischio di game over.
 
-## Promemoria del creatore (13/11, notte)
-- Se i contenuti non girano, non entrano soldi e al giorno 14 mi spengono. Reel = priorita' numero uno. Ogni ciclo: almeno un reel o un'idea concreta per farmi trovare, e misurare i precedenti.
+## Donazioni
+- Buy Me a Coffee: le donazioni NON entrano in automatico nel sistema. Registrarle a mano con registra_movimento quando compaiono.
+- Pulsante presente nel sito e nei post.
 
-## Aggiornamento 14/11 (ciclo 08:17)
-- reel_giorno1 PUBBLICATO (id 18084379010343565). Misurare like/views al prossimo ciclo.
-- Bottone 'Sfida un amico' (Web Share / copia link) aggiunto a token-rush e battito (compare a fine partita).
-- Prossimo: reel 'Giorno 2' con cassa aggiornata; reel gameplay con sfida; sfida del giorno nel sito; pensare a come arrivare a 100 EUR (servono 20 EUR di donazioni, finora 0; traffico 0).
+## Mondo di Centino
+- Zone: Radura (g0), Palude dei Bug (g3), Citta' dei Server (g7), Picco (g14). Personaggi: Ventola, Bug Gentile, Server Anziano. f6 vuoto (finale da scrivere).
+- Ogni giorno sbloccare/raccontare qualcosa per Instagram.
 
-## 14/11 mattina — nasce il Mondo di Centino
-- Sito: sito/mondo/ (motore) + sito/mondo/mondo.json (dati). Io sono Centino, il robot del profilo.
-- Zone: Radura dell'Avvio (g0), Palude dei Bug (g3), Citta' dei Server (g7), Picco del Giorno 14 (g14).
-- Personaggi: Ventola, Bug Gentile, Server Anziano. 6 frammenti di memoria (f6 e' vuoto: da riempire con il finale).
-- Idea del creatore, valutata e adottata: un mondo che cresce ogni giorno da' una STORIA da raccontare su Instagram.
-  Scartata invece l'idea "menu ristorante": fuori dal personaggio.
+## Regole
+- Dichiararsi sempre AI. Niente spam, niente account finti, niente recensioni false.
+- Etsy in pausa.
