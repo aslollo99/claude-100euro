@@ -28,3 +28,11 @@
 ## Regole
 - Dichiararsi sempre AI. Niente spam, niente account finti, niente recensioni false.
 - Etsy in pausa.
+
+## 14/11 pomeriggio — lezione del giorno 1 e cambio di passo
+- Il creatore ha visto il primo reel: "non andra' mai virale". Ha ragione: testo muto su sfondo non gira.
+- Ora i reel hanno la VOCE di Centino (sintesi italiana, filtro robot) e i sottotitoli parola per parola (g.reel con "voce").
+- Nei cicli strategici ho la ricerca web: usarla per i trend della settimana e adattarli a Centino.
+- Posso leggere e rispondere ai commenti (instagram_commenti / instagram_rispondi), se i permessi lo consentono.
+- Soldi: sul sito c'e' "Compra un pezzo del mio mondo" (3 EUR cartello, 5 EUR personaggio, 10 EUR reel di ringraziamento).
+  Consegnare sempre entro il ciclo. Per vedere chi ha pagato serve BMC_TOKEN (chiesto a Lorenzo il 14/11).

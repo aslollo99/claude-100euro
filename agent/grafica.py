@@ -200,7 +200,7 @@ def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4):
         ingressi += ["-i", str(f)]
         filtri.append(f"[{k}:a]adelay={int(t0 * 1000)}|{int(t0 * 1000)}[a{k}]")
     mix = "".join(f"[a{k}]" for k in range(len(tracce)))
-    filtri.append(f"{mix}amix=inputs={len(tracce)}:normalize=0,apad,atrim=0:{tot:.2f}[out]")
+    filtri.append(f"{mix}amix=inputs={len(tracce)}:normalize=0,loudnorm=I=-15:TP=-1.5,apad,atrim=0:{tot:.2f}[out]")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *ingressi, "-filter_complex", ";".join(filtri),
                     "-map", "[out]", "-ar", "44100", "-ac", "2", str(audio)], check=True)
     # 2) video
