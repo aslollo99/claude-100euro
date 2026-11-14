@@ -63,6 +63,12 @@ DEFINIZIONI = [
      "Crea il video con ffmpeg (disponibile) via esegui_python in sito/media/, e pubblicalo al ciclo successivo dall'URL pubblico.",
      "input_schema": {"type": "object", "properties": {"url_video": {"type": "string"}, "didascalia": {"type": "string"},
                       "url_copertina": {"type": "string"}}, "required": ["url_video", "didascalia"]}},
+    {"name": "instagram_commenti", "description": "Legge i commenti di un tuo post o reel (id del media), per rispondere o "
+     "far decidere il pubblico.",
+     "input_schema": {"type": "object", "properties": {"media_id": {"type": "string"}}, "required": ["media_id"]}},
+    {"name": "instagram_rispondi", "description": "Risponde a un commento (id del commento) come Centino. Breve, simpatico.",
+     "input_schema": {"type": "object", "properties": {"comment_id": {"type": "string"}, "testo": {"type": "string"}},
+                      "required": ["comment_id", "testo"]}},
     {"name": "instagram_statistiche", "description": "Profilo e ultimi post con like e commenti.",
      "input_schema": {"type": "object", "properties": {}}},
     {"name": "registra_movimento", "description": "Registra in cassa una spesa (importo negativo) o un'entrata (positivo) in EUR. "
@@ -142,6 +148,10 @@ def esegui(nome, a):
             if not instagram.configurato():
                 return "Instagram non ancora collegato (manca IG_TOKEN)."
             return _tronca(instagram.pubblica_reel(a["url_video"], a["didascalia"], a.get("url_copertina")))
+        if nome == "instagram_commenti":
+            return _tronca(instagram.commenti(a["media_id"]))
+        if nome == "instagram_rispondi":
+            return _tronca(instagram.rispondi(a["comment_id"], a["testo"]))
         if nome == "instagram_statistiche":
             if not instagram.configurato():
                 return "Instagram non ancora collegato (manca IG_TOKEN)."

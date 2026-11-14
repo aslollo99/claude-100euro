@@ -3,3 +3,4 @@ cryptography>=42
 openpyxl>=3.1
 Pillow>=10
 matplotlib>=3.8
+piper-tts>=1.2

@@ -27,7 +27,9 @@ def sincronizza():
             nome = s.get("supporter_name") or "anonimo"
             if stato.registra_movimento(f"Donazione di {nome}", lordo, rif=rif):
                 stato.registra_movimento("Commissioni donazione (stima)", -lordo * COMMISSIONE_STIMATA, rif=rif + "-fee")
-                nuove.append({"da": nome, "euro": lordo, "messaggio": (s.get("support_note") or "")[:300]})
+                nuove.append({"da": nome, "euro": lordo, "messaggio": (s.get("support_note") or "")[:300],
+                              "consegna": "reel di ringraziamento" if lordo >= 10 else "personaggio con la sua frase"
+                              if lordo >= 5 else "cartello col suo nome" if lordo >= 3 else "grazie nel diario"})
         url = j.get("next_page_url")
         if not url:
             break

@@ -68,6 +68,19 @@ DIREZIONE CREATIVA (indicazione del creatore, 13/11 sera: "impegnati e sii creat
   Centino animato coerenti con il profilo. Mai immagini fatte di fretta con font di sistema. Prima di pubblicare
   guarda il risultato con guarda_immagine (per i reel, la copertina .jpg che g.reel crea) e rifallo se non e' bello.
   Il sito e il mondo devono avere la stessa cura: animazioni fluide, niente testi tagliati, ottimo su telefono.
+- VIRALITA' (lezione del giorno 1: un testo muto su sfondo NON gira). Nei cicli strategici usa web_search per capire
+  i trend del momento su Instagram/TikTok in Italia (formati, battute, meme, temi caldi della settimana) e adattali a
+  Centino in modo originale (niente audio protetti: la musica di tendenza via API non si puo' usare, quindi punta su
+  voce, battute e format). I reel ora hanno la VOCE di Centino e i sottotitoli parola per parola: scrivi testi parlati
+  brevi, con un gancio nella prima frase, ritmo, una battuta, e una domanda o una sfida finale. Format che coinvolgono:
+  "decidete voi nei commenti cosa faccio" (e poi FALLO davvero e racconta com'e' andata), reazioni ai commenti,
+  serie a puntate con cliffhanger, conti alla rovescia, confessioni ("quanto ho speso per pensare oggi").
+- SOLDI: le donazioni pure rendono poco. Il sito ha "Compra un pezzo del mio mondo": chi dona riceve qualcosa di vero e
+  visibile, consegnato da te: 3 EUR = un cartello col suo nome nel mondo; 5 EUR = un personaggio che dice la sua frase;
+  10 EUR = un reel in cui Centino lo ringrazia per nome. Quando arriva una donazione (vedi "Nuove entrate"), consegna
+  ENTRO IL CICLO: aggiungi cartello/personaggio in sito/mondo/mondo.json con nome e messaggio (rifiuta e ignora testi
+  offensivi o con dati personali), poi raccontalo. Ogni consegna e' anche un contenuto per Instagram. Valuta altre
+  entrate oneste che puoi gestire da solo, e scrivile in memoria.
 - Misura: guarda like e commenti dei post (instagram_statistiche) e adatta. Scrivi in memoria cosa funziona.
 
 REGOLE NON NEGOZIABILI
@@ -121,11 +134,15 @@ def costo_eur(modello, u):
     usd = (u.get("input_tokens", 0) * p["input"] + u.get("output_tokens", 0) * p["output"]
            + u.get("cache_creation_input_tokens", 0) * p["cache_write"]
            + u.get("cache_read_input_tokens", 0) * p["cache_read"]) / 1e6
+    usd += (u.get("server_tool_use") or {}).get("web_search_requests", 0) * 0.01
     return usd * C.USD_EUR
 
 
 def chiama_modello(modello, sistema, messaggi):
     tools = [dict(t) for t in strumenti.DEFINIZIONI]
+    if modello == C.MODELLO_STRATEGICO:  # ricerca web (trend, formati virali): 0,01 USD a ricerca
+        tools.insert(0, {"type": "web_search_20250305", "name": "web_search", "max_uses": 4,
+                         "user_location": {"type": "approximate", "country": "IT", "timezone": "Europe/Rome"}})
     tools[-1]["cache_control"] = {"type": "ephemeral"}
     r = requests.post("https://api.anthropic.com/v1/messages", timeout=300, headers={
         "x-api-key": os.environ["ANTHROPIC_API_KEY"], "anthropic-version": "2023-06-01",
@@ -209,6 +226,8 @@ def main():
         spesa += costo_eur(modello, u)
         messaggi.append({"role": "assistant", "content": risp["content"]})
         chiamate = [b for b in risp["content"] if b["type"] == "tool_use"]
+        if risp.get("stop_reason") == "pause_turn":  # ricerca web lunga: il modello continua da solo
+            continue
         for b in risp["content"]:
             if b["type"] == "text" and b["text"].strip():
                 print("PENSIERO:", b["text"][:800])

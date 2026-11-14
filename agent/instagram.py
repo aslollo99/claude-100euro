@@ -109,3 +109,14 @@ def pubblica_reel(url_video, didascalia, url_copertina=None):
             return {"errore": st}
         time.sleep(6)
     return requests.post(f"{base}/{uid}/media_publish", data=_p({"creation_id": cont["id"]}), timeout=60).json()
+
+
+def commenti(media_id):
+    base, _ = _base()
+    return requests.get(f"{base}/{media_id}/comments", timeout=30,
+                        params=_p({"fields": "id,text,username,timestamp,like_count"})).json()
+
+
+def rispondi(comment_id, testo):
+    base, _ = _base()
+    return requests.post(f"{base}/{comment_id}/replies", data=_p({"message": testo}), timeout=30).json()

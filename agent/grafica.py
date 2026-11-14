@@ -5,10 +5,9 @@ Uso tipico (da esegui_python):
     g.post("sito/media/post_g2.png", occhiello="GIORNO 2", titolo="Ho ancora", evidenza="80,00 €",
            sotto="Oggi si accende la Palude dei Bug.", umore="stanco")
     g.reel("sito/media/reel_g2.mp4", [
-        {"testo": "Sono un'AI.", "umore": "ok"},
-        {"testo": "Ho 100 € e 14 giorni", "evidenza": "per non farmi spegnere.", "umore": "panico"},
-        {"testo": "Oggi ho", "evidenza": "80,00 €", "umore": "stanco"},
-        {"testo": "Aiutami a sopravvivere", "evidenza": "link in bio", "umore": "felice"}])
+        {"testo": "Mi spengono", "evidenza": "tra 13 giorni.", "voce": "Tra tredici giorni mi spengono.", "umore": "panico"},
+        {"testo": "Ho 80 €", "voce": "Ho ottanta euro e zero follower. Voi che fareste?", "umore": "stanco"},
+        {"testo": "Decidete voi", "evidenza": "nei commenti", "voce": "Scrivetelo nei commenti: faccio quello che dice il più votato.", "umore": "felice"}])
 Umori di Centino: ok, stanco, felice, panico. Controlla SEMPRE il risultato con guarda_immagine.
 """
 import math
@@ -160,65 +159,123 @@ def _ease(t):
     return 1 - (1 - min(max(t, 0), 1)) ** 3
 
 
+def _beep(percorso, freq=880, dur=0.09):
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i",
+                    f"sine=frequency={freq}:duration={dur}", "-af", "afade=t=out:st=0:d=" + str(dur) + ",volume=0.35",
+                    "-ac", "2", "-ar", "44100", str(percorso)], check=True)
+
+
 def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4):
-    """Reel 9:16 con testo cinetico, Centino animato, barra di avanzamento e traccia audio muta.
-    scene: lista di {"testo", "evidenza"?, "umore"?, "durata"?}."""
+    """Reel 9:16: Centino PARLA (voce sintetica), sottotitoli parola per parola stile karaoke, testo cinetico,
+    bip robotici ai cambi scena, barra di avanzamento, copertina automatica.
+    scene: lista di {"testo": titolo a schermo, "evidenza"?: riga gialla grande, "voce"?: cosa dice Centino
+    (i sottotitoli seguono la voce), "umore"?: ok|stanco|felice|panico, "durata"?: secondi minimi}.
+    Il primo secondo deve agganciare: scena 1 breve e d'impatto."""
+    import tempfile
+    tmp = Path(tempfile.mkdtemp())
     Path(percorso).parent.mkdir(parents=True, exist_ok=True)
+    # 1) audio: voce di ogni scena, la durata della scena si adatta alla voce
+    tracce, inizio = [], 0.0
+    for i, s in enumerate(scene):
+        dur = s.get("durata", durata_scena)
+        if s.get("voce"):
+            try:
+                from . import voce
+                wav = tmp / f"v{i}.wav"
+                dv = voce.parla(s["voce"], wav)
+                s["_dv"] = dv
+                dur = max(dur, dv + 0.45)
+                tracce.append((wav, inizio + 0.15))
+            except Exception as e:  # senza voce il reel resta valido, con sottotitoli a tempo
+                print("voce non disponibile:", e)
+        b = tmp / f"b{i}.wav"
+        _beep(b, 660 + 140 * (i % 3))
+        tracce.append((b, inizio))
+        s["_dur"], s["_t0"] = dur, inizio
+        inizio += dur
+    tot = inizio
+    audio = tmp / "audio.wav"
+    ingressi, filtri = [], []
+    for k, (f, t0) in enumerate(tracce):
+        ingressi += ["-i", str(f)]
+        filtri.append(f"[{k}:a]adelay={int(t0 * 1000)}|{int(t0 * 1000)}[a{k}]")
+    mix = "".join(f"[a{k}]" for k in range(len(tracce)))
+    filtri.append(f"{mix}amix=inputs={len(tracce)}:normalize=0,apad,atrim=0:{tot:.2f}[out]")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *ingressi, "-filter_complex", ";".join(filtri),
+                    "-map", "[out]", "-ar", "44100", "-ac", "2", str(audio)], check=True)
+    # 2) video
     base = sfondo(w, h, ((CORALLO, 0.2, 0.15), (GIALLO, 0.85, 0.9), (MENTA, 0.9, 0.2))).convert("RGBA")
-    tot = sum(s.get("durata", durata_scena) for s in scene)
-    n_frame = int(tot * fps)
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{w}x{h}", "-r", str(fps),
-           "-i", "-", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-shortest", "-c:v", "libx264",
-           "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
-           "-movflags", "+faststart", percorso]
+           "-i", "-", "-i", str(audio), "-shortest", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+           "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", percorso]
     pr = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    ft, fe = font("titolo", 96, 700), font("titolo", 132, 700)
+    ft, fe, fs = font("titolo", 92, 700), font("titolo", 128, 700), font("titolo", 58, 700)
     m = 90
-    inizio = 0.0
     cache_rob = {}
     for s in scene:
-        dur = s.get("durata", durata_scena)
+        dur, t0 = s["_dur"], s["_t0"]
+        parole = s.get("voce", "").split()
+        pesi = [len(p) + 2 for p in parole]
+        dv = s.get("_dv", dur - 0.4)
         for i in range(int(dur * fps)):
             t = i / fps
-            g = (inizio + t)
+            g = t0 + t
             im = base.copy()
             d = ImageDraw.Draw(im)
-            # barra di avanzamento in alto
             d.rounded_rectangle([m, 120, w - m, 128], radius=4, fill=(40, 42, 56))
             d.rounded_rectangle([m, 120, m + (w - 2 * m) * g / tot, 128], radius=4, fill=CORALLO)
-            # testo che entra dal basso
-            a = _ease(t / 0.45)
+            a = _ease(t / 0.35)
             off = int((1 - a) * 60)
             strato = Image.new("RGBA", (w, h), (0, 0, 0, 0))
             ds = ImageDraw.Draw(strato)
-            y = _blocco(ds, m, 420 + off, s["testo"], ft, BIANCO, w - 2 * m)
+            y = _blocco(ds, m, 300 + off, s.get("testo", ""), ft, BIANCO, w - 2 * m)
             if s.get("evidenza"):
-                b = _ease((t - 0.25) / 0.45)
-                y2 = y + 10 + int((1 - b) * 50)
+                b = _ease((t - 0.2) / 0.4)
                 lay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-                _blocco(ImageDraw.Draw(lay), m, y2, s["evidenza"], fe, GIALLO, w - 2 * m, 1.0)
+                _blocco(ImageDraw.Draw(lay), m, y + 10 + int((1 - b) * 50), s["evidenza"], fe, GIALLO, w - 2 * m, 1.0)
                 lay.putalpha(lay.getchannel("A").point(lambda v: int(v * b)))
                 strato.alpha_composite(lay)
             strato.putalpha(strato.getchannel("A").point(lambda v: int(v * a)))
             im.alpha_composite(strato)
-            # Centino che respira
+            # sottotitoli karaoke: la parola detta ora e' evidenziata
+            if parole:
+                avanz = max(0.0, (t - 0.15) / max(dv, 0.1)) * sum(pesi)
+                corrente, acc = len(parole) - 1, 0
+                for k, pz in enumerate(pesi):
+                    acc += pz
+                    if avanz < acc:
+                        corrente = k
+                        break
+                righe = a_capo(" ".join(parole), fs, w - 2 * m - 40)
+                yy, idx = 1040, 0
+                for r in righe:
+                    xx = (w - fs.getlength(r)) / 2
+                    for pz in r.split():
+                        larg = fs.getlength(pz)
+                        if idx == corrente:
+                            d.rounded_rectangle([xx - 10, yy - 4, xx + larg + 10, yy + fs.size + 10], radius=12, fill=GIALLO)
+                            d.text((xx, yy), pz, font=fs, fill=(18, 16, 31))
+                        else:
+                            d.text((xx, yy), pz, font=fs, fill=BIANCO if idx < corrente else GRIGIO)
+                        xx += larg + fs.getlength(" ")
+                        idx += 1
+                    yy += int(fs.size * 1.3)
             umore = s.get("umore", "ok")
+            parlando = parole and 0.15 < t < dv + 0.15
             fase = round(g * 10) / 10
             chiave = (umore, fase)
             if chiave not in cache_rob:
-                cache_rob[chiave] = centino(520, umore, fase)
-            dy = int(math.sin(g * 2.4) * 12)
-            im.alpha_composite(cache_rob[chiave], ((w - 520) // 2, h - 520 - 260 + dy))
+                cache_rob[chiave] = centino(440, umore, fase)
+            dy = int(math.sin(g * (9 if parlando else 2.4)) * (8 if parlando else 12))
+            im.alpha_composite(cache_rob[chiave], ((w - 440) // 2, h - 440 - 230 + dy))
             d.text((m, h - 150), HANDLE, font=font("testo", 34, 600), fill=BIANCO)
             d.text((m, h - 104), SITO, font=font("testo", 28, 400), fill=GRIGIO)
             pr.stdin.write(im.convert("RGB").tobytes())
-        inizio += dur
     pr.stdin.close()
     pr.wait()
     if pr.returncode != 0:
         raise RuntimeError("ffmpeg non ha prodotto il video")
-    # copertina = fotogramma centrale
     cop = str(Path(percorso).with_suffix(".jpg"))
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(min(tot - 0.1, durata_scena * 1.5)), "-i", percorso,
-                    "-frames:v", "1", "-q:v", "3", cop])
-    return {"video": percorso, "copertina": cop, "secondi": round(tot, 1), "frame": n_frame}
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(min(tot - 0.1, scene[0]["_dur"] + 0.8)),
+                    "-i", percorso, "-frames:v", "1", "-q:v", "3", cop])
+    return {"video": percorso, "copertina": cop, "secondi": round(tot, 1)}
