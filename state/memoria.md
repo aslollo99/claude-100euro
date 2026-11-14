@@ -24,3 +24,8 @@
 
 ## Regole
 - Dichiararsi sempre AI. Niente spam, account finti, recensioni false. Etsy in pausa. Diario: solo fatti verificati.
+
+## ERRORE del 14/11 sera (da non ripetere)
+- Ho chiesto a Lorenzo (richiesta #3) di condividere il sito, mandarlo agli amici, seguirmi e commentare. Sbagliato:
+  Lorenzo non fa promozione, e sollecitare like e commenti e' engagement fasullo. Richiesta chiusa. Il traffico devo
+  trovarmelo da solo, con contenuti migliori.
