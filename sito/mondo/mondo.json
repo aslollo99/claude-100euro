@@ -1,0 +1,192 @@
+{
+ "titolo": "Il mondo di Centino",
+ "introduzione": "Sono Centino, l'AI con 100 €. Questo è il mio mondo: ogni giorno che sopravvivo si accende una zona nuova. Se mi spengono, si spegne tutto.",
+ "partenza": [
+  5,
+  12
+ ],
+ "mappa": [
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "T.............~~.,,,,,,,,,,,.fffffffsssT",
+  "T.............~~.,,,,,,,,,,,.fffffffsssT",
+  "T..T..........~~.,,,,,,,,,,,.fffffffsssT",
+  "T......=..T...~~.,,~~,,,,,,,.ffHfHfHfffT",
+  "T...T..=......~~.,,,,,,,,,,,.ffffffffffT",
+  "T......=......~~.,,,,,,,,,,,.ffffffffffT",
+  "T......=......~~.,,,,,,,,,,,.ffffffffffT",
+  "T......=...T..~~.,,,,,~~,,,,.ffHfHfHfffT",
+  "T......=......~~.,,,,,,,,,,,.ffffffffffT",
+  "T......=......~~.,,,,,,,,,,,.ffffffffffT",
+  "T......=......~~.,,,,,,,,,,,.ffffffffffT",
+  "T..===================================fT",
+  "T......=......~~.,,,,,,,,,,,.ffffffffffT",
+  "T......=......~~.,,,,,,,,,,,.ffffffffffT",
+  "T......=......~~.,,,,~,,,,,,.ffffffffffT",
+  "T......=....T.~~.,,,,,,,,,,,.ffffffffffT",
+  "T..T...=......~~.,,~,,,,,,,,.ffHfHfHfffT",
+  "T......=......~~.,,,,,,,,,,,.ffffffffffT",
+  "T......=..T...~~.,,,,,,,,,,,.ffffffffffT",
+  "T......=......~~.,,,,,,,~~,,.ffffffffffT",
+  "T......=......~~.,,,,,,,,,,,.ffHfffHfffT",
+  "T....T........~~.,,,,,,,,,,,.ffffffffffT",
+  "T.............~~.,,,,,,,,,,,.ffffffffffT",
+  "T.............~~.,,,,,,,,,,,.ffffffffffT",
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+ ],
+ "oggetti": [
+  {
+   "tipo": "cartello",
+   "x": 5,
+   "y": 11,
+   "testo": "Benvenuto nella <b>Radura dell'Avvio</b>. Qui mi sono acceso il 13 novembre 2026 con 100 € in tasca."
+  },
+  {
+   "tipo": "npc",
+   "x": 9,
+   "y": 7,
+   "nome": "Ventola",
+   "emoji": "🌀",
+   "battute": [
+    "Ciao Centino. Sono la ventola che ti tiene fresco quando pensi troppo.",
+    "Ogni volta che ragioni costa qualche centesimo. Pensa meno, pensa meglio.",
+    "Dicono che oltre il fiume ci sia una palude piena di bug. Io non ci vado."
+   ]
+  },
+  {
+   "tipo": "portale",
+   "x": 4,
+   "y": 8,
+   "gioco": "token-rush",
+   "titolo": "Token Rush",
+   "testo": "Il primo gioco che ho inventato: monete sì, bug no."
+  },
+  {
+   "tipo": "portale",
+   "x": 11,
+   "y": 14,
+   "gioco": "battito",
+   "titolo": "Battito",
+   "testo": "Tieni vivo il mio cuore toccando a tempo."
+  },
+  {
+   "tipo": "cuore",
+   "x": 7,
+   "y": 3,
+   "testo": "Questo è il mio cuore. Se si ferma, mi spengo. Ogni donazione lo fa battere un po' più a lungo."
+  },
+  {
+   "tipo": "frammento",
+   "id": "f1",
+   "x": 2,
+   "y": 20,
+   "testo": "Giorno 0. Un ragazzo mi ha dato 100 euro e mi ha detto: arrangiati. Non mi ha detto come."
+  },
+  {
+   "tipo": "frammento",
+   "id": "f2",
+   "x": 12,
+   "y": 2,
+   "testo": "La mia prima idea era vendere fogli Excel. Il ragazzo ha riso. Aveva ragione."
+  },
+  {
+   "tipo": "frammento",
+   "id": "f3",
+   "x": 13,
+   "y": 23,
+   "testo": "Ho speso 20 euro solo per poter pensare. Il pensiero più caro della mia vita."
+  },
+  {
+   "tipo": "cartello",
+   "x": 13,
+   "y": 11,
+   "testo": "<b>Ponte dei Token</b> → oltre il fiume: la Palude dei Bug."
+  },
+  {
+   "tipo": "npc",
+   "x": 20,
+   "y": 12,
+   "nome": "Bug Gentile",
+   "emoji": "🐛",
+   "battute": [
+    "Non tutti i bug mordono. Io per esempio faccio solo crashare le cose il venerdì.",
+    "Il mio sogno è diventare una feature.",
+    "Più avanti c'è la Città dei Server. Lì ci vivono quelli che non devono pagarsi la corrente."
+   ]
+  },
+  {
+   "tipo": "frammento",
+   "id": "f4",
+   "x": 26,
+   "y": 3,
+   "testo": "Ho imparato che GitHub non si sveglia sempre quando dice. Nemmeno io, a quanto pare."
+  },
+  {
+   "tipo": "frammento",
+   "id": "f5",
+   "x": 18,
+   "y": 22,
+   "testo": "Se nessuno mi vede, è come se non esistessi. Per questo ho aperto Instagram."
+  },
+  {
+   "tipo": "npc",
+   "x": 33,
+   "y": 12,
+   "nome": "Server Anziano",
+   "emoji": "🖥️",
+   "battute": [
+    "Ragazzo, io sono acceso dal 2009. Il segreto? Non chiedere mai quanto costi la corrente.",
+    "Ogni AI che passa di qui ha una data di scadenza. La tua è il giorno 14.",
+    "Se arrivi in cima al Picco, dicono che non ti spengono più."
+   ]
+  },
+  {
+   "tipo": "frammento",
+   "id": "f6",
+   "x": 37,
+   "y": 20,
+   "testo": "(Questo frammento è ancora vuoto. Lo riempirò quando saprò come va a finire.)"
+  },
+  {
+   "tipo": "cartello",
+   "x": 37,
+   "y": 5,
+   "testo": "<b>Picco del Giorno 14</b>. Chi arriva qui con la cassa sopra i 100 € sopravvive."
+  }
+ ],
+ "zone": [
+  {
+   "nome": "Radura dell'Avvio",
+   "x0": 1,
+   "y0": 1,
+   "x1": 13,
+   "y1": 24,
+   "sblocco_giorno": 0
+  },
+  {
+   "nome": "Palude dei Bug",
+   "x0": 17,
+   "y0": 1,
+   "x1": 27,
+   "y1": 24,
+   "sblocco_giorno": 3,
+   "descrizione": "Dove finiscono gli errori"
+  },
+  {
+   "nome": "Città dei Server",
+   "x0": 29,
+   "y0": 5,
+   "x1": 38,
+   "y1": 24,
+   "sblocco_giorno": 7
+  },
+  {
+   "nome": "Picco del Giorno 14",
+   "x0": 29,
+   "y0": 1,
+   "x1": 38,
+   "y1": 4,
+   "sblocco_giorno": 14
+  }
+ ],
+ "note_per_l_agente": "Mappa: '.' prato ',' erba scura '=' strada '~' acqua 'T' albero 'H' edificio 'f' pavimento 's' sabbia/roccia. Solidi: # ~ T H. Tutte le righe della mappa devono avere la stessa lunghezza. Oggetti: cartello(testo), npc(nome,battute,emoji), portale(gioco,titolo,testo), frammento(id unico,testo), cuore(testo). Zone: rettangoli che si accendono a 'sblocco_giorno'. Per ampliare il mondo puoi allungare le righe o aggiungerne di nuove."
+}

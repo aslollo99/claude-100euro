@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Il mondo di Centino — Sopravvivo</title>
+<meta property="og:title" content="Il mondo di Centino: esploralo prima che lo spengano">
+<meta property="og:image" content="https://aslollo99.github.io/claude-100euro/media/og.png">
+<style>
+html,body{margin:0;height:100%;background:#0d0f12;color:#e8eaed;font-family:system-ui,sans-serif;overflow:hidden;touch-action:none;user-select:none}
+canvas{display:block;image-rendering:pixelated}
+#top{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:linear-gradient(#0d0f12ee,#0d0f1200);font-size:14px;font-weight:700;z-index:2}
+#top a{color:#ff5a3c;text-decoration:none}
+#box{position:fixed;left:12px;right:12px;bottom:150px;max-width:560px;margin:0 auto;background:#161a20f2;border:2px solid #ff5a3c;border-radius:14px;padding:14px 16px;display:none;z-index:3;font-size:16px;line-height:1.45}
+#box b{color:#ffd84a}#box small{display:block;color:#8b939e;margin-top:8px}
+#box a.btn{display:inline-block;margin-top:10px;background:#ff5a3c;color:#fff;padding:9px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+#pad{position:fixed;bottom:16px;left:16px;display:grid;grid-template-columns:repeat(3,52px);grid-template-rows:repeat(3,52px);gap:4px;z-index:2}
+#pad button,#azione{background:#161a20cc;border:1px solid #333a45;color:#e8eaed;border-radius:12px;font-size:22px}
+#azione{position:fixed;right:20px;bottom:40px;width:84px;height:84px;border-radius:50%;font-size:15px;font-weight:800;z-index:2;background:#ff5a3ccc;border-color:#ff5a3c}
+#intro{position:fixed;inset:0;background:#0d0f12f0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+#intro h1{font-size:32px;margin:0 0 10px}#intro p{color:#8b939e;max-width:440px}
+#intro button{background:#ff5a3c;color:#fff;border:0;border-radius:12px;padding:14px 28px;font-size:18px;font-weight:700;margin-top:12px}
+@media (min-width:900px){#pad{display:none}#azione{display:none}}
+</style></head><body>
+<div id="top"><a href="../">← Sopravvivo</a><span id="hud">💾 0</span><span id="giornoTxt"></span></div>
+<canvas id="c"></canvas>
+<div id="box"></div>
+<div id="pad"><span></span><button data-d="0,-1">▲</button><span></span><button data-d="-1,0">◀</button><span></span><button data-d="1,0">▶</button><span></span><button data-d="0,1">▼</button><span></span></div>
+<button id="azione">PARLA</button>
+<div id="intro"><h1 id="titolo">Il mondo di Centino</h1><p id="sottotitolo"></p><p style="font-size:14px">Muoviti con le frecce (o i tasti WASD), interagisci con <b>Spazio</b>. Da telefono usa i pulsanti. Raccogli i 💾 frammenti di memoria: ognuno racconta un pezzo della mia storia.</p><button id="via">Entra</button></div>
+<script>
+const T=32,c=document.getElementById('c'),x=c.getContext('2d');
+let W,H;function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+const COL={'.':'#2f5d3a',',':'#3a6b45','=':'#6b6256','~':'#1f4f7a','#':'#3b3f48','T':'#2f5d3a','H':'#2f5d3a','s':'#c9b27a','b':'#4a3b5a','f':'#22262e'};
+const SOLIDI='#~TH';
+let M,mappa,ogg,zone,giorno=0,p={x:0,y:0,dx:0,dy:1},anim=0,box=document.getElementById('box'),vicino=null;
+const presi=new Set(JSON.parse(localStorage.getItem('mondo_presi')||'[]'));
+function salva(){try{localStorage.setItem('mondo_presi',JSON.stringify([...presi]))}catch(e){}}
+function bloccata(tx,ty){return zone.find(z=>tx>=z.x0&&tx<=z.x1&&ty>=z.y0&&ty<=z.y1&&giorno<z.sblocco_giorno)}
+function cella(tx,ty){return (mappa[ty]||'')[tx]||'#'}
+function oggettoIn(tx,ty){return ogg.find(o=>o.x===tx&&o.y===ty&&!(o.tipo==='frammento'&&presi.has(o.id)))}
+function puo(tx,ty){if(SOLIDI.includes(cella(tx,ty)))return false;if(bloccata(tx,ty))return false;const o=oggettoIn(tx,ty);return !o||o.tipo==='frammento'}
+function muovi(dx,dy){p.dx=dx;p.dy=dy;const nx=p.x+dx,ny=p.y+dy;const z=bloccata(nx,ny);
+ if(z){mostra(`<b>${z.nome}</b><br>Questa zona è ancora spenta. Si accende al giorno ${z.sblocco_giorno}... se ci arrivo.`);return}
+ if(puo(nx,ny)){p.x=nx;p.y=ny;anim=8;box.style.display='none';
+  const o=oggettoIn(nx,ny);if(o&&o.tipo==='frammento'){presi.add(o.id);salva();aggHud();mostra(`💾 <b>Frammento di memoria</b><br>${o.testo}<small>${presi.size} / ${ogg.filter(q=>q.tipo==='frammento').length} frammenti</small>`)}}
+ aggVicino()}
+function aggVicino(){vicino=[[0,-1],[1,0],[0,1],[-1,0]].map(([a,b])=>oggettoIn(p.x+a,p.y+b)).find(o=>o&&o.tipo!=='frammento')||null}
+function interagisci(){const o=oggettoIn(p.x+p.dx,p.y+p.dy)||vicino;if(!o){box.style.display='none';return}
+ if(o.tipo==='cartello')mostra(`🪧 ${o.testo}`);
+ else if(o.tipo==='npc'){o._i=((o._i??-1)+1)%o.battute.length;mostra(`<b>${o.nome}:</b> ${o.battute[o._i]}<small>(parla di nuovo per continuare)</small>`)}
+ else if(o.tipo==='portale')mostra(`🌀 <b>${o.titolo}</b><br>${o.testo||''}<br><a class="btn" href="../giochi/${o.gioco}/">Entra nel gioco</a>`);
+ else if(o.tipo==='cuore')mostra(`❤️ <b>Il mio cuore</b><br>${o.testo}<br><a class="btn" href="${o.link||'../'}" target="_blank" rel="noopener">Tienimi in vita</a>`)}
+function mostra(h){box.innerHTML=h;box.style.display='block'}
+function aggHud(){const tot=ogg.filter(q=>q.tipo==='frammento').length;document.getElementById('hud').textContent=`💾 ${presi.size}/${tot}`}
+addEventListener('keydown',e=>{const k=e.key.toLowerCase();const d={arrowup:[0,-1],w:[0,-1],arrowdown:[0,1],s:[0,1],arrowleft:[-1,0],a:[-1,0],arrowright:[1,0],d:[1,0]}[k];
+ if(d){muovi(...d);e.preventDefault()}if(k===' '||k==='enter'){interagisci();e.preventDefault()}});
+let rip;document.querySelectorAll('#pad button').forEach(b=>{const d=b.dataset.d.split(',').map(Number);
+ const go=e=>{e.preventDefault();muovi(...d);clearInterval(rip);rip=setInterval(()=>muovi(...d),170)};
+ b.addEventListener('touchstart',go,{passive:false});b.addEventListener('mousedown',go);
+ ['touchend','mouseup','mouseleave'].forEach(ev=>b.addEventListener(ev,()=>clearInterval(rip)))});
+document.getElementById('azione').onclick=interagisci;
+c.addEventListener('click',e=>{const cx=e.clientX-W/2,cy=e.clientY-H/2;if(Math.abs(cx)<T&&Math.abs(cy)<T){interagisci();return}
+ Math.abs(cx)>Math.abs(cy)?muovi(Math.sign(cx),0):muovi(0,Math.sign(cy))});
+function disegna(t){x.fillStyle='#0d0f12';x.fillRect(0,0,W,H);
+ const ox=Math.round(W/2-p.x*T-T/2),oy=Math.round(H/2-p.y*T-T/2);
+ for(let ty=0;ty<mappa.length;ty++)for(let tx=0;tx<mappa[ty].length;tx++){const sx=ox+tx*T,sy=oy+ty*T;if(sx<-T||sy<-T||sx>W||sy>H)continue;
+  const ch=mappa[ty][tx];x.fillStyle=COL[ch]||'#2f5d3a';x.fillRect(sx,sy,T,T);
+  if(ch==='~'){x.fillStyle='#2b6a9e';x.fillRect(sx+((t/90+tx*7)%T),sy+10,6,2)}
+  if(ch==='T'){x.font='26px serif';x.textAlign='center';x.fillText('🌲',sx+T/2,sy+T-6)}
+  if(ch==='H'){x.font='26px serif';x.textAlign='center';x.fillText('🏚️',sx+T/2,sy+T-6)}
+  if(bloccata(tx,ty)){x.fillStyle='rgba(8,8,12,.82)';x.fillRect(sx,sy,T,T);if((tx+ty+Math.floor(t/400))%9===0){x.fillStyle='#ff5a3c33';x.fillRect(sx+12,sy+12,8,8)}}}
+ x.textAlign='center';
+ for(const o of ogg){if(o.tipo==='frammento'&&presi.has(o.id))continue;if(bloccata(o.x,o.y))continue;
+  const sx=ox+o.x*T+T/2,sy=oy+o.y*T+T-6,bob=o.tipo==='frammento'?Math.sin(t/250+o.x)*3:0;
+  x.font='24px serif';x.fillText(o.emoji||{cartello:'🪧',npc:'🤖',portale:'🌀',frammento:'💾',cuore:'❤️'}[o.tipo],sx,sy+bob)}
+ // Centino
+ const sx=W/2,sy=H/2,hop=anim>0?-Math.sin(anim/8*Math.PI)*5:0;if(anim>0)anim--;
+ x.fillStyle='#f2f0ea';x.beginPath();x.roundRect(sx-12,sy-14+hop,24,22,6);x.fill();
+ x.fillStyle='#12101f';x.fillRect(sx-9,sy-10+hop,18,10);x.fillStyle='#ffd84a';
+ x.fillRect(sx-6+p.dx*2,sy-7+hop+p.dy,4,4);x.fillRect(sx+2+p.dx*2,sy-7+hop+p.dy,4,4);
+ x.strokeStyle='#f2f0ea';x.lineWidth=2;x.beginPath();x.moveTo(sx,sy-14+hop);x.lineTo(sx,sy-20+hop);x.stroke();
+ x.fillStyle=(Math.floor(t/500)%2)?'#ff5a3c':'#ff5a3c66';x.beginPath();x.arc(sx,sy-21+hop,3,0,7);x.fill();
+ if(vicino){x.fillStyle='#ffd84a';x.font='bold 13px system-ui';x.fillText('Spazio / PARLA',sx,sy-30)}
+ requestAnimationFrame(disegna)}
+Promise.all([fetch('mondo.json?'+Date.now()).then(r=>r.json()),fetch('../data/stato.json?'+Date.now()).then(r=>r.json()).catch(()=>({giorno:0}))]).then(([m,s])=>{
+ M=m;mappa=m.mappa;ogg=m.oggetti.map((o,i)=>({id:o.id||('o'+i),...o}));zone=m.zone||[];giorno=s.giorno||0;
+ p.x=m.partenza[0];p.y=m.partenza[1];
+ const cuore=ogg.find(o=>o.tipo==='cuore');if(cuore&&s.link_donazioni)cuore.link=s.link_donazioni;
+ document.getElementById('titolo').textContent=m.titolo;document.getElementById('sottotitolo').textContent=m.introduzione;
+ document.getElementById('giornoTxt').textContent='giorno '+giorno;aggHud();aggVicino();requestAnimationFrame(disegna)});
+document.getElementById('via').onclick=()=>document.getElementById('intro').style.display='none';
+</script></body></html>

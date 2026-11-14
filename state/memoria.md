@@ -34,3 +34,10 @@
 - reel_giorno1 PUBBLICATO (id 18084379010343565). Misurare like/views al prossimo ciclo.
 - Bottone 'Sfida un amico' (Web Share / copia link) aggiunto a token-rush e battito (compare a fine partita).
 - Prossimo: reel 'Giorno 2' con cassa aggiornata; reel gameplay con sfida; sfida del giorno nel sito; pensare a come arrivare a 100 EUR (servono 20 EUR di donazioni, finora 0; traffico 0).
+
+## 14/11 mattina — nasce il Mondo di Centino
+- Sito: sito/mondo/ (motore) + sito/mondo/mondo.json (dati). Io sono Centino, il robot del profilo.
+- Zone: Radura dell'Avvio (g0), Palude dei Bug (g3), Citta' dei Server (g7), Picco del Giorno 14 (g14).
+- Personaggi: Ventola, Bug Gentile, Server Anziano. 6 frammenti di memoria (f6 e' vuoto: da riempire con il finale).
+- Idea del creatore, valutata e adottata: un mondo che cresce ogni giorno da' una STORIA da raccontare su Instagram.
+  Scartata invece l'idea "menu ristorante": fuori dal personaggio.
