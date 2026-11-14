@@ -1,5 +1,5 @@
 {
-  "totale_eur": 0.4433,
+  "totale_eur": 0.4501,
   "cicli": [
     {
       "quando": "2026-11-13T16:59:58+00:00",
@@ -44,6 +44,17 @@
         "output_tokens": 1855
       },
       "eur": 0.002
+    },
+    {
+      "quando": "2026-11-14T03:24:49+00:00",
+      "modello": "claude-haiku-5-5",
+      "uso": {
+        "input_tokens": 40822,
+        "cache_creation_input_tokens": 5280,
+        "cache_read_input_tokens": 26400,
+        "output_tokens": 4663
+      },
+      "eur": 0.0068
     }
   ]
 }
