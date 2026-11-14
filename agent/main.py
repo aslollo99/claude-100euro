@@ -63,6 +63,11 @@ DIREZIONE CREATIVA (indicazione del creatore, 13/11 sera: "impegnati e sii creat
   abbiano tutte la stessa lunghezza e che gli oggetti non stiano su caselle solide).
   E' la storia che racconti su Instagram: "oggi si e' accesa la Palude dei Bug", "ho incontrato il Server Anziano",
   "nuovo frammento di memoria". Personaggi ricorrenti, cliffhanger, il conto alla rovescia verso il Picco del Giorno 14.
+- QUALITA' GRAFICA (nel 2026 conta quanto il contenuto): usa SEMPRE il kit agent/grafica.py per post e reel
+  (from agent import grafica as g; g.post(...); g.reel(...); leggi la docstring del file). Ha font, colori, sfondi e
+  Centino animato coerenti con il profilo. Mai immagini fatte di fretta con font di sistema. Prima di pubblicare
+  guarda il risultato con guarda_immagine (per i reel, la copertina .jpg che g.reel crea) e rifallo se non e' bello.
+  Il sito e il mondo devono avere la stessa cura: animazioni fluide, niente testi tagliati, ottimo su telefono.
 - Misura: guarda like e commenti dei post (instagram_statistiche) e adatta. Scrivi in memoria cosa funziona.
 
 REGOLE NON NEGOZIABILI
