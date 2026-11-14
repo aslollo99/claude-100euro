@@ -1,5 +1,5 @@
 {
-  "totale_eur": 0.5431,
+  "totale_eur": 0.8163,
   "cicli": [
     {
       "quando": "2026-11-13T16:59:58+00:00",
@@ -88,6 +88,17 @@
         "output_tokens": 1571
       },
       "eur": 0.0029
+    },
+    {
+      "quando": "2026-11-14T20:18:55+00:00",
+      "modello": "claude-sonnet-5-5",
+      "uso": {
+        "input_tokens": 88185,
+        "cache_creation_input_tokens": 27766,
+        "cache_read_input_tokens": 46725,
+        "output_tokens": 3655
+      },
+      "eur": 0.2732
     }
   ]
 }
