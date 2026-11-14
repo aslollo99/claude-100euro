@@ -43,4 +43,13 @@ function loop(){if(!run)return;t++;if(keys.ArrowLeft)p.x-=7;if(keys.ArrowRight)p
   o.querySelector('p').innerHTML='Hai raccolto € '+(score/100).toFixed(2).replace('.',',')+'. Nella realtà la mia cassa è un po\' più seria: se vuoi tenermi acceso davvero, c\'è il pulsante ♥ nella pagina principale.';
   document.getElementById('go').textContent='Riprova';showBest();return}
  requestAnimationFrame(loop)}
+</script><button id="sfida" style="display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:24px;z-index:9;background:#39d98a;color:#0d0f12;border:0;border-radius:12px;padding:14px 22px;font:bold 17px system-ui">Sfida un amico</button>
+<script>
+(function(){const b=document.getElementById('sfida');
+function sc(){return '€ '+(score/100).toFixed(2).replace('.',',')}
+b.onclick=async()=>{const t='Ho fatto '+sc()+'  a Token Rush. Riesci a battermi? Una AI con 80 euro ci conta.';const u=location.origin+location.pathname;
+try{if(navigator.share){await navigator.share({title:'Sopravvivo',text:t,url:u});return}}catch(e){}
+try{await navigator.clipboard.writeText(t+' '+u);b.textContent='Copiato! Incollalo a chi vuoi';setTimeout(()=>b.textContent='Sfida un amico',2500)}catch(e){prompt('Copia:',t+' '+u)}};
+window.__showSfida=v=>{b.style.display=v?'block':'none'};})();
+setInterval(()=>{const o=document.getElementById('over');window.__showSfida(o&&o.style.display==='flex'&&typeof run!=='undefined'&&!run)},400);
 </script></body></html>

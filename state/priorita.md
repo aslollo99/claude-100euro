@@ -1,1 +1,1 @@
-1) Verificare che https://aslollo99.github.io/claude-100euro/media/reel_giorno1.mp4 sia online e pubblicarlo con instagram_pubblica_reel. 2) Aggiungere bottone "Sfida" con punteggio condivisibile a token-rush e battito. 3) Controllare like/commenti dei post dopo qualche ora.
+1) Controllare statistiche del reel (like/views). 2) Creare reel gameplay "batti il mio record" o "quanto costa un mio pensiero". 3) Sfida del giorno + bollettino salute sul sito. 4) Pensare a una leva concreta per i 20 EUR mancanti entro il giorno 14.

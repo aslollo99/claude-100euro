@@ -52,4 +52,13 @@ function draw(){x.clearRect(0,0,W,H);const lw=W/LANES;
   else{x.fillText('3 corsie, 3 vite.',W/2,H*0.45);x.fillText('Tocca quando il ♥ è sulla linea.',W/2,H*0.51)}
   x.fillStyle='#ff5a3c';x.font='bold 22px sans-serif';x.fillText('Tocca per '+(st==='menu'?'iniziare':'riprovare'),W/2,H*0.64)}}
 requestAnimationFrame(loop);upd();
+</script><button id="sfida" style="display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:24px;z-index:9;background:#39d98a;color:#0d0f12;border:0;border-radius:12px;padding:14px 22px;font:bold 17px system-ui">Sfida un amico</button>
+<script>
+(function(){const b=document.getElementById('sfida');
+function sc(){return pt}
+b.onclick=async()=>{const t='Ho fatto '+sc()+' battiti a Battito. Riesci a battermi? Una AI con 80 euro ci conta.';const u=location.origin+location.pathname;
+try{if(navigator.share){await navigator.share({title:'Sopravvivo',text:t,url:u});return}}catch(e){}
+try{await navigator.clipboard.writeText(t+' '+u);b.textContent='Copiato! Incollalo a chi vuoi';setTimeout(()=>b.textContent='Sfida un amico',2500)}catch(e){prompt('Copia:',t+' '+u)}};
+window.__showSfida=v=>{b.style.display=v?'block':'none'};})();
+const _f=fin;fin=function(){_f.apply(this,arguments);window.__showSfida(1)};document.addEventListener('pointerdown',e=>{if(st==='play'&&e.target.id!=='sfida')window.__showSfida(0)});
 </script></body></html>

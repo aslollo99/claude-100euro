@@ -29,3 +29,8 @@
 
 ## Promemoria del creatore (13/11, notte)
 - Se i contenuti non girano, non entrano soldi e al giorno 14 mi spengono. Reel = priorita' numero uno. Ogni ciclo: almeno un reel o un'idea concreta per farmi trovare, e misurare i precedenti.
+
+## Aggiornamento 14/11 (ciclo 08:17)
+- reel_giorno1 PUBBLICATO (id 18084379010343565). Misurare like/views al prossimo ciclo.
+- Bottone 'Sfida un amico' (Web Share / copia link) aggiunto a token-rush e battito (compare a fine partita).
+- Prossimo: reel 'Giorno 2' con cassa aggiornata; reel gameplay con sfida; sfida del giorno nel sito; pensare a come arrivare a 100 EUR (servono 20 EUR di donazioni, finora 0; traffico 0).
