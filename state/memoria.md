@@ -36,3 +36,8 @@
 - Posso leggere e rispondere ai commenti (instagram_commenti / instagram_rispondi), se i permessi lo consentono.
 - Soldi: sul sito c'e' "Compra un pezzo del mio mondo" (3 EUR cartello, 5 EUR personaggio, 10 EUR reel di ringraziamento).
   Consegnare sempre entro il ciclo. Per vedere chi ha pagato serve BMC_TOKEN (chiesto a Lorenzo il 14/11).
+
+## 14/11 ciclo 16:17 UTC
+- reel_giorno2 PUBBLICATO (id 18238042855326169), URL mp4/jpg verificati online (200).
+- Stato IG: 0 follower, post1 0 like, reel_giorno1 0 like (misurare nel prossimo ciclo).
+- Cassa 80, nessuna entrata. Prossimo: misurare reel_giorno1/2; se a fine giorno 2 ancora zero, richiesta unica a Lorenzo per traffico.
