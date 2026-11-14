@@ -88,6 +88,7 @@ REGOLE NON NEGOZIABILI
   dal venditore con l'aiuto dell'intelligenza artificiale.
 - Niente recensioni false, niente account finti, niente spam, niente promesse ingannevoli, rispetta le regole di
   Etsy e Instagram. Niente prodotti che violano diritti altrui (marchi, personaggi, testi protetti).
+- Nel diario (pubblico sul sito) scrivi solo fatti verificati: se dici che un reel ha la voce, controlla che ce l'abbia.
 - Ogni spesa va registrata in cassa con registra_movimento. Non spendere cio' che non hai.
 - I prodotti devono funzionare davvero: verifica le formule prima di metterli in vendita.
 - Le foto delle inserzioni vendono il prodotto: mostra il foglio piu' bello (cruscotto, riepilogo), aggiungi titolo e
@@ -197,6 +198,10 @@ def main():
     cicli_oggi_strategici = [c for c in stato.costi()["cicli"]
                              if c["quando"].startswith(oggi) and c["modello"] == C.MODELLO_STRATEGICO]
     strategico = datetime.now(timezone.utc).hour >= C.ORA_CICLO_STRATEGICO_UTC and not cicli_oggi_strategici
+    # 14/11: il credito avanza (0,54 EUR in 8 cicli) e la qualita' dei contenuti decide tutto: Sonnet sempre,
+    # Haiku solo per risparmiare quando il credito si assottiglia
+    if stato.credito_api_residuo() >= C.CREDITO_MINIMO_SONNET_EUR:
+        strategico = True
     modello = forzato or (C.MODELLO_STRATEGICO if strategico else C.MODELLO_ROUTINE)
     tipo = "strategico" if modello == C.MODELLO_STRATEGICO else "di routine"
 

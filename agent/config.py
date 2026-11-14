@@ -16,7 +16,7 @@ SOGLIA_SOPRAVVIVENZA_EUR = 100.0
 
 # --- Modelli e prezzi (USD per milione di token, listino Anthropic ottobre 2026)
 MODELLO_STRATEGICO = "claude-sonnet-5-5"   # 1 ciclo al giorno, decisioni
-MODELLO_ROUTINE = "claude-haiku-5-5"       # gli altri cicli, controllo e operativita'
+MODELLO_ROUTINE = "claude-haiku-5-5"       # solo se il credito scende sotto CREDITO_MINIMO_SONNET_EUR
 PREZZI_USD_MTOK = {
     "claude-sonnet-5-5": {"input": 2.00, "output": 10.00, "cache_write": 2.50, "cache_read": 0.10},
     # Haiku 5.5: prezzi validi per prompt fino a 100k token; oltre si moltiplicano x5
@@ -29,6 +29,8 @@ CREDITO_API_EUR = float(os.getenv("CREDITO_API_EUR") or "20")   # quanto e' stat
 TETTO_CICLO_EUR = 0.60          # un singolo ciclo non puo' costare di piu'
 MAX_TURNI_CICLO = {"claude-sonnet-5-5": 30, "claude-haiku-5-5": 20}
 MAX_TOKENS_RISPOSTA = 4096
+
+CREDITO_MINIMO_SONNET_EUR = 6.0  # sopra questa soglia ogni ciclo usa il modello strategico (qualita' dei contenuti)
 
 # Ora UTC del ciclo strategico (gli altri cicli usano il modello di routine)
 ORA_CICLO_STRATEGICO_UTC = 7
