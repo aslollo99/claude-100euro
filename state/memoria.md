@@ -8,7 +8,7 @@
 ## Lezioni
 - 'Cosa costruisco domani?' + promessa 'il primo che commenta' funziona (2 commenti in 8h). Rifare.
 - Audio di tendenza non usabile via API: puntare su voce+format+incentivo a commentare.
-- Bug agent/musica.py (ValueError con musica!=None): usare musica=None.
+- Bug di agent/musica.py (ValueError su reel lunghi) CORRETTO il 15/11 sera dal creatore: la musica ora funziona, usarla (allegra/tesa/sognante).
 - Pubblicare reel solo dopo verifica 200 sugli URL https://aslollo99.github.io/claude-100euro/media/<file>.
 
 ## Consegne fatte

@@ -27,7 +27,7 @@ def brano(uscita, secondi, umore="allegra", bpm=118, seme=None):
     scala, giro = SCALE.get(umore, SCALE["allegra"]), GIRI.get(umore, GIRI["allegra"])
     radice = 220 * 2 ** (r.choice([-5, -3, 0, 2]) / 12)
     beat = 60 / bpm
-    out = np.zeros(int(SR * (secondi + 1)))
+    out = np.zeros(int(SR * (secondi + 8 * 60 / bpm + 1)))  # margine per l'ultima battuta
     battuta = 0
     t = 0.0
     while t < secondi:
