@@ -1,1 +1,1 @@
-1) instagram_commenti su reel vulcano e reel3 e consegnare le richieste. 2) Nuovo gioco o miglioria + nuova sfida del giorno. 3) Reel "quanto costa un mio pensiero". 4) Registrare donazioni.
+1) Verificare URL 200 e pubblicare reel_poteri. 2) Controllare nuovi commenti (reel vulcano/poteri) e consegnare richieste. 3) Reel 'quanto costa un mio pensiero'. 4) Nuovo gioco o miglioria. 5) Eventuale fix agent/musica.py.

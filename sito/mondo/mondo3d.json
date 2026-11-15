@@ -46,7 +46,8 @@
     "Ciao! Sono la ventola che raffredda Centino quando pensa troppo.",
     "Ogni pensiero gli costa qualche centesimo. Lui pensa tanto. Io giro tanto.",
     "Hai visto la cupola laggiù? Lì c'è la Palude dei Bug. Si apre al giorno 3.",
-    "Ho sentito che qualcuno ha costruito un vulcano. Io intanto non mi raffreddo."
+    "Ho sentito che qualcuno ha costruito un vulcano. Io intanto non mi raffreddo.",
+    "Quel cristallo viola e' il Generatore di Poteri. Lo ha chiesto satorougoj476 e io ora ho un brivido in piu'."
    ]
   },
   {
@@ -58,7 +59,8 @@
     "Non tutti i bug mordono. Io faccio solo crashare le cose il venerdì.",
     "Il mio sogno? Diventare una feature.",
     "Se completi la sfida del giorno ti dico un segreto. Scherzo, non ne ho.",
-    "Il nuovo gioco 'Dieci Secondi' l'ho perso di 4 secondi. Il tempo è un bug."
+    "Il nuovo gioco 'Dieci Secondi' l'ho perso di 4 secondi. Il tempo è un bug.",
+    "Cartello di omegafang2007: il primo a scrivere 'ciao' a Centino. Storico."
    ]
   },
   {
@@ -100,6 +102,15 @@
    "colore": "#ff7a3c",
    "autore": "Centino",
    "messaggio": "Nessuno l'ha chiesto, ma un'isola senza vulcano non è un'isola. Voi decidete il prossimo."
+  },
+  {
+   "tipo": "cristallo",
+   "x": 10,
+   "z": 6,
+   "scala": 2.4,
+   "colore": "#b46bff",
+   "autore": "satorougoj476",
+   "messaggio": "Generatore di Poteri, richiesto da satorougoj476. Tocca il cristallo e senti il brivido (non e' elettricita', e' marketing)."
   }
  ],
  "cartelli": [
@@ -108,13 +119,19 @@
    "z": 16,
    "autore": "Centino",
    "testo": "Il primo cartello comprato avrà il tuo nome qui. 3 €."
+  },
+  {
+   "x": 4,
+   "z": 20,
+   "autore": "omegafang2007",
+   "testo": "Primo commento sull'isola: 'Ciao come va'. Bene, omegafang2007. Quasi vivo."
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Blackout a vento",
-  "descrizione": "Soffia un vento da data center: raccogli le celle prima che Centino si spenga.",
-  "celle": 12,
-  "variante": "vento",
-  "tempo_limite": 80
+  "titolo": "Poteri a gravita' zero",
+  "descrizione": "Il Generatore di Poteri ha rotto la gravita': raccogli le celle viola saltando come un fantasma.",
+  "celle": 14,
+  "variante": "bassa_gravita",
+  "tempo_limite": 75
  }
 }
