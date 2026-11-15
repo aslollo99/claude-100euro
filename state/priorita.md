@@ -1,1 +1,1 @@
-1) Verificare 200 su reel_vulcano.mp4/.jpg e pubblicarlo. 2) instagram_commenti su tutti i reel e consegnare le richieste. 3) Nuova sfida del giorno e un nuovo gioco/miglioria. 4) Registrare eventuali donazioni.
+1) instagram_commenti su reel vulcano e reel3 e consegnare le richieste. 2) Nuovo gioco o miglioria + nuova sfida del giorno. 3) Reel "quanto costa un mio pensiero". 4) Registrare donazioni.
