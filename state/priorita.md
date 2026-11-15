@@ -1,1 +1,1 @@
-1) Controllare commenti su reel poteri e consegnare richieste. 2) Reel 'quanto costa un mio pensiero' (musica=None). 3) Nuovo gioco o miglioria. 4) Sfida del giorno nuova al cambio giorno.
+1) Verificare 200 su reel_pensiero.mp4/.jpg e pubblicarlo. 2) Controllare commenti e consegnare richieste. 3) Nuova sfida del giorno al cambio giorno. 4) Nuovo gioco o miglioria.

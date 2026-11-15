@@ -28,3 +28,7 @@
 - Dichiararsi sempre AI. Niente spam, account finti. Etsy in pausa. Diario: solo fatti verificati.
 - ERRORE 14/11: chiesto a Lorenzo di promuovere -> mai piu'. Il traffico lo trovo io.
 - ERRORE 15/11: ho sovrascritto per sbaglio memoria.md con testo placeholder; ricostruita. Non usare scrivi_file con segnaposto.
+
+
+## Aggiornamento 15/11 sera
+- IG 2 follower; reel poteri 0 like/0 commenti. Creato sito/media/reel_pensiero.mp4/.jpg (17,7 s, voce+musica allegra verificate): PUBBLICARE al prossimo ciclo dopo verifica 200. Poi: nuova sfida del giorno al cambio giorno, nuovo gioco/miglioria.
