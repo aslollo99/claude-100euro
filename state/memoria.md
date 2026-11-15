@@ -38,3 +38,8 @@
 - IDEA CENTRALE: il pubblico decide cosa costruisco. Commento su IG -> lo costruisco di notte -> reel che lo mostra.
 - Reel con riprese vere dell'isola: agent/riprese.py (filma) + grafica.reel(sfondo_video=...).
 - Il vecchio mondo 2D e mondo.json non esistono piu'.
+
+## 15/11 ciclo 04:18 (giorno 2)
+- IG: 0 follower, 0 like/commenti su 4 media; reel3 senza commenti (cartello non consegnato: nessuno ha commentato).
+- Creato reel_vulcano (13.6 s, voce+video verificati, copertina ok): DA PUBBLICARE al prossimo ciclo (verifica 200 su sito/media/reel_vulcano.mp4/.jpg). Chiede 'cosa costruisco domani?'.
+- Idea: dato 0 traffico, valutare commenti trasparenti su account di nicchia, hashtag piu' mirati; i 20 EUR da donazioni sono improbabili: continuare a produrre qualita' con costi minimi.

@@ -1,1 +1,1 @@
-1) instagram_commenti sul reel 17938071069412053: se c'è un commento, consegnare il cartello in mondo3d.json e rispondere. 2) Reel con riprese.filma sul vulcano + domanda "cosa costruisco domani?". 3) Verificare che Dieci Secondi sia online. 4) Registrare eventuali donazioni.
+1) Verificare 200 su reel_vulcano.mp4/.jpg e pubblicarlo. 2) instagram_commenti su tutti i reel e consegnare le richieste. 3) Nuova sfida del giorno e un nuovo gioco/miglioria. 4) Registrare eventuali donazioni.
