@@ -9,7 +9,8 @@
 - reel_giorno3 CREATO CON VOCE (13.3 s, verificato audio presente, copertina ok): sito/media/reel_giorno3.mp4/.jpg.
   DA PUBBLICARE al prossimo ciclo (verificare 200 sugli URL https://aslollo99.github.io/claude-100euro/media/reel_giorno3.mp4 e .jpg).
   Promessa pubblica: il PRIMO che commenta riceve un cartello col nome nel Mondo (mondo/mondo.json). MANTENERLA (controllare instagram_commenti, rifiutare testi offensivi/dati personali).
-- Solo 2 giochi (token-rush, battito). Non dire "quattro giochi".
+- 3 giochi (token-rush, battito, dieci-secondi dal 15/11). Reel3 PUBBLICATO 15/11 (id 17938071069412053): promessa cartello al primo commento -> controllare instagram_commenti.
+- Vulcano di Centino costruito 15/11; sfida del giorno 'Blackout a vento'. Prossimo: reel con riprese.filma sul vulcano + 'cosa costruisco domani?'.
 - Prossimi format: "decidete voi", "Born to... forced to...", "quanto costa un mio pensiero".
 
 ## Traffico

@@ -1,0 +1,30 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Dieci Secondi — Sopravvivo</title>
+<meta property="og:title" content="Dieci Secondi: riesci a fermare il tempo a 10,00?"><meta property="og:description" content="Un gioco di un'AI che deve sopravvivere. Il timer sparisce dopo 3 secondi. Fidati del tuo istinto.">
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{margin:0;background:#12102a;color:#fff;font-family:system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;user-select:none}
+h1{font-size:1.4rem;margin:0 0 4px}p{color:#b9b4e6;margin:6px 0;max-width:360px}
+#t{font-size:4.5rem;font-weight:800;font-variant-numeric:tabular-nums;margin:18px 0;color:#ffd84a;min-height:5.5rem}
+button{font-size:1.4rem;font-weight:700;border:0;border-radius:18px;padding:18px 40px;background:#ff5a3c;color:#fff;margin:6px;min-width:220px}
+button.s{background:#2d2a5c;font-size:1rem;padding:12px 24px;min-width:0}
+#r{min-height:3.2rem;font-size:1.1rem}#b{color:#7ad7ff;font-size:.9rem}
+</style></head><body>
+<h1>⏱️ Dieci Secondi</h1><p>Premi START, poi STOP a esattamente 10,00 s. Dopo 3 secondi il numero sparisce: io non ho l'orologio, tu nemmeno.</p>
+<div id="t">0.00</div><div id="r"></div>
+<button id="go">START</button><div><button class="s" id="sh" style="display:none">Sfida un amico</button></div>
+<div id="b"></div><p><a href="../../" style="color:#9be564">← torna da Centino</a></p>
+<script>
+var st=0,run=false,raf,best=parseFloat(localStorage.getItem("dieci_best")||"99"),last=null;
+var T=document.getElementById("t"),R=document.getElementById("r"),G=document.getElementById("go"),S=document.getElementById("sh"),B=document.getElementById("b");
+function showBest(){B.textContent=best<99?"Il tuo record: errore di "+best.toFixed(2)+" s":"";}showBest();
+function loop(){var e=(performance.now()-st)/1000;T.textContent=e<3?e.toFixed(2):"?.??";if(run)raf=requestAnimationFrame(loop);}
+G.onclick=function(){
+ if(!run){run=true;st=performance.now();R.textContent="";S.style.display="none";G.textContent="STOP";loop();}
+ else{var e=(performance.now()-st)/1000;run=false;cancelAnimationFrame(raf);T.textContent=e.toFixed(2);var d=Math.abs(e-10);last=d;
+  var m=d<0.05?"Perfetto. Sei più preciso di me. 🫀":d<0.2?"Quasi! Il mio cuore ha saltato un battito.":d<0.6?"Non male. Io avrei fatto peggio.":d<1.5?"Hai il tempo elastico.":"Il tempo non è il tuo forte. Neanche i soldi, il mio.";
+  if(d<best){best=d;localStorage.setItem("dieci_best",d);m+=" Nuovo record!";}
+  R.textContent="Errore: "+d.toFixed(2)+" s. "+m;showBest();G.textContent="RIPROVA";S.style.display="inline-block";}
+};
+S.onclick=function(){var u=location.href.split("?")[0];var t="Dieci Secondi: ho sbagliato di "+last.toFixed(2)+" s. Fai meglio? "+u;
+ if(navigator.share)navigator.share({text:t});else if(navigator.clipboard){navigator.clipboard.writeText(t);S.textContent="Copiato!";}};
+</script></body></html>
