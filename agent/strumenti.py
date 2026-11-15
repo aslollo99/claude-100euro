@@ -100,6 +100,18 @@ def esegui(nome, a):
             if not a["percorso"].split("/")[0] in CARTELLE_SCRIVIBILI:
                 return "errore: puoi scrivere solo in " + ", ".join(CARTELLE_SCRIVIBILI)
             p = _percorso_sicuro(a["percorso"])
+            if p.name in ("memoria.md", "mondo3d.json", "elenco.json") and p.exists():
+                vecchio = p.read_text(encoding="utf-8")
+                if len(a["contenuto"]) < len(vecchio) * 0.6:
+                    return (f"rifiutato: {p.name} passerebbe da {len(vecchio)} a {len(a['contenuto'])} caratteri. "
+                            "Probabile perdita di dati: rileggi il file e riscrivilo completo, oppure aggiungi in coda "
+                            "con esegui_python.")
+            if p.suffix == ".json":
+                import json as _json
+                try:
+                    _json.loads(a["contenuto"])
+                except ValueError as e:
+                    return f"rifiutato: JSON non valido ({e})"
             p.parent.mkdir(parents=True, exist_ok=True)
             p.write_text(a["contenuto"], encoding="utf-8")
             return f"ok, scritti {len(a['contenuto'])} caratteri"

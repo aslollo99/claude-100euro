@@ -209,9 +209,14 @@ def reel(percorso, scene, fps=30, w=1080, h=1920, durata_scena=2.4, sfondo_video
         filtri.append(f"[{k}:a]adelay={int(t0 * 1000)}|{int(t0 * 1000)}[a{k}]")
     mix = "".join(f"[a{k}]" for k in range(len(tracce)))
     if musica:
-        from . import musica as mus
-        bm = tmp / "musica.wav"
-        mus.brano(bm, tot + 0.5, musica, seme=seme_musica or percorso)
+        try:
+            from . import musica as mus
+            bm = tmp / "musica.wav"
+            mus.brano(bm, tot + 0.5, musica if isinstance(musica, str) else "allegra", seme=seme_musica or percorso)
+        except Exception as e:
+            print("musica non disponibile, proseguo senza:", repr(e))
+            musica = None
+    if musica:
         k = len(tracce)
         ingressi += ["-i", str(bm)]
         filtri.append(f"{mix}amix=inputs={len(tracce)}:normalize=0[voce]")
