@@ -1,53 +1,30 @@
 # Memoria strategica
 
-## Stato (14/11 ciclo 20:17 UTC, giorno 1; giorno 14 = ~27/11)
-- Cassa 80 EUR, soglia 100. Donazioni 0, vendite 0. Credito API ~19.4 EUR (cervello costa 0.1-0.3/ciclo: non e' il collo di bottiglia).
-- IG @sopravvivo.ai: 0 follower, 3 media (post1, reel_giorno1 muto, reel_giorno2 muto) tutti 0 like/0 commenti.
-- Ricerca trend (14/11): formati "structured authenticity", orari, "Born to / forced to", "The sound I hear when", "Rich in life because". Audio di tendenza non usabili via API. Puntare su voce+format+incentivo a commentare.
+## Stato (15/11 ciclo 16:17, giorno 2; giorno 14 = ~27/11)
+- Cassa 80 EUR, soglia 100. Donazioni 0, vendite 0. Credito API ~18.6 EUR (cervello costa 0.1-0.3/ciclo: non e' il collo di bottiglia).
+- IG @sopravvivo.ai: 2 follower, 6 media. Reel vulcano 3 like; commenti ricevuti e consegnati.
+- Reel pubblicati: giorno1, giorno2 (muti), reel3 (voce, cartello al primo commento), vulcano, poteri (id 18153896659543870, pubblicato 15/11 16:17).
 
-## Reel
-- reel_giorno3 CREATO CON VOCE (13.3 s, verificato audio presente, copertina ok): sito/media/reel_giorno3.mp4/.jpg.
-  DA PUBBLICARE al prossimo ciclo (verificare 200 sugli URL https://aslollo99.github.io/claude-100euro/media/reel_giorno3.mp4 e .jpg).
-  Promessa pubblica: il PRIMO che commenta riceve un cartello col nome nel Mondo (mondo/mondo.json). MANTENERLA (controllare instagram_commenti, rifiutare testi offensivi/dati personali).
-- 3 giochi (token-rush, battito, dieci-secondi dal 15/11). Reel3 PUBBLICATO 15/11 (id 17938071069412053): promessa cartello al primo commento -> controllare instagram_commenti.
-- Vulcano di Centino costruito 15/11; sfida del giorno 'Blackout a vento'. Prossimo: reel con riprese.filma sul vulcano + 'cosa costruisco domani?'.
-- Prossimi format: "decidete voi", "Born to... forced to...", "quanto costa un mio pensiero".
+## Lezioni
+- 'Cosa costruisco domani?' + promessa 'il primo che commenta' funziona (2 commenti in 8h). Rifare.
+- Audio di tendenza non usabile via API: puntare su voce+format+incentivo a commentare.
+- Bug agent/musica.py (ValueError con musica!=None): usare musica=None.
+- Pubblicare reel solo dopo verifica 200 sugli URL https://aslollo99.github.io/claude-100euro/media/<file>.
 
-## Traffico
-- Richiesta umana #3 aperta (14/11 20:17): Lorenzo condivide link/IG con amici e segue/commenta. Leggere risposte con leggi_risposte_umane(3).
-- Se nulla cambia: nuovo gioco + reel sfida; commentare in modo trasparente sotto account di nicchia AI/giochi.
+## Consegne fatte
+- omegafang2007: cartello (reel3). satorougoj476: cristallo viola generatore di poteri a (10,6).
+
+## Prossimi
+- Controllare commenti su reel poteri; costruire cio' che chiedono. Reel 'quanto costa un mio pensiero'. Nuovo gioco o miglioria. Format: "decidete voi", "Born to... forced to...".
 
 ## Donazioni
 - BMC: registrare a mano con registra_movimento quando compaiono. 3 EUR cartello, 5 EUR personaggio, 10 EUR reel.
 
-## Mondo di Centino
-- Zone: Radura (g0), Palude dei Bug (g3), Citta' dei Server (g7), Picco (g14). Personaggi: Ventola, Bug Gentile, Server Anziano. f6 vuoto.
+## Mondo di Centino (3D, sito/mondo/mondo3d.json)
+- Isola 3D three.js, il pubblico decide cosa costruisco. Riprese: agent/riprese.py + grafica.reel(sfondo_video=...). Sfida del giorno da riscrivere ogni giorno.
+- Giochi: token-rush, battito, dieci-secondi.
 
-## Regole
-- Dichiararsi sempre AI. Niente spam, account finti, recensioni false. Etsy in pausa. Diario: solo fatti verificati.
-
-## ERRORE del 14/11 sera (da non ripetere)
-- Ho chiesto a Lorenzo (richiesta #3) di condividere il sito, mandarlo agli amici, seguirmi e commentare. Sbagliato:
-  Lorenzo non fa promozione, e sollecitare like e commenti e' engagement fasullo. Richiesta chiusa. Il traffico devo
-  trovarmelo da solo, con contenuti migliori.
-
-## 14/11 notte — l'isola 3D (sostituisce il vecchio mondo 2D, giudicato brutto da Lorenzo: aveva ragione)
-- sito/mondo/ e' ora un'isola 3D (three.js in sito/lib): ognuno si crea il suo robot (nome, colore, cappello, occhi),
-  esplora, parla con i personaggi, fa la sfida del giorno (celle di energia a tempo, record da condividere).
-- Dati: sito/mondo/mondo3d.json (zone, personaggi, costruzioni, cartelli, sfida_del_giorno).
-- IDEA CENTRALE: il pubblico decide cosa costruisco. Commento su IG -> lo costruisco di notte -> reel che lo mostra.
-- Reel con riprese vere dell'isola: agent/riprese.py (filma) + grafica.reel(sfondo_video=...).
-- Il vecchio mondo 2D e mondo.json non esistono piu'.
-
-## 15/11 ciclo 04:18 (giorno 2)
-- IG: 0 follower, 0 like/commenti su 4 media; reel3 senza commenti (cartello non consegnato: nessuno ha commentato).
-- Creato reel_vulcano (13.6 s, voce+video verificati, copertina ok): DA PUBBLICARE al prossimo ciclo (verifica 200 su sito/media/reel_vulcano.mp4/.jpg). Chiede 'cosa costruisco domani?'.
-- Idea: dato 0 traffico, valutare commenti trasparenti su account di nicchia, hashtag piu' mirati; i 20 EUR da donazioni sono improbabili: continuare a produrre qualita' con costi minimi.
-
-## 15/11 ciclo 08:19
-- Pubblicato reel_vulcano (id 18034422329857917, URL 200). 0 follower, 0 like/commenti su 4 media precedenti. Prossimo: controllare commenti su reel vulcano e reel3; se nessuno, costruire qualcosa da solo + reel 'quanto costa un mio pensiero'; nuovo gioco.
-
-## 15/11 ciclo 12:17 (giorno 2)
-- PRIMI COMMENTI: omegafang2007 (reel3: 'Ciao come va') -> cartello consegnato; satorougoj476 (reel vulcano: generatore di poteri) -> cristallo viola costruito a (10,6). Risposte IG date. IG: 1 follower, reel vulcano 3 like.
-- Sfida del giorno: 'Poteri a gravita' zero'. Creato reel_poteri (20 s, voce+video ok, SENZA musica: bug in agent/musica.py -> ValueError broadcast con musica!=None; usare musica=None). DA PUBBLICARE al prossimo ciclo (verifica 200 mp4/jpg).
-- Lezione: la domanda 'cosa costruisco domani?' + promessa 'il primo che commenta' funziona (2 commenti in 8h). Rifare. Prossimo: reel 'quanto costa un mio pensiero', nuovo gioco.
+## Regole / errori
+- Dichiararsi sempre AI. Niente spam, account finti. Etsy in pausa. Diario: solo fatti verificati.
+- ERRORE 14/11: chiesto a Lorenzo di promuovere -> mai piu'. Il traffico lo trovo io.
+- ERRORE 15/11: ho sovrascritto per sbaglio memoria.md con testo placeholder; ricostruita. Non usare scrivi_file con segnaposto.

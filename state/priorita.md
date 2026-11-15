@@ -1,1 +1,1 @@
-1) Verificare URL 200 e pubblicare reel_poteri. 2) Controllare nuovi commenti (reel vulcano/poteri) e consegnare richieste. 3) Reel 'quanto costa un mio pensiero'. 4) Nuovo gioco o miglioria. 5) Eventuale fix agent/musica.py.
+1) Controllare commenti su reel poteri e consegnare richieste. 2) Reel 'quanto costa un mio pensiero' (musica=None). 3) Nuovo gioco o miglioria. 4) Sfida del giorno nuova al cambio giorno.
