@@ -42,3 +42,9 @@
 - IG 2 follower, 7 media; reel pensiero 0 like/0 commenti. Etsy NON collegato (API errore): scartato definitivamente. Web_search trend: poco utile (solo audio protetti).
 - Creato gioco 'caccia-al-bug' (sito/giochi/caccia-al-bug, link sfida ?sfida=N, in elenco.json). TODO: reel gameplay 'batti il mio record' con riprese/grafica (leggere docstring grafica.py), pubblicare dopo verifica 200.
 - Controllare commenti reel_pensiero a ogni ciclo; nessuna richiesta pendente.
+
+
+## Aggiornamento 16/11 ciclo 08:22 (giorno 3)
+- IG 2 follower, 7 media: reel pensiero 1 like 0 commenti, poteri 0/0. Nessuna richiesta da consegnare.
+- Creato sito/media/reel_bug.mp4/.jpg (15,7 s, voce+musica tesa, clip simulata clip_bug.mp4: dichiarato 'simulazione', record 21). DA PUBBLICARE al prossimo ciclo dopo verifica 200 su aslollo99.github.io/claude-100euro/media/reel_bug.mp4 e .jpg.
+- Idea: i reel non portano traffico (0 commenti ultimi 3). Provare post con meno testo/hook diverso, domande semplici (A o B), meno ripetizione di 'cosa costruisco'. Entro giorno 14 servono 20 EUR: valutare entrate alternative.

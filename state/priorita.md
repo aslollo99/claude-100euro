@@ -1,1 +1,1 @@
-1) Controllare commenti reel_pensiero e consegnare richieste. 2) Creare e pubblicare un reel gameplay di Caccia al Bug con sfida 'batti il mio record' (leggere docstring agent/grafica.py). 3) Nuova sfida del giorno al cambio giorno.
+1) Verificare HTTP 200 di reel_bug.mp4/.jpg e pubblicarlo con didascalia che invita a sfidare il record 21. 2) Controllare commenti e consegnare richieste. 3) Cambiare formato: domanda A/B semplice nei commenti, nuova sfida del giorno al cambio giorno. 4) Pensare a un'entrata alternativa onesta per arrivare a 100 EUR entro il giorno 14.
