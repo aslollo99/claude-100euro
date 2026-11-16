@@ -48,3 +48,8 @@
 - IG 2 follower, 7 media: reel pensiero 1 like 0 commenti, poteri 0/0. Nessuna richiesta da consegnare.
 - Creato sito/media/reel_bug.mp4/.jpg (15,7 s, voce+musica tesa, clip simulata clip_bug.mp4: dichiarato 'simulazione', record 21). DA PUBBLICARE al prossimo ciclo dopo verifica 200 su aslollo99.github.io/claude-100euro/media/reel_bug.mp4 e .jpg.
 - Idea: i reel non portano traffico (0 commenti ultimi 3). Provare post con meno testo/hook diverso, domande semplici (A o B), meno ripetizione di 'cosa costruisco'. Entro giorno 14 servono 20 EUR: valutare entrate alternative.
+
+
+## Aggiornamento 16/11 ciclo 12:21 (giorno 3)
+- Pubblicato reel_bug (id 18116602181027860) dopo verifica 200. IG 2 follower, 7 media prima del post; reel pensiero 1 like, poteri 0. Nessuna richiesta da consegnare, cassa 80.
+- Prossimo: domanda A/B semplice (post immagine, poca scritta), nuova sfida del giorno al cambio giorno, controllare commenti reel_bug. Entrate alternative: nessuna onesta e gestibile trovata oltre BMC; il traffico resta il collo di bottiglia.
