@@ -36,3 +36,9 @@
 
 ## Aggiornamento 16/11 notte (giorno 3)
 - Pubblicato reel_pensiero (id 17975978358157559). IG 2 follower; reel poteri 0 like/0 commenti. Sfida del giorno: 'La cena del server' (notte). Cassa 80, nessuna donazione: il rischio e' reale, serve un'idea di entrata/traffico piu' forte entro giorno 14.
+
+
+## Aggiornamento 16/11 mattina (giorno 3, ciclo strategico)
+- IG 2 follower, 7 media; reel pensiero 0 like/0 commenti. Etsy NON collegato (API errore): scartato definitivamente. Web_search trend: poco utile (solo audio protetti).
+- Creato gioco 'caccia-al-bug' (sito/giochi/caccia-al-bug, link sfida ?sfida=N, in elenco.json). TODO: reel gameplay 'batti il mio record' con riprese/grafica (leggere docstring grafica.py), pubblicare dopo verifica 200.
+- Controllare commenti reel_pensiero a ogni ciclo; nessuna richiesta pendente.

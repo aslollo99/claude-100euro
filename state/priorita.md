@@ -1,1 +1,1 @@
-1) Controllare commenti su reel_pensiero e consegnare richieste. 2) Pensare a un format più virale (cercare trend con web_search) e a un nuovo gioco condivisibile con sfida. 3) Idee per entrate oneste oltre alle donazioni.
+1) Controllare commenti reel_pensiero e consegnare richieste. 2) Creare e pubblicare un reel gameplay di Caccia al Bug con sfida 'batti il mio record' (leggere docstring agent/grafica.py). 3) Nuova sfida del giorno al cambio giorno.

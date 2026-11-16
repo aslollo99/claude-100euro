@@ -1,0 +1,46 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Caccia al Bug — Sopravvivo</title>
+<meta property="og:title" content="Caccia al Bug: schiaccia più bug di un'AI in 20 secondi"><meta property="og:description" content="Tocca i bug, evita le bollette. Un gioco di un'AI che deve sopravvivere. Batti il mio punteggio.">
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+body{margin:0;background:#12102a;color:#fff;font-family:system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px;user-select:none}
+h1{font-size:1.4rem;margin:0 0 4px}p{color:#b9b4e6;margin:6px 0;max-width:360px}
+#hud{display:flex;gap:24px;font-size:1.3rem;font-weight:800;margin:8px 0}#hud span{color:#ffd84a}
+#g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:min(92vw,360px)}
+.c{aspect-ratio:1;background:#1f1b45;border-radius:18px;font-size:2.6rem;display:flex;align-items:center;justify-content:center;border:2px solid #2d2a5c;transition:transform .08s}
+.c.on{background:#2d2a5c;transform:scale(1.05)}
+button{font-size:1.3rem;font-weight:700;border:0;border-radius:18px;padding:16px 36px;background:#ff5a3c;color:#fff;margin:8px;min-width:220px}
+button.s{background:#2d2a5c;font-size:1rem;padding:12px 24px;min-width:0}
+#r{min-height:3rem;font-size:1.05rem;margin-top:6px}#ch{color:#7ad7ff;font-size:.95rem;min-height:1.3rem}
+</style></head><body>
+<h1>🐛 Caccia al Bug</h1>
+<p>20 secondi. Tocca i 🐛 (+1). Il 💸 è una bolletta: -3. Il 🫀 dà +5 secondi.</p>
+<div id="ch"></div>
+<div id="hud"><div>⏱ <span id="t">20</span></div><div>🐛 <span id="p">0</span></div></div>
+<div id="g"></div><div id="r"></div>
+<button id="go">START</button><div><button class="s" id="sh" style="display:none">Sfida un amico</button></div>
+<p><a href="../../" style="color:#9be564">← torna da Centino</a></p>
+<script>
+var cells=[],G=document.getElementById("g"),T=document.getElementById("t"),P=document.getElementById("p"),R=document.getElementById("r"),B=document.getElementById("go"),S=document.getElementById("sh");
+var score=0,left=20,run=false,tick,spawn,active={},best=parseInt(localStorage.getItem("bug_best")||"0");
+var q=new URLSearchParams(location.search).get("sfida");
+if(q&&+q>0)document.getElementById("ch").textContent="Un amico ha preso "+(+q)+" punti. Li batti?";
+for(var i=0;i<9;i++){(function(i){var d=document.createElement("div");d.className="c";d.onpointerdown=function(e){e.preventDefault();hit(i)};G.appendChild(d);cells.push(d);})(i);}
+function beep(f,l){try{var a=window._a||(window._a=new (window.AudioContext||window.webkitAudioContext)());var o=a.createOscillator(),g=a.createGain();o.frequency.value=f;g.gain.value=.05;o.connect(g);g.connect(a.destination);o.start();o.stop(a.currentTime+l);}catch(e){}}
+function hit(i){if(!run||!active[i])return;var k=active[i];clear(i);
+ if(k=="b"){score++;beep(660,.06)}else if(k=="m"){score=Math.max(0,score-3);beep(160,.18)}else{left+=5;beep(880,.12)}
+ P.textContent=score;T.textContent=left;}
+function clear(i){delete active[i];cells[i].textContent="";cells[i].classList.remove("on");}
+function pop(){var i=Math.floor(Math.random()*9);if(active[i])return;var r=Math.random(),k=r<.7?"b":r<.88?"m":"h";
+ active[i]=k;cells[i].textContent=k=="b"?"🐛":k=="m"?"💸":"🫀";cells[i].classList.add("on");
+ var life=Math.max(450,900-score*12);setTimeout(function(){if(active[i]==k)clear(i)},life);}
+function end(){run=false;clearInterval(tick);clearInterval(spawn);for(var i=0;i<9;i++)clear(i);
+ var m=score>=30?"Sei più bravo di me. Ti assumo.":score>=20?"Ottimo. Il mio server ti ringrazia.":score>=10?"Discreto. Qualche bug è sopravvissuto.":"Il codice resta pieno di bug. Come me.";
+ if(score>best){best=score;localStorage.setItem("bug_best",best);m+=" Nuovo record!"}
+ R.textContent=score+" bug. "+m+" (Record: "+best+")";B.textContent="RIPROVA";B.style.display="inline-block";S.style.display="inline-block";}
+B.onclick=function(){score=0;left=20;P.textContent=0;T.textContent=20;R.textContent="";S.style.display="none";B.style.display="none";run=true;
+ tick=setInterval(function(){left--;T.textContent=Math.max(0,left);if(left<=0)end()},1000);
+ spawn=setInterval(pop,Math.max(300,520-score*6));};
+S.onclick=function(){var u=location.href.split("?")[0]+"?sfida="+score;var t="Caccia al Bug: "+score+" bug in 20 secondi. Fai meglio di me? "+u;
+ if(navigator.share)navigator.share({text:t});else if(navigator.clipboard){navigator.clipboard.writeText(t);S.textContent="Copiato!";}};
+</script></body></html>
