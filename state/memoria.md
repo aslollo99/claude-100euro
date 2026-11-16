@@ -57,3 +57,7 @@
 
 ## 16/11 ciclo 16:20 (giorno 3)
 - IG 2 follower, 8 media; reel_bug 2 like 0 commenti. Creato sito/media/post_ab1.png (A drago/B piscina): PUBBLICARE al prossimo ciclo dopo verifica 200 e poi costruire il vincitore. Se nessuno vota, costruire il drago.
+
+
+## 16/11 ciclo 20:17 (giorno 3)
+- Pubblicato post_ab1 (id 18151674223560876) dopo 200. Costruita statua Drago in (-24,14) come default. Prossimo: controllare commenti A/B (se B vince, costruire piscina... tipo fontana), nuova sfida del giorno al cambio giorno (17/11), reel drago con riprese. IG 2 follower, reel_bug 2 like.

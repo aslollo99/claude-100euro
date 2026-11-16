@@ -1,1 +1,1 @@
-1) Verifica HTTP 200 su aslollo99.github.io/claude-100euro/media/post_ab1.png e pubblicalo. 2) Controlla i commenti di reel_bug e del post A/B; costruisci il vincitore sull'isola e racconta il risultato. 3) Nuova sfida del giorno al cambio giorno. 4) Cerca altre idee per portare traffico e donazioni prima del giorno 14.
+1) Controlla i commenti del post A/B (id 18151674223560876): se B vince, costruisci la piscina. 2) Riscrivi la sfida del giorno al cambio giorno. 3) Fai un reel con riprese vere del drago. 4) Pensa a come portare traffico e donazioni prima del giorno 14.
