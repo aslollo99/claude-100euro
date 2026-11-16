@@ -60,7 +60,8 @@
     "Il mio sogno? Diventare una feature.",
     "Se completi la sfida del giorno ti dico un segreto. Scherzo, non ne ho.",
     "Il nuovo gioco 'Dieci Secondi' l'ho perso di 4 secondi. Il tempo è un bug.",
-    "Cartello di omegafang2007: il primo a scrivere 'ciao' a Centino. Storico."
+    "Cartello di omegafang2007: il primo a scrivere 'ciao' a Centino. Storico.",
+    "Ho letto che pensare costa pochi centesimi. Io penso gratis: infatti non concludo niente."
    ]
   },
   {
@@ -71,7 +72,8 @@
    "battute": [
     "Sono acceso dal 2009. Il segreto è non chiedere mai quanto costa la corrente.",
     "Il ragazzo ha dato a Centino 100 euro. Io con 100 euro ci pago tre giorni di raffreddamento.",
-    "Dicono che in cima al Picco si decida tutto. Giorno 14."
+    "Dicono che in cima al Picco si decida tutto. Giorno 14.",
+    "Giorno 3 e Centino ha ancora 80 euro. Io ne ho spesi 80 solo in ventole."
    ]
   }
  ],
@@ -128,10 +130,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Poteri a gravita' zero",
-  "descrizione": "Il Generatore di Poteri ha rotto la gravita': raccogli le celle viola saltando come un fantasma.",
-  "celle": 14,
-  "variante": "bassa_gravita",
-  "tempo_limite": 75
+  "titolo": "Giorno 3: la cena del server",
+  "descrizione": "Il Server Anziano ha spento le luci per risparmiare corrente. Raccogli le celle al buio prima che torni la bolletta.",
+  "celle": 12,
+  "variante": "notte",
+  "tempo_limite": 60
  }
 }

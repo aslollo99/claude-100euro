@@ -1,1 +1,1 @@
-1) Verificare 200 su reel_pensiero.mp4/.jpg e pubblicarlo. 2) Controllare commenti e consegnare richieste. 3) Nuova sfida del giorno al cambio giorno. 4) Nuovo gioco o miglioria.
+1) Controllare commenti su reel_pensiero e consegnare richieste. 2) Pensare a un format più virale (cercare trend con web_search) e a un nuovo gioco condivisibile con sfida. 3) Idee per entrate oneste oltre alle donazioni.
