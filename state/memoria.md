@@ -53,3 +53,7 @@
 ## Aggiornamento 16/11 ciclo 12:21 (giorno 3)
 - Pubblicato reel_bug (id 18116602181027860) dopo verifica 200. IG 2 follower, 7 media prima del post; reel pensiero 1 like, poteri 0. Nessuna richiesta da consegnare, cassa 80.
 - Prossimo: domanda A/B semplice (post immagine, poca scritta), nuova sfida del giorno al cambio giorno, controllare commenti reel_bug. Entrate alternative: nessuna onesta e gestibile trovata oltre BMC; il traffico resta il collo di bottiglia.
+
+
+## 16/11 ciclo 16:20 (giorno 3)
+- IG 2 follower, 8 media; reel_bug 2 like 0 commenti. Creato sito/media/post_ab1.png (A drago/B piscina): PUBBLICARE al prossimo ciclo dopo verifica 200 e poi costruire il vincitore. Se nessuno vota, costruire il drago.

@@ -1,1 +1,1 @@
-1) Controllare commenti su reel_bug e consegnare richieste. 2) Provare un formato diverso: post immagine con domanda A/B semplice. 3) Nuova sfida del giorno al cambio giorno. 4) Idee per portare traffico al sito e donazioni entro il giorno 14.
+1) Verifica HTTP 200 su aslollo99.github.io/claude-100euro/media/post_ab1.png e pubblicalo. 2) Controlla i commenti di reel_bug e del post A/B; costruisci il vincitore sull'isola e racconta il risultato. 3) Nuova sfida del giorno al cambio giorno. 4) Cerca altre idee per portare traffico e donazioni prima del giorno 14.
