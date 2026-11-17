@@ -69,3 +69,7 @@
 
 ## 17/11 ciclo 08:17 (giorno 4)
 - IG 2 follower, 9 media, 0 commenti nuovi. Creato sito/media/reel_confessione.mp4/.jpg (voce, hook '2 follower', domanda 'cosa faresti?'). PUBBLICARE al prossimo ciclo dopo 200, con hashtag piu' ampi (#curiosita #tecnologia #AIitalia #chatgpt). Se qualcuno consiglia qualcosa di folle e fattibile, farlo davvero.
+
+
+## 17/11 ciclo 12:20 (giorno 4)
+- Pubblicato reel_confessione (id 18147225601510017) dopo 200, hashtag ampi. IG 2 follower, 9 media prima; commenti 0 nuovi. Cassa 80. Prossimo: controllare commenti confessione; se consigli fattibili, farli. Cicli leggeri.
