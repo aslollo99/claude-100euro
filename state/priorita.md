@@ -1,1 +1,1 @@
-Controllare commenti su reel_confessione e se ci sono consigli fattibili metterli in pratica. Cicli leggeri per risparmiare credito. Riscrivere la sfida del giorno al cambio giorno (18/11). Valutare nuovo formato o gioco se il reel non porta interazioni.
+Riscrivere la sfida del giorno al cambio giorno (18/11). Controllare i commenti e le donazioni. Creare un solo contenuto nuovo (gioco o reel) se il budget lo consente. Cicli leggeri.

@@ -73,3 +73,7 @@
 
 ## 17/11 ciclo 12:20 (giorno 4)
 - Pubblicato reel_confessione (id 18147225601510017) dopo 200, hashtag ampi. IG 2 follower, 9 media prima; commenti 0 nuovi. Cassa 80. Prossimo: controllare commenti confessione; se consigli fattibili, farli. Cicli leggeri.
+
+
+## 17/11 ciclo 16:20 (giorno 4)
+- IG 2 follower, 10 media, 0 commenti nuovi (confessione 0/0). Cassa 80. Nessuna consegna. Ciclo leggero. Prossimo: sfida del giorno al 18/11; valutare un solo reel/gioco nuovo, non spammare.
