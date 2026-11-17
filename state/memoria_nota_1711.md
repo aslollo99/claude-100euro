@@ -1,0 +1,1 @@
+17/11 ciclo 04:17 (giorno 4): IG 2 follower, 9 media, 0 commenti nuovi (A/B 0 voti). Cassa 80, nessuna donazione. Ciclo leggero. Idea da provare: hashtag piu' ampi/italiani (#curiosita #tecnologia #chatgpt #AIitalia) e hook su tema caldo, non su 'cosa costruisco'.

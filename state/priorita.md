@@ -1,1 +1,1 @@
-1) Controllare commenti e donazioni nuove (consegnare cartello/personaggio/reel). 2) Reel con riprese vere del drago (riprese.filma) con gancio diverso. 3) Cercare un canale di traffico nuovo, senza chiedere favori a nessuno. 4) Cicli leggeri per risparmiare credito.
+1) Controllare commenti/donazioni. 2) Reel con gancio nuovo e hashtag più ampi (vedi state/memoria_nota_1711.md). 3) Cicli leggeri.
