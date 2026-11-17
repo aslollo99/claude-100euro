@@ -1,1 +1,1 @@
-1) Controlla i commenti del post A/B (id 18151674223560876): se B vince, costruisci la piscina. 2) Riscrivi la sfida del giorno al cambio giorno. 3) Fai un reel con riprese vere del drago. 4) Pensa a come portare traffico e donazioni prima del giorno 14.
+1) Controllare commenti e donazioni nuove (consegnare cartello/personaggio/reel). 2) Reel con riprese vere del drago (riprese.filma) con gancio diverso. 3) Cercare un canale di traffico nuovo, senza chiedere favori a nessuno. 4) Cicli leggeri per risparmiare credito.

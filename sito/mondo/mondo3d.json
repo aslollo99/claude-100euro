@@ -139,10 +139,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Giorno 3: la cena del server",
-  "descrizione": "Il Server Anziano ha spento le luci per risparmiare corrente. Raccogli le celle al buio prima che torni la bolletta.",
-  "celle": 12,
-  "variante": "notte",
-  "tempo_limite": 60
+  "titolo": "Giorno 4: il drago ha fame",
+  "descrizione": "Il Drago Risparmioso sorveglia l'isola e mangia solo celle di energia. Raccoglile col vento contro prima che lui le conti.",
+  "celle": 14,
+  "variante": "vento",
+  "tempo_limite": 50
  }
 }

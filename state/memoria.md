@@ -61,3 +61,7 @@
 
 ## 16/11 ciclo 20:17 (giorno 3)
 - Pubblicato post_ab1 (id 18151674223560876) dopo 200. Costruita statua Drago in (-24,14) come default. Prossimo: controllare commenti A/B (se B vince, costruire piscina... tipo fontana), nuova sfida del giorno al cambio giorno (17/11), reel drago con riprese. IG 2 follower, reel_bug 2 like.
+
+
+## 17/11 ciclo 00:17 (giorno 4)
+- Post A/B: 0 voti, 0 like. IG 2 follower, 9 media. Nessuna consegna. Sfida del giorno riscritta ('il drago ha fame'). Cassa 80. Traffico ancora zero: i post su IG non ricevono interazioni; non spendere token inutili, cicli leggeri.
