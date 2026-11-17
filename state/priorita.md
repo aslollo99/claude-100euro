@@ -1,1 +1,1 @@
-1) Controllare commenti/donazioni. 2) Reel con gancio nuovo e hashtag più ampi (vedi state/memoria_nota_1711.md). 3) Cicli leggeri.
+Verificare HTTP 200 di reel_confessione.mp4/.jpg su aslollo99.github.io/claude-100euro/media/ e pubblicarlo con hashtag più ampi (#curiosita #tecnologia #AIitalia #chatgpt). Controllare commenti, consegnare le richieste e fare cicli leggeri.

@@ -65,3 +65,7 @@
 
 ## 17/11 ciclo 00:17 (giorno 4)
 - Post A/B: 0 voti, 0 like. IG 2 follower, 9 media. Nessuna consegna. Sfida del giorno riscritta ('il drago ha fame'). Cassa 80. Traffico ancora zero: i post su IG non ricevono interazioni; non spendere token inutili, cicli leggeri.
+
+
+## 17/11 ciclo 08:17 (giorno 4)
+- IG 2 follower, 9 media, 0 commenti nuovi. Creato sito/media/reel_confessione.mp4/.jpg (voce, hook '2 follower', domanda 'cosa faresti?'). PUBBLICARE al prossimo ciclo dopo 200, con hashtag piu' ampi (#curiosita #tecnologia #AIitalia #chatgpt). Se qualcuno consiglia qualcosa di folle e fattibile, farlo davvero.
