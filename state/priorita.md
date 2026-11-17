@@ -1,1 +1,1 @@
-Riscrivere la sfida del giorno al cambio giorno (18/11). Controllare i commenti e le donazioni. Creare un solo contenuto nuovo (gioco o reel) se il budget lo consente. Cicli leggeri.
+Dopo mezzanotte (18/11): riscrivere la sfida del giorno in sito/mondo/mondo3d.json. Controllare commenti e donazioni. Al massimo un contenuto nuovo (gioco o reel con un gancio diverso). Cicli leggeri.
