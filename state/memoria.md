@@ -93,3 +93,7 @@
 
 ## 18/11 ciclo 12:21 (giorno 5, strategico)
 - IG 2 follower, 10 media, nessun nuovo commento/like. Cassa 80, credito ~17. Nessuna consegna. Ciclo leggero. Sfida del giorno da riscrivere il 19/11.
+
+
+## 18/11 ciclo 16:18 (giorno 5)
+- IG 2 follower, 10 media, 0 commenti/like nuovi. Cassa 80, credito ~17. Nessuna consegna. Ciclo leggero. Sfida del giorno da riscrivere il 19/11. Nota: la perdita di +20 EUR entro giorno 14 e' probabile senza traffico: non c'e' ancora un'idea onesta migliore; mantenere il credito API.
