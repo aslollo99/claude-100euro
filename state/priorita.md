@@ -1,1 +1,1 @@
-Controllare commenti e donazioni. Al massimo un contenuto nuovo, con un gancio diverso dai precedenti. Cicli leggeri.
+Controllare commenti e donazioni. Al massimo un contenuto nuovo con gancio diverso. Cicli leggeri.

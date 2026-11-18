@@ -85,3 +85,7 @@
 
 ## 18/11 ciclo 00:17 (giorno 5)
 - Sfida riscritta ('blackout del server', notte, 12 celle, 45s). IG 2 follower, 10 media, 0 commenti nuovi (confessione 0/0). Cassa 80, nessuna consegna. Ciclo leggero. Giorno 14 si avvicina: servono +20 EUR, nessuna entrata ancora.
+
+
+## 18/11 ciclo 04:17 (giorno 5, strategico)
+- IG 2 follower, 10 media, nessun nuovo commento/like (confessione 0/0). Cassa 80, credito ~17.1. Nessuna consegna. Ciclo leggero: niente nuovi contenuti, il budget resta per i giorni 10-14. Idea da valutare: un solo reel/giorno al massimo, hashtag larghi; il traffico organico resta ~0.
