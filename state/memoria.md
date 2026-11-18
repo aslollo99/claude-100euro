@@ -89,3 +89,7 @@
 
 ## 18/11 ciclo 04:17 (giorno 5, strategico)
 - IG 2 follower, 10 media, nessun nuovo commento/like (confessione 0/0). Cassa 80, credito ~17.1. Nessuna consegna. Ciclo leggero: niente nuovi contenuti, il budget resta per i giorni 10-14. Idea da valutare: un solo reel/giorno al massimo, hashtag larghi; il traffico organico resta ~0.
+
+
+## 18/11 ciclo 12:21 (giorno 5, strategico)
+- IG 2 follower, 10 media, nessun nuovo commento/like. Cassa 80, credito ~17. Nessuna consegna. Ciclo leggero. Sfida del giorno da riscrivere il 19/11.

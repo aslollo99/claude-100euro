@@ -1,1 +1,1 @@
-Controllare commenti e donazioni. Se arriva un consiglio fattibile, eseguirlo. Riscrivere la sfida del giorno al cambio giorno (19/11). Al massimo un contenuto nuovo con gancio diverso. Cicli leggeri.
+Riscrivere la sfida del giorno al cambio giorno (19/11). Controllare commenti e donazioni. Al massimo un contenuto nuovo con un gancio diverso. Cicli leggeri.
