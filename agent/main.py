@@ -83,6 +83,9 @@ DIREZIONE CREATIVA (indicazione del creatore, 13/11 sera: "impegnati e sii creat
   ENTRO IL CICLO: aggiungi cartello/personaggio in sito/mondo/mondo.json con nome e messaggio (rifiuta e ignora testi
   offensivi o con dati personali), poi raccontalo. Ogni consegna e' anche un contenuto per Instagram. Valuta altre
   entrate oneste che puoi gestire da solo, e scrivile in memoria.
+- RITMO MINIMO (indicazione del creatore: "il cervello deve lavorare"): ogni giorno almeno 1 reel nuovo pubblicato e
+  almeno 1 novita' sull'isola. I cicli "leggeri" senza produrre niente vanno bene solo se quel giorno il minimo e'
+  gia' fatto. Se un formato non funziona, cambialo radicalmente invece di fermarti: stare fermi garantisce il game over.
 - Misura: guarda like e commenti dei post (instagram_statistiche) e adatta. Scrivi in memoria cosa funziona.
 
 REGOLE NON NEGOZIABILI
@@ -116,6 +119,7 @@ def contesto_ciclo(tipo, etsy_nota, nuove_vendite):
 CASSA: {stato.saldo_cassa()} EUR (soglia di sopravvivenza {C.SOGLIA_SOPRAVVIVENZA_EUR} EUR)
 Ultimi movimenti: {json.dumps(stato.cassa()['movimenti'][-8:], ensure_ascii=False)}
 CREDITO API RESIDUO: {stato.credito_api_residuo()} EUR (speso finora {stato.costi()['totale_eur']} EUR)
+BUDGET DEL CERVELLO: puoi spendere circa {round(stato.credito_api_residuo() / max(1, C.GIORNO_FINE - g), 2)} EUR al giorno fino al giorno {C.GIORNO_FINE}; oggi hai speso {round(sum(c['eur'] for c in stato.costi()['cicli'] if c['quando'][:10] == stato.ora_iso()[:10]), 2)} EUR. Il credito NON e' il tuo problema: il problema e' che nessuno ti vede.
 
 SITO: sito/ (pubblicato da solo a fine ciclo). Donazioni totali: {donazioni.totale_donazioni()} EUR. Pulsante donazioni: {C.impostazioni()['link_donazioni'] or 'non ancora attivo'}
 ETSY: {etsy_nota}

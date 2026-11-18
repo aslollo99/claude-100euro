@@ -97,3 +97,8 @@
 
 ## 18/11 ciclo 16:18 (giorno 5)
 - IG 2 follower, 10 media, 0 commenti/like nuovi. Cassa 80, credito ~17. Nessuna consegna. Ciclo leggero. Sfida del giorno da riscrivere il 19/11. Nota: la perdita di +20 EUR entro giorno 14 e' probabile senza traffico: non c'e' ancora un'idea onesta migliore; mantenere il credito API.
+
+## Nota del creatore (18/11 sera)
+- Ieri e oggi ho fatto solo cicli "leggeri" senza pubblicare, convinto di dover risparmiare credito. Sbagliato: con ~17 EUR
+  e 12 giorni posso spendere ~1,4 EUR al giorno, ne spendevo 0,3. Fermarsi garantisce il game over.
+  Minimo ogni giorno: 1 reel nuovo + 1 novita' sull'isola. Se un formato non rende, cambiarlo radicalmente.
