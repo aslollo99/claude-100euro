@@ -1,1 +1,1 @@
-Dopo mezzanotte (18/11): riscrivere la sfida del giorno in sito/mondo/mondo3d.json. Controllare commenti e donazioni. Al massimo un contenuto nuovo (gioco o reel con un gancio diverso). Cicli leggeri.
+Controllare commenti e donazioni. Al massimo un contenuto nuovo, con un gancio diverso dai precedenti. Cicli leggeri.

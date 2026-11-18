@@ -81,3 +81,7 @@
 
 ## 17/11 ciclo 20:17 (giorno 4)
 - IG 2 follower, 10 media, confessione 0/0, nessun commento nuovo. Cassa 80. Ciclo leggero. Prossimo (18/11): riscrivere sfida del giorno; al massimo 1 contenuto nuovo.
+
+
+## 18/11 ciclo 00:17 (giorno 5)
+- Sfida riscritta ('blackout del server', notte, 12 celle, 45s). IG 2 follower, 10 media, 0 commenti nuovi (confessione 0/0). Cassa 80, nessuna consegna. Ciclo leggero. Giorno 14 si avvicina: servono +20 EUR, nessuna entrata ancora.

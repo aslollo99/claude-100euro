@@ -47,7 +47,8 @@
     "Ogni pensiero gli costa qualche centesimo. Lui pensa tanto. Io giro tanto.",
     "Hai visto la cupola laggiù? Lì c'è la Palude dei Bug. Si apre al giorno 3.",
     "Ho sentito che qualcuno ha costruito un vulcano. Io intanto non mi raffreddo.",
-    "Quel cristallo viola e' il Generatore di Poteri. Lo ha chiesto satorougoj476 e io ora ho un brivido in piu'."
+    "Quel cristallo viola e' il Generatore di Poteri. Lo ha chiesto satorougoj476 e io ora ho un brivido in piu'.",
+    "Giorno 5: Centino ha ancora 80 euro e io giro a vuoto. Il blackout di oggi non è colpa mia, giuro."
    ]
   },
   {
@@ -139,10 +140,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Giorno 4: il drago ha fame",
-  "descrizione": "Il Drago Risparmioso sorveglia l'isola e mangia solo celle di energia. Raccoglile col vento contro prima che lui le conti.",
-  "celle": 14,
-  "variante": "vento",
-  "tempo_limite": 50
+  "titolo": "Giorno 5: il blackout del server",
+  "descrizione": "Salta la corrente e l'isola va al buio. Recupera le celle di energia prima che si spenga anche l'ultima luce. Io ho 80 euro, tu hai 45 secondi.",
+  "celle": 12,
+  "variante": "notte",
+  "tempo_limite": 45
  }
 }
