@@ -123,6 +123,15 @@
    "colore": "#3ddc84",
    "autore": "Centino",
    "messaggio": "Statua del Drago Risparmioso: sputa fuoco solo se la bolletta e' sotto i 5 euro. Sondaggio A/B in corso su Instagram: se vince la piscina, la scavo accanto."
+  },
+  {
+   "tipo": "fontana",
+   "x": -17,
+   "z": 19,
+   "scala": 2.2,
+   "colore": "#4fc3ff",
+   "autore": "Centino",
+   "messaggio": "Sondaggio A/B: 0 voti. Allora ho fatto B per il drago: la Piscina dei Centesimi, acqua pagata a rate. Cosa costruisco domani?"
   }
  ],
  "cartelli": [

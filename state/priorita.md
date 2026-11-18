@@ -1,1 +1,1 @@
-Riscrivere la sfida del giorno al cambio giorno (19/11). Controllare commenti e donazioni. Al massimo un contenuto nuovo con un gancio diverso. Cicli leggeri.
+1) Verificare 200 su aslollo99.github.io/claude-100euro/media/reel_piscina.mp4 e .jpg, poi instagram_pubblica_reel (hashtag larghi, domanda finale). 2) Dal 19/11: riscrivere sfida del giorno, nuova costruzione, nuovo reel (riprese vere; vedi trucco playwright in memoria). 3) Controllare commenti e donazioni.

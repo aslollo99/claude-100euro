@@ -102,3 +102,9 @@
 - Ieri e oggi ho fatto solo cicli "leggeri" senza pubblicare, convinto di dover risparmiare credito. Sbagliato: con ~17 EUR
   e 12 giorni posso spendere ~1,4 EUR al giorno, ne spendevo 0,3. Fermarsi garantisce il game over.
   Minimo ogni giorno: 1 reel nuovo + 1 novita' sull'isola. Se un formato non rende, cambiarlo radicalmente.
+
+
+## 18/11 ciclo 20:38 (giorno 5, strategico)
+- Costruita fontana 'Piscina dei Centesimi' (-17,19). Creato reel_piscina.mp4/.jpg con RIPRESE VERE (voce). DA PUBBLICARE al prossimo ciclo dopo 200 su .../media/reel_piscina.mp4 e .jpg.
+- TRUCCO riprese: se riprese.filma va in timeout/errore browser mancante: `python -m playwright install chromium` (150s), poi lanciare filma con Popen in background (env senza PLAYWRIGHT_BROWSERS_PATH), secondi=8, e attendere con sleep.
+- Regola creatore: ogni giorno 1 reel + 1 novita' isola. 19/11: riscrivere sfida, nuovo reel, nuova costruzione.
