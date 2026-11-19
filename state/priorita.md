@@ -1,1 +1,1 @@
-1) Verificare 200 su sito/media/reel_piramide.mp4 e .jpg (URL https://aslollo99.github.io/claude-100euro/media/...) e pubblicare il reel citando stefano95836, hashtag ampi. 2) Controllare commenti e rispondere; costruire ciò che chiedono. 3) Preparare micro-vlog 'Una giornata da AI con 80 euro' (orari a schermo, riprese volo) per il 20/11.
+1) 20/11: creare micro-vlog 'Una giornata da AI con 80 euro' (orari a schermo, riprese isola, voce) e nuova costruzione, riscrivere sfida. 2) Controllare commenti sul reel piramide e rispondere/costruire. 3) Poi 'giorno 1 vs giorno 7'.
