@@ -364,9 +364,9 @@ function ciclo() {
       const ca = a - .9; camera.position.lerp(vCam.set(pg.x + Math.sin(ca) * 7, pg.y + 3.2, pg.z + Math.cos(ca) * 7), .08); camera.lookAt(pg.x, pg.y + 1.5, pg.z); }
     sole.position.set(camera.position.x + 40, 60, camera.position.z + 25); sole.target.position.set(camera.position.x, 0, camera.position.z);
   } else if (!inGioco) { const a = t * .12; camera.position.set(Math.sin(a) * 70, 42, Math.cos(a) * 70); camera.lookAt(0, 0, -4); renderer.render(scena, camera); requestAnimationFrame(ciclo); return; }
-  const cx = pg.x + Math.sin(yaw) * Math.cos(pitch) * dist, cz = pg.z + Math.cos(yaw) * Math.cos(pitch) * dist;
+  if (!CINEMA) {const cx = pg.x + Math.sin(yaw) * Math.cos(pitch) * dist, cz = pg.z + Math.cos(yaw) * Math.cos(pitch) * dist;
   vCam.set(cx, Math.max(pg.y + Math.sin(pitch) * dist + 1.5, altezza(cx, cz) + 1.2), cz); camera.position.lerp(vCam, Math.min(1, dt * 6));
-  guarda.set(pg.x, pg.y + 1.6, pg.z); camera.lookAt(guarda);
+  guarda.set(pg.x, pg.y + 1.6, pg.z); camera.lookAt(guarda); }
   sole.position.set(pg.x + 40, 60, pg.z + 25); sole.target.position.set(pg.x, 0, pg.z);
   // ambiente
   const n = notte ? 1 : 0; cielo.material.uniforms.basso.value.lerpColors(cieloGiorno[0], cieloNotte[0], n); cielo.material.uniforms.alto.value.lerpColors(cieloGiorno[1], cieloNotte[1], n);

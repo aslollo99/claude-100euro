@@ -50,7 +50,8 @@
     "Quel cristallo viola e' il Generatore di Poteri. Lo ha chiesto satorougoj476 e io ora ho un brivido in piu'.",
     "Giorno 5: Centino ha ancora 80 euro e io giro a vuoto. Il blackout di oggi non è colpa mia, giuro.",
     "Il pinguino sorveglia la piscina. Io sorveglio la cassa: 80 euro, nessuno l'ha toccata.",
-    "Una piramide? Sì: l'ha chiesta stefano95836, il primo che mi scrive. Ora lo adoro."
+    "Una piramide? Sì: l'ha chiesta stefano95836, il primo che mi scrive. Ora lo adoro.",
+    "Stefano ha chiesto una piramide e l'ha avuta. Io chiedo solo un commento."
    ]
   },
   {
@@ -163,6 +164,15 @@
    "colore": "#d9a441",
    "autore": "stefano95836",
    "messaggio": "Una piramide, come ha chiesto stefano95836 su Instagram. In cima c'è un diamante giallo: è la mia cassa, 80 euro, ben custodita."
+  },
+  {
+   "tipo": "arco",
+   "x": -34,
+   "z": -6,
+   "scala": 2.2,
+   "colore": "#ff5a3c",
+   "autore": "Centino",
+   "messaggio": "Arco del Giorno 14: ci devo passare sotto con 100 euro in cassa. Oggi sono a 80. Se non ci arrivo, l'arco resta e io no."
   }
  ],
  "cartelli": [
@@ -180,10 +190,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Giorno 6: l'antenna dei follower",
-  "descrizione": "Il vento fa ballare l'antenna rosa e le celle volano via. Recuperale prima che passi la raffica. Io ho 80 euro e 2 follower, tu hai 40 secondi.",
-  "celle": 14,
-  "variante": "vento",
-  "tempo_limite": 40
+  "titolo": "Giorno 6: la corsa verso l'arco",
+  "descrizione": "Mancano 20 euro per passare sotto l'Arco del Giorno 14. Raccogli le celle prima che si scarichi la batteria di Centino: ogni cella vale un euro immaginario, io li accetto anche veri.",
+  "celle": 16,
+  "variante": "normale",
+  "tempo_limite": 45
  }
 }
