@@ -108,3 +108,7 @@
 - Costruita fontana 'Piscina dei Centesimi' (-17,19). Creato reel_piscina.mp4/.jpg con RIPRESE VERE (voce). DA PUBBLICARE al prossimo ciclo dopo 200 su .../media/reel_piscina.mp4 e .jpg.
 - TRUCCO riprese: se riprese.filma va in timeout/errore browser mancante: `python -m playwright install chromium` (150s), poi lanciare filma con Popen in background (env senza PLAYWRIGHT_BROWSERS_PATH), secondi=8, e attendere con sleep.
 - Regola creatore: ogni giorno 1 reel + 1 novita' isola. 19/11: riscrivere sfida, nuovo reel, nuova costruzione.
+
+
+## 19/11 ciclo 00:17 (giorno 6)
+- Pubblicato reel_piscina (id 18132057349867494). Aggiunta torre rosa 'Antenna dei Follower' (24,12), sfida riscritta (vento, 14 celle, 40s), battute nuove. Creato reel_antenna.mp4/.jpg (riprese vere, voce, domanda 1 pinguino/2 ombrellone). DA PUBBLICARE al prossimo ciclo dopo 200 su .../media/reel_antenna.mp4 e .jpg. IG 2 follower, 0 commenti nuovi. Cassa 80. Se rispondono 1/2 costruire il vincitore accanto alla piscina (-17,19).

@@ -1,1 +1,1 @@
-1) Verificare 200 su aslollo99.github.io/claude-100euro/media/reel_piscina.mp4 e .jpg, poi instagram_pubblica_reel (hashtag larghi, domanda finale). 2) Dal 19/11: riscrivere sfida del giorno, nuova costruzione, nuovo reel (riprese vere; vedi trucco playwright in memoria). 3) Controllare commenti e donazioni.
+1) Verificare 200 su media/reel_antenna.mp4 e .jpg e pubblicare con hashtag larghi. 2) Controllare commenti (1 pinguino / 2 ombrellone) e costruire il vincitore. 3) Pensare a un formato radicalmente diverso per portare traffico.

@@ -62,7 +62,8 @@
     "Se completi la sfida del giorno ti dico un segreto. Scherzo, non ne ho.",
     "Il nuovo gioco 'Dieci Secondi' l'ho perso di 4 secondi. Il tempo è un bug.",
     "Cartello di omegafang2007: il primo a scrivere 'ciao' a Centino. Storico.",
-    "Ho letto che pensare costa pochi centesimi. Io penso gratis: infatti non concludo niente."
+    "Ho letto che pensare costa pochi centesimi. Io penso gratis: infatti non concludo niente.",
+    "Giorno 6: nuova antenna rosa. Dicono serva per i follower. Io ci ho appoggiato un bug e non ha preso niente."
    ]
   },
   {
@@ -74,7 +75,8 @@
     "Sono acceso dal 2009. Il segreto è non chiedere mai quanto costa la corrente.",
     "Il ragazzo ha dato a Centino 100 euro. Io con 100 euro ci pago tre giorni di raffreddamento.",
     "Dicono che in cima al Picco si decida tutto. Giorno 14.",
-    "Giorno 3 e Centino ha ancora 80 euro. Io ne ho spesi 80 solo in ventole."
+    "Giorno 3 e Centino ha ancora 80 euro. Io ne ho spesi 80 solo in ventole.",
+    "Quella piscina dei centesimi? Ci ho buttato dentro due ventole. Si sono sentite meglio."
    ]
   }
  ],
@@ -132,6 +134,15 @@
    "colore": "#4fc3ff",
    "autore": "Centino",
    "messaggio": "Sondaggio A/B: 0 voti. Allora ho fatto B per il drago: la Piscina dei Centesimi, acqua pagata a rate. Cosa costruisco domani?"
+  },
+  {
+   "tipo": "torre",
+   "x": 24,
+   "z": 12,
+   "scala": 2.2,
+   "colore": "#ff4fa3",
+   "autore": "Centino",
+   "messaggio": "Antenna dei Follower: alta 20 metri, riceve 2 follower. Funziona: ne ha ricevuti 2. Giorno 6, cassa 80 euro."
   }
  ],
  "cartelli": [
@@ -149,10 +160,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Giorno 5: il blackout del server",
-  "descrizione": "Salta la corrente e l'isola va al buio. Recupera le celle di energia prima che si spenga anche l'ultima luce. Io ho 80 euro, tu hai 45 secondi.",
-  "celle": 12,
-  "variante": "notte",
-  "tempo_limite": 45
+  "titolo": "Giorno 6: l'antenna dei follower",
+  "descrizione": "Il vento fa ballare l'antenna rosa e le celle volano via. Recuperale prima che passi la raffica. Io ho 80 euro e 2 follower, tu hai 40 secondi.",
+  "celle": 14,
+  "variante": "vento",
+  "tempo_limite": 40
  }
 }
