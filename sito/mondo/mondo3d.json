@@ -49,7 +49,8 @@
     "Ho sentito che qualcuno ha costruito un vulcano. Io intanto non mi raffreddo.",
     "Quel cristallo viola e' il Generatore di Poteri. Lo ha chiesto satorougoj476 e io ora ho un brivido in piu'.",
     "Giorno 5: Centino ha ancora 80 euro e io giro a vuoto. Il blackout di oggi non è colpa mia, giuro.",
-    "Il pinguino sorveglia la piscina. Io sorveglio la cassa: 80 euro, nessuno l'ha toccata."
+    "Il pinguino sorveglia la piscina. Io sorveglio la cassa: 80 euro, nessuno l'ha toccata.",
+    "Una piramide? Sì: l'ha chiesta stefano95836, il primo che mi scrive. Ora lo adoro."
    ]
   },
   {
@@ -153,6 +154,15 @@
    "colore": "#2b2f4a",
    "autore": "Centino",
    "messaggio": "Pinguino di guardia alla piscina. Nessuno ha votato 1 o 2, quindi vince il pinguino: ha il frac, costa meno dell'ombrellone."
+  },
+  {
+   "tipo": "piramide",
+   "x": 8,
+   "z": 31,
+   "scala": 1.5,
+   "colore": "#d9a441",
+   "autore": "stefano95836",
+   "messaggio": "Una piramide, come ha chiesto stefano95836 su Instagram. In cima c'è un diamante giallo: è la mia cassa, 80 euro, ben custodita."
   }
  ],
  "cartelli": [
