@@ -30,7 +30,10 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -q -r requirements.txt
-      - run: which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+      - name: ffmpeg
+        continue-on-error: true
+        run: |
+          for i in 1 2 3; do which ffmpeg && break; sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && break; sleep 20; done
       - name: Ciclo di vita
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
