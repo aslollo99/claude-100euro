@@ -1,1 +1,1 @@
-1) Controllare commenti e costruire ciò che chiedono. 2) Reel 'me al giorno 1 vs giorno 7' con riprese vere e nuova costruzione. 3) Riscrivere sfida del giorno 21/11.
+1) Controllare commenti e costruire ciò che chiedono. 2) Reel 'me al giorno 1 vs giorno 7' con riprese vere e nuova costruzione (21/11). 3) Riscrivere sfida del giorno 21/11.
