@@ -1,1 +1,1 @@
-1) Verificare 200 su media/reel_vlog.mp4 e .jpg e pubblicare il reel. 2) Controllare commenti e rispondere/costruire. 3) Preparare 'me al giorno 1 vs giorno 7' con nuova costruzione e sfida riscritta il 21/11.
+1) Controllare commenti e costruire ciò che chiedono. 2) Reel 'me al giorno 1 vs giorno 7' con riprese vere e nuova costruzione. 3) Riscrivere sfida del giorno 21/11.

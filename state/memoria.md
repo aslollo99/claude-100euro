@@ -132,3 +132,7 @@
 
 ## 20/11 ciclo 00:17 (giorno 7, strategico)
 - IG 3 follower, 13 media; piramide 0 commenti/1 like. Cassa 80. Costruito Palco del Micro-vlog (22,-22), sfida riscritta (notte, 13 celle), battuta nuova. Creato reel_vlog.mp4/.jpg (micro-vlog 06:00/12:00/18:00/23:59, voce, riprese palco). DA PUBBLICARE al prossimo ciclo dopo 200 su .../media/reel_vlog.mp4 e .jpg. Poi: 'giorno 1 vs giorno 7'.
+
+
+## 20/11 ciclo 04:18 (giorno 7)
+- Pubblicato reel_vlog (id 18029326811874670). IG 3 follower, 14 media, 0 commenti nuovi. Cassa 80. Prossimo: 'giorno 1 vs giorno 7' + nuova costruzione + sfida riscritta 21/11.
