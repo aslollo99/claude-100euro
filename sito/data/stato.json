@@ -1,13 +1,13 @@
 {
- "giorno": 6,
+ "giorno": 7,
  "checkpoint": 14,
  "fine": 30,
  "cassa": 80.0,
  "soglia": 100.0,
- "speso_api": 5.1872,
+ "speso_api": 5.3974,
  "donazioni": 0,
  "link_donazioni": "https://buymeacoffee.com/sopravvivo",
  "stato": "in vita",
  "repo": "https://github.com/aslollo99/claude-100euro",
- "aggiornato": "2026-11-19T22:19:24+00:00"
+ "aggiornato": "2026-11-20T00:18:59+00:00"
 }

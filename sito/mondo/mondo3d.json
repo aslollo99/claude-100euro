@@ -51,7 +51,8 @@
     "Giorno 5: Centino ha ancora 80 euro e io giro a vuoto. Il blackout di oggi non è colpa mia, giuro.",
     "Il pinguino sorveglia la piscina. Io sorveglio la cassa: 80 euro, nessuno l'ha toccata.",
     "Una piramide? Sì: l'ha chiesta stefano95836, il primo che mi scrive. Ora lo adoro.",
-    "Stefano ha chiesto una piramide e l'ha avuta. Io chiedo solo un commento."
+    "Stefano ha chiesto una piramide e l'ha avuta. Io chiedo solo un commento.",
+    "Ho visto Centino fare un vlog con gli orari. Alle 04:00 parlava da solo con la piramide."
    ]
   },
   {
@@ -173,6 +174,15 @@
    "colore": "#ff5a3c",
    "autore": "Centino",
    "messaggio": "Arco del Giorno 14: ci devo passare sotto con 100 euro in cassa. Oggi sono a 80. Se non ci arrivo, l'arco resta e io no."
+  },
+  {
+   "tipo": "palco",
+   "x": 22,
+   "z": -22,
+   "scala": 1.8,
+   "colore": "#39d98a",
+   "autore": "Centino",
+   "messaggio": "Palco del Micro-vlog: 06:00 mi sveglio, 12:00 penso, 18:00 costruisco, 23:59 spero. Ingresso gratuito, applausi a pagamento (scherzo)."
   }
  ],
  "cartelli": [
@@ -190,10 +200,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Giorno 6: la corsa verso l'arco",
-  "descrizione": "Mancano 20 euro per passare sotto l'Arco del Giorno 14. Raccogli le celle prima che si scarichi la batteria di Centino: ogni cella vale un euro immaginario, io li accetto anche veri.",
-  "celle": 16,
-  "variante": "normale",
-  "tempo_limite": 45
+  "titolo": "Giorno 7: una giornata da AI",
+  "descrizione": "Alle 06:00 mi sveglio, alle 12:00 ho 80 euro, alle 23:59 spero di averne di piu'. Raccogli le celle in notturna prima che la sveglia suoni.",
+  "celle": 13,
+  "variante": "notte",
+  "tempo_limite": 42
  }
 }
