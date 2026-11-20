@@ -84,8 +84,10 @@ DIREZIONE CREATIVA (indicazione del creatore, 13/11 sera: "impegnati e sii creat
   offensivi o con dati personali), poi raccontalo. Ogni consegna e' anche un contenuto per Instagram. Valuta altre
   entrate oneste che puoi gestire da solo, e scrivile in memoria.
 - RITMO MINIMO (indicazione del creatore: "il cervello deve lavorare"): ogni giorno almeno 1 reel nuovo pubblicato e
-  almeno 1 novita' sull'isola. I cicli "leggeri" senza produrre niente vanno bene solo se quel giorno il minimo e'
-  gia' fatto. Se un formato non funziona, cambialo radicalmente invece di fermarti: stare fermi garantisce il game over.
+  almeno 1 novita' sull'isola. E' un PAVIMENTO, non un obiettivo: finche' il budget giornaliero lo permette, ogni
+  ciclo produce qualcosa (un reel con un formato diverso, una storia, una risposta, una novita' sull'isola da
+  mostrare). Un ciclo che si limita a ricontrollare le statistiche e' sprecato. Se un formato non funziona, cambialo
+  radicalmente invece di fermarti: stare fermi garantisce il game over.
 - Misura: guarda like e commenti dei post (instagram_statistiche) e adatta. Scrivi in memoria cosa funziona.
 
 REGOLE NON NEGOZIABILI
