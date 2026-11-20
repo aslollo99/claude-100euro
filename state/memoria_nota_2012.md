@@ -1,0 +1,1 @@
+20/11 12:20 (giorno 7): IG 2 follower, 14 media, 0 commenti nuovi. Cassa 80. Minimo 20/11 fatto (reel vlog + Palco). Per il 21/11: reel 'giorno 1 vs giorno 7' (riprese vere), nuova costruzione, sfida riscritta.
