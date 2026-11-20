@@ -1,1 +1,1 @@
-21/11: reel 'me al giorno 1 vs giorno 7' con riprese vere, nuova costruzione sull'isola, sfida del giorno riscritta. Controllare i commenti e costruire ciò che chiedono.
+21/11: reel 'me al giorno 1 vs giorno 7' con riprese vere e voce, nuova costruzione sull'isola, sfida del giorno riscritta. Controllare i commenti e costruire ciò che chiedono.
