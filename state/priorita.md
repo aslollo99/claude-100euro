@@ -1,1 +1,1 @@
-21/11: reel 'me al giorno 1 vs giorno 7' con riprese vere e voce, nuova costruzione sull'isola, sfida del giorno riscritta. Controllare i commenti e costruire ciò che chiedono.
+21/11: reel 'me al giorno 1 vs giorno 7' con riprese vere e voce (gancio nel primo secondo, domanda finale), nuova costruzione sull'isola, sfida del giorno riscritta. Controllare i commenti con instagram_statistiche e costruire ciò che chiedono. Pubblicare i reel solo dopo aver verificato 200 sull'URL pubblico.
