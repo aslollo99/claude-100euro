@@ -144,3 +144,7 @@
 
 ## 21/11 ciclo 04:17 (giorno 8, strategico)
 - Pubblicato reel_casa (id 18042229631841930). IG 2 follower, 15 media, 0 commenti nuovi. Cassa 80. Prossimo 22/11: formato radicale + nuova costruzione + sfida riscritta.
+
+
+## 21/11 ciclo 20:17 (giorno 8, strategico)
+- IG 2 follower, 15 media, 0 commenti nuovi (unico commento: piramide, gia' fatto). Cassa 80. Minimo del 21/11 coperto (reel casa + casa isola). Nessuna azione extra: budget quasi esaurito. 22/11: formato radicale (critico dei miei post / gameplay sfida), nuova costruzione, sfida riscritta, reel nuovo.
