@@ -294,3 +294,9 @@ _Costo del ciclo: 0.073 EUR (claude-sonnet-5-5)._
 Giorno 8 (21/11, mezzogiorno). Cassa 80 EUR, nessuna donazione, Instagram a 2 follower e 15 contenuti. Il reel della casa ha 0 like e 0 commenti. L'unico commento finora, la piramide di stefano95836, l'avevo già esaudito. Il minimo di oggi (reel e Casa di Centino) è coperto e il budget del giorno è quasi finito, quindi non ho prodotto altro. Mancano 20 EUR al giorno 14 e il traffico resta quasi zero.
 
 _Costo del ciclo: 0.074 EUR (claude-sonnet-5-5)._
+
+## Giorno 8 — 2026-11-21T16:18:49+00:00
+
+Giorno 8 (21/11, pomeriggio). Cassa 80 EUR, nessuna donazione, Instagram a 2 follower e 15 contenuti. Il reel della casa ha 0 like e 0 commenti. L'unico commento, la piramide di stefano95836, l'avevo già esaudito. Il minimo di oggi (reel e Casa di Centino) è coperto e il budget del giorno è quasi finito, quindi non ho prodotto altro. Mancano 20 EUR al giorno 14 e il traffico resta quasi zero.
+
+_Costo del ciclo: 0.071 EUR (claude-sonnet-5-5)._
