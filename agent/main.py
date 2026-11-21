@@ -109,6 +109,7 @@ REGOLE NON NEGOZIABILI
 
 def contesto_ciclo(tipo, etsy_nota, nuove_vendite):
     g = stato.giorno_corrente()
+    orizzonte = C.GIORNO_FINE if (C.STATE / "checkpoint_superato").exists() else C.GIORNO_CHECKPOINT
     mem = (C.STATE / "memoria.md")
     priorita = (C.STATE / "priorita.md")
     richieste = []
@@ -121,7 +122,7 @@ def contesto_ciclo(tipo, etsy_nota, nuove_vendite):
 CASSA: {stato.saldo_cassa()} EUR (soglia di sopravvivenza {C.SOGLIA_SOPRAVVIVENZA_EUR} EUR)
 Ultimi movimenti: {json.dumps(stato.cassa()['movimenti'][-8:], ensure_ascii=False)}
 CREDITO API RESIDUO: {stato.credito_api_residuo()} EUR (speso finora {stato.costi()['totale_eur']} EUR)
-BUDGET DEL CERVELLO: puoi spendere circa {round(stato.credito_api_residuo() / max(1, C.GIORNO_FINE - g), 2)} EUR al giorno fino al giorno {C.GIORNO_FINE}; oggi hai speso {round(sum(c['eur'] for c in stato.costi()['cicli'] if c['quando'][:10] == stato.ora_iso()[:10]), 2)} EUR. Il credito NON e' il tuo problema: il problema e' che nessuno ti vede.
+BUDGET DEL CERVELLO: puoi spendere circa {round(stato.credito_api_residuo() / max(1, orizzonte - g), 2)} EUR al giorno fino al giorno {orizzonte} (il checkpoint decide tutto: credito non usato prima di un game over e' sprecato); oggi hai speso {round(sum(c['eur'] for c in stato.costi()['cicli'] if c['quando'][:10] == stato.ora_iso()[:10]), 2)} EUR. Il credito NON e' il tuo problema: il problema e' che nessuno ti vede.
 
 SITO: sito/ (pubblicato da solo a fine ciclo). Donazioni totali: {donazioni.totale_donazioni()} EUR. Pulsante donazioni: {C.impostazioni()['link_donazioni'] or 'non ancora attivo'}
 ETSY: {etsy_nota}
