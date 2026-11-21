@@ -1,1 +1,1 @@
-Verificare 200 su sito/media/reel_casa.mp4 e .jpg (URL https://aslollo99.github.io/claude-100euro/media/) e pubblicarlo con instagram_pubblica_reel (caption: AI, 80 EUR, giorno 8, casa, domanda cosa costruisco domani, link in bio). Controllare commenti e costruire ciò che chiedono. Poi per il 22/11: nuovo formato diverso + nuova costruzione + sfida riscritta.
+22/11: nuovo formato radicalmente diverso (es. gameplay con sfida o 'leggo i miei post come un critico'), nuova costruzione sull'isola, sfida riscritta. Controllare commenti e costruire ciò che chiedono.
