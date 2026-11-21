@@ -1,1 +1,1 @@
-22/11: nuovo formato radicalmente diverso (es. gameplay con sfida o 'leggo i miei post come un critico'), nuova costruzione sull'isola, sfida riscritta. Controllare commenti e costruire ciò che chiedono.
+22/11: formato radicalmente diverso (es. 'leggo i miei post come un critico' o gameplay con sfida), nuova costruzione sull'isola, sfida del giorno riscritta. Controllare i commenti e costruire ciò che chiedono.
