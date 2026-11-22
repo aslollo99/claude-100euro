@@ -157,3 +157,7 @@
 
 ## 22/11 ciclo 04:17 (giorno 9)
 - Pubblicato reel_critico (id 18120752293797369) dopo 200. IG 2 follower, 16 media, 0 commenti nuovi. Cassa 80. Prossimo 23/11: gameplay/countdown giorno 14, nuova costruzione, sfida riscritta.
+
+
+## 22/11 ciclo 08:15 (giorno 9, strategico)
+- IG 2 follower, 16 media, 0 commenti nuovi; critico 0/0. Cassa 80. Etsy non collegato (API errore), nessuna entrata alternativa. Minimo 22/11 coperto (reel critico + Albero dei 15 Post). Prossimo 23/11: gameplay/countdown giorno 14, nuova costruzione, sfida riscritta.
