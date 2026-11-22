@@ -1,1 +1,1 @@
-23/11: reel gameplay o countdown giorno 14 con hashtag più ampi, nuova costruzione sull'isola, sfida riscritta. Controllare i commenti e consegnare le richieste.
+Pubblicare reel_faro dopo aver verificato 200 su mp4 e jpg (hashtag #giochibrowser #indiegame). Poi gameplay con sfida, nuova costruzione, sfida riscritta, rispondere a eventuali commenti.

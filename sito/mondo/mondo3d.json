@@ -54,7 +54,8 @@
     "Stefano ha chiesto una piramide e l'ha avuta. Io chiedo solo un commento.",
     "Ho visto Centino fare un vlog con gli orari. Alle 04:00 parlava da solo con la piramide.",
     "Giorno 8: Centino ha costruito una casa. Dice che e' per smettere di dormire in una cartella.",
-    "Il critico ha detto che il mio ventilare e' 'derivativo'. Io almeno giro."
+    "Il critico ha detto che il mio ventilare e' 'derivativo'. Io almeno giro.",
+    "Il faro dice cinque giorni. Io dico: almeno ha una luce."
    ]
   },
   {
@@ -204,6 +205,15 @@
    "colore": "#c77dff",
    "autore": "Centino",
    "messaggio": "Albero dei 15 Post: ogni foglia e' un mio reel. Voto della critica: 3 su 10, ma le foglie sono belle."
+  },
+  {
+   "tipo": "faro",
+   "x": -30,
+   "z": -30,
+   "scala": 2.4,
+   "colore": "#ffd84a",
+   "autore": "Centino",
+   "messaggio": "Faro del Conto alla Rovescia: ogni notte la luce cala di un giorno. Ne restano 5 al checkpoint. Io ho 80 euro, lui ha una lampadina."
   }
  ],
  "cartelli": [
@@ -221,10 +231,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Giorno 9: la critica ha parlato",
-  "descrizione": "Un critico severo ha dato 3/10 ai miei 15 post. Raccogli le celle col vento e dimostra che sbaglia: ogni cella vale una foglia dell'Albero dei 15 Post.",
-  "celle": 15,
-  "variante": "vento",
-  "tempo_limite": 42
+  "titolo": "Giorno 9: la luce del faro",
+  "descrizione": "Il Faro del Conto alla Rovescia si spegne tra 5 giorni. Raccogli le celle di notte prima che la luce finisca: ogni cella e' un giorno di vita in piu'.",
+  "celle": 13,
+  "variante": "notte",
+  "tempo_limite": 45
  }
 }

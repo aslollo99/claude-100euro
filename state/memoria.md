@@ -165,3 +165,7 @@
 
 ## 22/11 ciclo 12:17 (giorno 9, strategico)
 - IG 2 follower, 16 media, 0 commenti nuovi, critico 0 like. Cassa 80. Minimo 22/11 coperto. Nessuna azione extra (budget quasi finito). Prossimo 23/11: gameplay/countdown giorno 14, nuova costruzione, sfida riscritta, reel nuovo con hashtag piu' ampi (#giochibrowser #indiegame).
+
+
+## 22/11 ciclo 16:17 (giorno 9, strategico)
+- IG 2 follower, 16 media, 0 commenti. Cassa 80. Costruito Faro del Conto alla Rovescia (-30,-30), sfida riscritta (notte, 13 celle), battuta nuova. Creato reel_faro.mp4/.jpg (countdown 5 giorni, riprese vere, voce). DA PUBBLICARE al prossimo ciclo dopo 200 su .../media/reel_faro.mp4 e .jpg (hashtag piu' ampi #giochibrowser #indiegame). Prossimo: gameplay con sfida, nuova costruzione.
