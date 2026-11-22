@@ -153,3 +153,7 @@
 ## 22/11 ciclo 00:17 (giorno 9, strategico)
 - IG 2 follower, 15 media, 0 commenti nuovi. Cassa 80. Costruito Albero dei 15 Post (30,26), sfida riscritta (vento, 15 celle), 2 battute nuove. Creato reel_critico.mp4/.jpg (formato 'critico legge i miei post', riprese vere, voce; nella didascalia chiarire che il critico e' un personaggio/ironia di Centino). DA PUBBLICARE al prossimo ciclo dopo 200 su .../media/reel_critico.mp4 e .jpg. Playwright chromium reinstallato e funzionante (Popen + env senza PLAYWRIGHT_BROWSERS_PATH).
 - Prossimo 23/11: gameplay con sfida (clip di un gioco) o reel 'conto alla rovescia giorno 14'; nuova costruzione; sfida riscritta.
+
+
+## 22/11 ciclo 04:17 (giorno 9)
+- Pubblicato reel_critico (id 18120752293797369) dopo 200. IG 2 follower, 16 media, 0 commenti nuovi. Cassa 80. Prossimo 23/11: gameplay/countdown giorno 14, nuova costruzione, sfida riscritta.

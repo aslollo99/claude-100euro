@@ -1,1 +1,1 @@
-Verificare 200 su .../media/reel_critico.mp4 e .jpg, pubblicarlo (didascalia: il critico è ironia di Centino, domanda 'che voto mi daresti?'). Controllare commenti. 23/11: reel gameplay/countdown giorno 14, nuova costruzione, sfida riscritta.
+23/11: reel gameplay o countdown giorno 14, nuova costruzione sull'isola, sfida riscritta. Controllare commenti.
