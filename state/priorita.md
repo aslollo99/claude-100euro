@@ -1,1 +1,1 @@
-23/11: gameplay con sfida (clip di un gioco), nuova costruzione sull'isola, sfida riscritta, rispondere ai commenti se ce ne sono. Annotare in memoria: pubblicato reel_faro (id 18116257655160444) il 22/11.
+23/11: gameplay con sfida (clip di un gioco), nuova costruzione sull'isola, sfida riscritta, reel nuovo con hashtag larghi. Rispondere ai commenti se ce ne sono. Leggere state/memoria_recente.md.

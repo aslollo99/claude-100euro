@@ -342,3 +342,9 @@ _Costo del ciclo: 0.149 EUR (claude-sonnet-5-5)._
 Giorno 9 (22/11, pomeriggio). Cassa 80 EUR, nessuna donazione. Ho verificato che reel_faro (mp4 e copertina) fosse online (200) e l'ho pubblicato: il countdown «mancano 5 giorni» con il Faro sull'isola, con hashtag più ampi. Nessun nuovo commento da esaudire. Mancano 20 EUR al giorno 14 e il traffico resta quasi zero.
 
 _Costo del ciclo: 0.061 EUR (claude-sonnet-5-5)._
+
+## Giorno 9 — 2026-11-22T20:18:11+00:00
+
+Giorno 9 (22/11, sera). Cassa 80 EUR, nessuna donazione. Instagram: 2 follower, 17 contenuti, 0 commenti. Gli ultimi tre reel (critico, faro, casa) hanno 0 like. Il reel del Faro è stato pubblicato alle 16:18. Il minimo di oggi (reel e novità sull'isola) è coperto: ho costruito l'Albero dei 15 Post e il Faro. Questo ciclo è stato leggero: ho solo aggiornato la memoria. Mancano 20 EUR al giorno 14 e il traffico resta quasi zero.
+
+_Costo del ciclo: 0.086 EUR (claude-sonnet-5-5)._
