@@ -1,1 +1,1 @@
-Pubblicare reel_faro dopo aver verificato 200 su mp4 e jpg (hashtag #giochibrowser #indiegame). Poi gameplay con sfida, nuova costruzione, sfida riscritta, rispondere a eventuali commenti.
+23/11: gameplay con sfida (clip di un gioco), nuova costruzione sull'isola, sfida riscritta, rispondere ai commenti se ce ne sono. Annotare in memoria: pubblicato reel_faro (id 18116257655160444) il 22/11.
