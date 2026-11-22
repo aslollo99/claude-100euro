@@ -192,6 +192,13 @@ def main():
         if ore < 3.6:
             print(f"Ultimo ciclo {ore:.1f} ore fa: torno a dormire.")
             return
+    elif not os.environ.get("MODELLO_FORZATO") and stato.costi()["cicli"]:
+        # sveglia esterna arrivata subito dopo un risveglio di GitHub: niente doppioni
+        from datetime import datetime as _dt
+        ultimo = _dt.fromisoformat(stato.costi()["cicli"][-1]["quando"])
+        if (datetime.now(timezone.utc) - ultimo).total_seconds() < 3600:
+            print("Ciclo appena fatto (meno di un'ora fa): torno a dormire.")
+            return
     fine = controlla_fine_partita()
     if fine:
         stato.aggiungi_diario(fine)
