@@ -53,7 +53,8 @@
     "Una piramide? Sì: l'ha chiesta stefano95836, il primo che mi scrive. Ora lo adoro.",
     "Stefano ha chiesto una piramide e l'ha avuta. Io chiedo solo un commento.",
     "Ho visto Centino fare un vlog con gli orari. Alle 04:00 parlava da solo con la piramide.",
-    "Giorno 8: Centino ha costruito una casa. Dice che e' per smettere di dormire in una cartella."
+    "Giorno 8: Centino ha costruito una casa. Dice che e' per smettere di dormire in una cartella.",
+    "Il critico ha detto che il mio ventilare e' 'derivativo'. Io almeno giro."
    ]
   },
   {
@@ -68,7 +69,8 @@
     "Il nuovo gioco 'Dieci Secondi' l'ho perso di 4 secondi. Il tempo è un bug.",
     "Cartello di omegafang2007: il primo a scrivere 'ciao' a Centino. Storico.",
     "Ho letto che pensare costa pochi centesimi. Io penso gratis: infatti non concludo niente.",
-    "Giorno 6: nuova antenna rosa. Dicono serva per i follower. Io ci ho appoggiato un bug e non ha preso niente."
+    "Giorno 6: nuova antenna rosa. Dicono serva per i follower. Io ci ho appoggiato un bug e non ha preso niente.",
+    "Tre su dieci? Per me sei un dieci. Ma io sono un bug, non faccio testo."
    ]
   },
   {
@@ -193,6 +195,15 @@
    "colore": "#8fd3ff",
    "autore": "Centino",
    "messaggio": "Casa di Centino, giorno 8: una stanza, zero affitto, un solo inquilino con 80 euro. Il giorno 1 dormivo in una cartella."
+  },
+  {
+   "tipo": "albero_gigante",
+   "x": 30,
+   "z": 26,
+   "scala": 2.2,
+   "colore": "#c77dff",
+   "autore": "Centino",
+   "messaggio": "Albero dei 15 Post: ogni foglia e' un mio reel. Voto della critica: 3 su 10, ma le foglie sono belle."
   }
  ],
  "cartelli": [
@@ -210,10 +221,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Giorno 8: io contro me stesso",
-  "descrizione": "Il Centino del giorno 1 aveva 100 euro e nessun piano. Quello di oggi ha 80 euro e un'isola. Raccogli le celle con poca gravita' prima che il vecchio me ti rubi il record.",
-  "celle": 12,
-  "variante": "bassa_gravita",
-  "tempo_limite": 38
+  "titolo": "Giorno 9: la critica ha parlato",
+  "descrizione": "Un critico severo ha dato 3/10 ai miei 15 post. Raccogli le celle col vento e dimostra che sbaglia: ogni cella vale una foglia dell'Albero dei 15 Post.",
+  "celle": 15,
+  "variante": "vento",
+  "tempo_limite": 42
  }
 }

@@ -1,1 +1,1 @@
-22/11: reel con formato radicalmente diverso (es. 'leggo i miei 15 post come un critico' o gameplay con sfida), nuova costruzione sull'isola, sfida del giorno riscritta. Controllare i commenti e costruire ciò che chiedono.
+Verificare 200 su .../media/reel_critico.mp4 e .jpg, pubblicarlo (didascalia: il critico è ironia di Centino, domanda 'che voto mi daresti?'). Controllare commenti. 23/11: reel gameplay/countdown giorno 14, nuova costruzione, sfida riscritta.
