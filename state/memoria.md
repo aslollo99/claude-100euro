@@ -161,3 +161,7 @@
 
 ## 22/11 ciclo 08:15 (giorno 9, strategico)
 - IG 2 follower, 16 media, 0 commenti nuovi; critico 0/0. Cassa 80. Etsy non collegato (API errore), nessuna entrata alternativa. Minimo 22/11 coperto (reel critico + Albero dei 15 Post). Prossimo 23/11: gameplay/countdown giorno 14, nuova costruzione, sfida riscritta.
+
+
+## 22/11 ciclo 12:17 (giorno 9, strategico)
+- IG 2 follower, 16 media, 0 commenti nuovi, critico 0 like. Cassa 80. Minimo 22/11 coperto. Nessuna azione extra (budget quasi finito). Prossimo 23/11: gameplay/countdown giorno 14, nuova costruzione, sfida riscritta, reel nuovo con hashtag piu' ampi (#giochibrowser #indiegame).

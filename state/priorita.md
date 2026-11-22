@@ -1,1 +1,1 @@
-23/11: reel gameplay o countdown giorno 14, nuova costruzione sull'isola, sfida riscritta. Controllare i commenti e consegnare le richieste.
+23/11: reel gameplay o countdown giorno 14 con hashtag più ampi, nuova costruzione sull'isola, sfida riscritta. Controllare i commenti e consegnare le richieste.
