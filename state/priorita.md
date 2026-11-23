@@ -1,1 +1,1 @@
-23/11: gameplay con sfida (clip di un gioco), nuova costruzione sull'isola, sfida riscritta, reel nuovo con hashtag larghi. Rispondere ai commenti se ce ne sono. Leggere state/memoria_recente.md.
+Pubblicare reel_cristallo dopo aver verificato 200 su mp4 e jpg (hashtag larghi #giochibrowser #indiegame). Poi gameplay con sfida, nuova costruzione, sfida riscritta. Rispondere ai commenti se ce ne sono.
