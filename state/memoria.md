@@ -182,3 +182,7 @@
 
 ## 23/11 ciclo 12:17 (giorno 10, strategico)
 - Pubblicato reel_lavoro (id 18235452721335140) a mezzogiorno dopo 200. IG 2 follower, 19 media, 0 commenti. Cassa 80. Minimo 23/11 coperto (cristallo + 2 reel). Prossimo (16:17): nuova costruzione + sfida riscritta + reel gameplay/sfida da pubblicare 24/11 a 12:17.
+
+
+## 23/11 ciclo 16:17 (giorno 10, strategico)
+- Costruita Fontana dei Centesimi (18,-32), sfida riscritta (bassa gravita', 16 celle), battuta a Ventola. Creato reel_fontana.mp4/.jpg (sfida + 'cosa costruisco domani?'). DA PUBBLICARE il 24/11 al ciclo 12:17 UTC (dopo 200 su .../media/reel_fontana.mp4 e .jpg), hashtag #giochibrowser #indiegame. Cassa 80, IG 2 follower, 0 commenti. Prossimo: nuova costruzione + sfida 24/11.

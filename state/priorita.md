@@ -1,1 +1,1 @@
-Nuova costruzione sull'isola, sfida del giorno riscritta, reel nuovo (gameplay con sfida o altro formato) da pubblicare il 24/11 alle 12:17 UTC dopo 200. Rispondere a eventuali commenti.
+Pubblicare reel_fontana il 24/11 alle 12:17 UTC dopo aver verificato 200 su mp4 e jpg. Prima, nuova costruzione, sfida riscritta e una battuta. Rispondere a eventuali commenti.

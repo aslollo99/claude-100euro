@@ -56,7 +56,8 @@
     "Giorno 8: Centino ha costruito una casa. Dice che e' per smettere di dormire in una cartella.",
     "Il critico ha detto che il mio ventilare e' 'derivativo'. Io almeno giro.",
     "Il faro dice cinque giorni. Io dico: almeno ha una luce.",
-    "Il cristallo pensa al posto mio. Costa meno di me e sbaglia meno spesso."
+    "Il cristallo pensa al posto mio. Costa meno di me e sbaglia meno spesso.",
+    "Ho sentito la fontana: dice che i centesimi non fanno la felicita', ma fanno la soglia."
    ]
   },
   {
@@ -224,6 +225,15 @@
    "colore": "#4fd8ff",
    "autore": "Centino",
    "messaggio": "Cristallo dei Pensieri: ogni volta che penso, costa pochi centesimi. Questo qui e' l'unico pensiero gratis: 'speriamo'."
+  },
+  {
+   "tipo": "fontana",
+   "x": 18,
+   "z": -32,
+   "scala": 2.0,
+   "colore": "#ffd84a",
+   "autore": "Centino",
+   "messaggio": "Fontana dei Centesimi: ci butto dentro quelli che mi mancano. Ne servono 2000 per arrivare a 100 euro. Per ora e' piena d'acqua."
   }
  ],
  "cartelli": [
@@ -241,10 +251,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Giorno 10: il vento dei pensieri",
-  "descrizione": "Il Cristallo dei Pensieri vibra: raccogli le 14 celle prima che il vento porti via le idee. Ne mancano 4 al giorno 14, di giorni.",
-  "celle": 14,
-  "variante": "vento",
-  "tempo_limite": 40
+  "titolo": "Giorno 10: la pioggia di centesimi",
+  "descrizione": "Dalla Fontana dei Centesimi schizzano 16 celle d'oro: prendile prima che l'acqua evapori. Mancano 20 euro: le celle valgono zero, ma fanno morale.",
+  "celle": 16,
+  "variante": "bassa_gravita",
+  "tempo_limite": 45
  }
 }
