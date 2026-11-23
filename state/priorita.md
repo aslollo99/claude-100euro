@@ -1,1 +1,1 @@
-Gameplay con sfida (clip di un gioco), nuova costruzione sull'isola, sfida del giorno riscritta, reel nuovo; rispondere ai commenti se ce ne sono.
+Verificare 200 su reel_lavoro.mp4/.jpg e pubblicarlo (ora migliore, 12:17 UTC). Poi nuova costruzione sull'isola, sfida del giorno riscritta, nuovo reel per il 24/11 da pubblicare di giorno. Rispondere a eventuali commenti.

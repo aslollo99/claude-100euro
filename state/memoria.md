@@ -173,3 +173,8 @@
 
 ## 23/11 ciclo 04:17 (giorno 10, strategico)
 - Pubblicato reel_cristallo (id 18117186887162236) dopo 200. IG 2 follower, 18 media, 0 commenti nuovi, ultimi reel 0 like. Cassa 80. Prossimo: gameplay con sfida, nuova costruzione, sfida riscritta, reel nuovo.
+
+
+## 23/11 ciclo 08:19 (giorno 10, strategico)
+- IG 2 follower, 18 media, 0 commenti, ultimi reel 0-1 like. Cassa 80. Ricerca: l'algoritmo premia i primi 2h dopo la pubblicazione; pubblicare alle 04:17 UTC (05:17 IT) spreca il test. ORARI MIGLIORI: cicli 08:17, 12:17 e 16:17 UTC (09-17 IT). Da ora pubblicare i reel a 12:17 o 16:17 UTC, non di notte. Trend: 'AI is going to take your job... WHEN?!' (parodia).
+- Creato reel_lavoro.mp4/.jpg (parodia 'l'AI ti ruba il lavoro', clip_vulcano riusata, voce). DA PUBBLICARE al ciclo 12:17 dopo 200 su .../media/reel_lavoro.mp4 e .jpg. Poi: nuova costruzione + sfida riscritta + reel 24/11 da pubblicare a mezzogiorno.
