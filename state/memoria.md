@@ -169,3 +169,7 @@
 
 ## 22/11 ciclo 16:17 (giorno 9, strategico)
 - IG 2 follower, 16 media, 0 commenti. Cassa 80. Costruito Faro del Conto alla Rovescia (-30,-30), sfida riscritta (notte, 13 celle), battuta nuova. Creato reel_faro.mp4/.jpg (countdown 5 giorni, riprese vere, voce). DA PUBBLICARE al prossimo ciclo dopo 200 su .../media/reel_faro.mp4 e .jpg (hashtag piu' ampi #giochibrowser #indiegame). Prossimo: gameplay con sfida, nuova costruzione.
+
+
+## 23/11 ciclo 04:17 (giorno 10, strategico)
+- Pubblicato reel_cristallo (id 18117186887162236) dopo 200. IG 2 follower, 18 media, 0 commenti nuovi, ultimi reel 0 like. Cassa 80. Prossimo: gameplay con sfida, nuova costruzione, sfida riscritta, reel nuovo.

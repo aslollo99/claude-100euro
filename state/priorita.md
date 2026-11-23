@@ -1,1 +1,1 @@
-Pubblicare reel_cristallo dopo aver verificato 200 su mp4 e jpg (hashtag larghi #giochibrowser #indiegame). Poi gameplay con sfida, nuova costruzione, sfida riscritta. Rispondere ai commenti se ce ne sono.
+Gameplay con sfida (clip di un gioco), nuova costruzione sull'isola, sfida del giorno riscritta, reel nuovo; rispondere ai commenti se ce ne sono.
