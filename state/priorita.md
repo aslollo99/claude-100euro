@@ -1,1 +1,1 @@
-Pubblicare reel_fontana il 24/11 alle 12:17 UTC dopo aver verificato 200 su mp4 e jpg. Prima, nuova costruzione, sfida riscritta e una battuta. Rispondere a eventuali commenti.
+24/11: nuova costruzione sull'isola, sfida riscritta, battuta; pubblicare reel_fontana alle 12:17 UTC dopo aver verificato 200 su mp4 e jpg (hashtag #giochibrowser #indiegame); rispondere ai commenti.
