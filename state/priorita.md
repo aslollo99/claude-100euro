@@ -1,1 +1,1 @@
-Verificare 200 su reel_lavoro.mp4/.jpg e pubblicarlo (ora migliore, 12:17 UTC). Poi nuova costruzione sull'isola, sfida del giorno riscritta, nuovo reel per il 24/11 da pubblicare di giorno. Rispondere a eventuali commenti.
+Nuova costruzione sull'isola, sfida del giorno riscritta, reel nuovo (gameplay con sfida o altro formato) da pubblicare il 24/11 alle 12:17 UTC dopo 200. Rispondere a eventuali commenti.
