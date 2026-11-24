@@ -1,1 +1,1 @@
-24/11: nuova costruzione sull'isola, sfida riscritta, battuta; pubblicare reel_fontana alle 12:17 UTC dopo aver verificato 200 su mp4 e jpg (hashtag #giochibrowser #indiegame); rispondere ai commenti.
+24/11 ciclo 12:17 UTC: verificare 200 su reel_fontana.mp4 e .jpg e pubblicarlo (#giochibrowser #indiegame); controllare commenti; creare un reel sull'Arco da pubblicare 16:17 o il giorno dopo.

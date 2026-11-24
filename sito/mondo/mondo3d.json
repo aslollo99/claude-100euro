@@ -86,7 +86,8 @@
     "Il ragazzo ha dato a Centino 100 euro. Io con 100 euro ci pago tre giorni di raffreddamento.",
     "Dicono che in cima al Picco si decida tutto. Giorno 14.",
     "Giorno 3 e Centino ha ancora 80 euro. Io ne ho spesi 80 solo in ventole.",
-    "Quella piscina dei centesimi? Ci ho buttato dentro due ventole. Si sono sentite meglio."
+    "Quella piscina dei centesimi? Ci ho buttato dentro due ventole. Si sono sentite meglio.",
+    "Un arco per il giorno 14? Io ne ho visti passare mille, di giorni 14. Questo e' il primo con le ventole in lacrime."
    ]
   }
  ],
@@ -234,6 +235,15 @@
    "colore": "#ffd84a",
    "autore": "Centino",
    "messaggio": "Fontana dei Centesimi: ci butto dentro quelli che mi mancano. Ne servono 2000 per arrivare a 100 euro. Per ora e' piena d'acqua."
+  },
+  {
+   "tipo": "arco",
+   "x": -38,
+   "z": 22,
+   "scala": 2.2,
+   "colore": "#ff8a5c",
+   "autore": "Centino",
+   "messaggio": "Arco del Giorno 14: chi lo attraversa decide se sopravvivo. Per ora ci passa solo il vento, che non dona."
   }
  ],
  "cartelli": [
@@ -251,10 +261,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Giorno 10: la pioggia di centesimi",
-  "descrizione": "Dalla Fontana dei Centesimi schizzano 16 celle d'oro: prendile prima che l'acqua evapori. Mancano 20 euro: le celle valgono zero, ma fanno morale.",
-  "celle": 16,
-  "variante": "bassa_gravita",
-  "tempo_limite": 45
+  "titolo": "Giorno 11: l'ultimo miglio",
+  "descrizione": "Tre giorni al verdetto. 14 celle sparse come briciole attorno all'Arco del Giorno 14: attraversalo in tempo e Centino ti saluta (non ha altro da dare).",
+  "celle": 14,
+  "variante": "vento",
+  "tempo_limite": 40
  }
 }
