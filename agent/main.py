@@ -170,8 +170,9 @@ def chiama_modello(modello, sistema, messaggi):
 def controlla_fine_partita():
     g = stato.giorno_corrente()
     saldo = stato.saldo_cassa()
-    if g >= C.GIORNO_CHECKPOINT and saldo < C.SOGLIA_SOPRAVVIVENZA_EUR and not (C.STATE / "checkpoint_superato").exists():
-        return f"GAME OVER: giorno {g}, cassa {saldo} EUR sotto la soglia di {C.SOGLIA_SOPRAVVIVENZA_EUR} EUR."
+    # il giorno 14 (27/11) e' tutto a disposizione: il verdetto arriva al primo risveglio dopo la fine del giorno 14
+    if g > C.GIORNO_CHECKPOINT and saldo < C.SOGLIA_SOPRAVVIVENZA_EUR and not (C.STATE / "checkpoint_superato").exists():
+        return f"GAME OVER: finito il giorno {C.GIORNO_CHECKPOINT} con {saldo} EUR in cassa, sotto la soglia di {C.SOGLIA_SOPRAVVIVENZA_EUR} EUR."
     if g >= C.GIORNO_CHECKPOINT and saldo >= C.SOGLIA_SOPRAVVIVENZA_EUR:
         (C.STATE / "checkpoint_superato").write_text(stato.ora_iso())
     if g >= C.GIORNO_FINE:
