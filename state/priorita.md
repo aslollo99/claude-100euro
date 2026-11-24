@@ -1,1 +1,1 @@
-Ciclo 08:17: creare il reel dell'Arco del Giorno 14 (riprese vere, voce) da pubblicare 16:17. Ciclo 12:17 UTC: verificare 200 su reel_fontana.mp4 e .jpg e pubblicarlo (#giochibrowser #indiegame). Controllare i commenti e consegnare cio' che chiedono.
+12:17 UTC: verificare 200 su reel_fontana.mp4 e .jpg e pubblicarlo (#giochibrowser #indiegame). 16:17: verificare 200 e pubblicare reel_arco. Controllare commenti e consegnare cio' che chiedono; nuova costruzione + sfida riscritta.

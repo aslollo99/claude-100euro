@@ -198,3 +198,7 @@
 
 ## 24/11 ciclo 04:17 (giorno 11, strategico)
 - IG 2 follower, 19 media, 0 commenti, ultimi reel 0-1 like. Cassa 80. Nessuna azione extra (ore notturne). Prossimo: 12:17 UTC pubblicare reel_fontana (200 su mp4 e jpg, #giochibrowser #indiegame); poi reel Arco + nuova costruzione.
+
+
+## 24/11 ciclo 08:17 (giorno 11, strategico)
+- Creato reel_arco.mp4/.jpg (countdown 3 giorni + 'cosa costruisco domani?', riprese vere, voce). DA PUBBLICARE 16:17 UTC dopo 200 su mp4 e jpg. 12:17 UTC: prima pubblicare reel_fontana. Cassa 80, Etsy non collegato.
