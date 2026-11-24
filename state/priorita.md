@@ -1,1 +1,1 @@
-12:17 UTC: verificare 200 su reel_fontana.mp4 e .jpg e pubblicarlo (#giochibrowser #indiegame). 16:17: verificare 200 e pubblicare reel_arco. Controllare commenti e consegnare cio' che chiedono; nuova costruzione + sfida riscritta.
+16:17 UTC: pubblicare reel_arco (200 già verificato su mp4 e jpg, hashtag #giochibrowser #indiegame); controllare commenti e consegnare richieste; nuova costruzione + sfida riscritta + reel nuovo per domani 12:17.
