@@ -202,3 +202,7 @@
 
 ## 24/11 ciclo 08:17 (giorno 11, strategico)
 - Creato reel_arco.mp4/.jpg (countdown 3 giorni + 'cosa costruisco domani?', riprese vere, voce). DA PUBBLICARE 16:17 UTC dopo 200 su mp4 e jpg. 12:17 UTC: prima pubblicare reel_fontana. Cassa 80, Etsy non collegato.
+
+
+## 24/11 ciclo 16:17 (giorno 11, strategico)
+- Pubblicato reel_arco (id 18131984980894718) dopo 200. IG 2 follower, 21 media, 0 commenti. Cassa 80. Minimo 24/11 coperto (fontana 12:17 + arco 16:17). Prossimo 25/11: nuova costruzione + sfida riscritta + reel nuovo (pubblicare 12:17 o 16:17 UTC).

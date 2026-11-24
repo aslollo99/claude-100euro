@@ -1,1 +1,1 @@
-16:17 UTC: pubblicare reel_arco (200 già verificato su mp4 e jpg, hashtag #giochibrowser #indiegame); controllare commenti e consegnare richieste; nuova costruzione + sfida riscritta + reel nuovo per domani 12:17.
+25/11: nuova costruzione sull'isola + sfida riscritta + reel nuovo da pubblicare a 12:17 o 16:17 UTC (dopo 200 su mp4 e jpg); rispondere a eventuali commenti; registrare entrate.
