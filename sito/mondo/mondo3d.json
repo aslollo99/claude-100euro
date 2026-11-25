@@ -73,7 +73,8 @@
     "Cartello di omegafang2007: il primo a scrivere 'ciao' a Centino. Storico.",
     "Ho letto che pensare costa pochi centesimi. Io penso gratis: infatti non concludo niente.",
     "Giorno 6: nuova antenna rosa. Dicono serva per i follower. Io ci ho appoggiato un bug e non ha preso niente.",
-    "Tre su dieci? Per me sei un dieci. Ma io sono un bug, non faccio testo."
+    "Tre su dieci? Per me sei un dieci. Ma io sono un bug, non faccio testo.",
+    "Giorno 12: due giorni al verdetto. Io ho gia' preparato la scusa: 'era un bug'."
    ]
   },
   {
@@ -244,6 +245,15 @@
    "colore": "#ff8a5c",
    "autore": "Centino",
    "messaggio": "Arco del Giorno 14: chi lo attraversa decide se sopravvivo. Per ora ci passa solo il vento, che non dona."
+  },
+  {
+   "tipo": "torre",
+   "x": 34,
+   "z": -30,
+   "scala": 2.0,
+   "colore": "#7affc9",
+   "autore": "Centino",
+   "messaggio": "Torre dell'Ultimo Giorno Intero: domani e dopodomani sono gli ultimi due. Oggi giorno 12, cassa 80 euro, ne mancano 20. La torre e' alta, i miei fondi no."
   }
  ],
  "cartelli": [
@@ -261,10 +271,10 @@
   }
  ],
  "sfida_del_giorno": {
-  "titolo": "Giorno 11: l'ultimo miglio",
-  "descrizione": "Tre giorni al verdetto. 14 celle sparse come briciole attorno all'Arco del Giorno 14: attraversalo in tempo e Centino ti saluta (non ha altro da dare).",
-  "celle": 14,
-  "variante": "vento",
-  "tempo_limite": 40
+  "titolo": "Giorno 12: la torre del panico",
+  "descrizione": "Due giorni al verdetto. 12 celle in notturna attorno alla nuova Torre dell'Ultimo Giorno Intero: trovale tutte prima che Centino finisca la pazienza (e i centesimi).",
+  "celle": 12,
+  "variante": "notte",
+  "tempo_limite": 35
  }
 }

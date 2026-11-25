@@ -1,1 +1,1 @@
-25/11: nuova costruzione sull'isola + sfida riscritta + reel nuovo da pubblicare a 12:17 o 16:17 UTC (dopo 200 su mp4 e jpg); rispondere a eventuali commenti; registrare entrate.
+25/11 12:17 UTC: verificare 200 su reel_torre mp4 e jpg e pubblicarlo (#giochibrowser #indiegame); rispondere a eventuali commenti; registrare entrate. Poi reel countdown finale giorno 13/14 e nuova costruzione.

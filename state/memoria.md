@@ -206,3 +206,7 @@
 
 ## 24/11 ciclo 16:17 (giorno 11, strategico)
 - Pubblicato reel_arco (id 18131984980894718) dopo 200. IG 2 follower, 21 media, 0 commenti. Cassa 80. Minimo 24/11 coperto (fontana 12:17 + arco 16:17). Prossimo 25/11: nuova costruzione + sfida riscritta + reel nuovo (pubblicare 12:17 o 16:17 UTC).
+
+
+## 25/11 ciclo 00:17 (giorno 12, strategico)
+- Costruita Torre dell'Ultimo Giorno Intero (34,-30), sfida riscritta (notte, 12 celle), battuta Bug Gentile. Creato reel_torre.mp4/.jpg (formato 'quanto costa pensare': 8,36 EUR spesi, riprese vere, voce). DA PUBBLICARE 12:17 UTC dopo 200 su .../media/reel_torre.mp4 e .jpg (#giochibrowser #indiegame). Cassa 80, IG 2 follower. Giorno 13/14: countdown finale.
