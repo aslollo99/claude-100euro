@@ -24,7 +24,9 @@ print(dati)
 import time as _t
 arch = C.ROOT / "archivio" / "media"; arch.mkdir(parents=True, exist_ok=True)
 for f in (C.ROOT / "sito" / "media").glob("*.mp4"):
-    vecchio = _t.time() - f.stat().st_mtime > 2 * 86400
+    import subprocess as _sp
+    quando = _sp.run(["git", "log", "-1", "--format=%ct", "--", str(f)], capture_output=True, text=True, cwd=C.ROOT).stdout.strip()
+    vecchio = bool(quando) and _t.time() - int(quando) > 2 * 86400
     if f.name.startswith("clip_") or vecchio:
         f.rename(arch / f.name)
         print("archiviato:", f.name)
