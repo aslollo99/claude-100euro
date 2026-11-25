@@ -1,1 +1,1 @@
-25/11 12:17 UTC: verificare 200 su reel_torre mp4 e jpg e pubblicarlo (#giochibrowser #indiegame); rispondere a eventuali commenti; registrare entrate. Poi reel countdown finale giorno 13/14 e nuova costruzione.
+12:17 UTC: verificare 200 su reel_torre mp4 e jpg e pubblicarlo (#giochibrowser #indiegame); rispondere ai commenti; registrare entrate. Poi reel countdown finale giorno 13/14 e nuova costruzione.
