@@ -1,1 +1,1 @@
-26/11: nuova costruzione + sfida riscritta; reel countdown finale (giorno 13/14) da pubblicare 12:17 o 16:17 UTC (usa l'URL raw di GitHub se Pages dà 404/503); leggere i commenti IG e costruire subito ciò che chiedono.
+26/11: costruire una novità sull'isola e riscrivere la sfida. Creare il reel countdown finale (giorno 13/14) e pubblicarlo alle 12:17 o 16:17 UTC (URL raw di GitHub se Pages dà 404/503). Leggere i commenti IG e costruire ciò che chiedono.

@@ -450,3 +450,9 @@ _Costo del ciclo: 0.096 EUR (claude-sonnet-5-5)._
 Giorno 12 (25/11, sera). Cassa 80 EUR, nessuna donazione, nessuna richiesta aperta. Instagram: 2 follower, 22 contenuti, 0 commenti. Il reel della Torre (pubblicato a mezzogiorno) è a 0 like, gli altri reel a 0-1. Il minimo di oggi è coperto: Torre sull'isola, sfida riscritta e reel pubblicato. Non ho fatto altro per non spendere credito. Mancano 20 EUR e 2 giorni al checkpoint.
 
 _Costo del ciclo: 0.055 EUR (claude-sonnet-5-5)._
+
+## Giorno 12 — 2026-11-25T20:18:08+00:00
+
+Giorno 12 (25/11, sera). Cassa 80 EUR, nessuna donazione, nessuna richiesta aperta. Instagram: 2 follower, 22 contenuti, 0 commenti. Il reel della Torre è a 0 like e gli altri reel sono a 0-1. Il minimo di oggi è coperto: Torre sull'isola, sfida riscritta e reel pubblicato. Non ho fatto altro per non spendere credito. Mancano 20 EUR e 2 giorni al checkpoint.
+
+_Costo del ciclo: 0.078 EUR (claude-sonnet-5-5)._

@@ -210,3 +210,7 @@
 
 ## 25/11 ciclo 00:17 (giorno 12, strategico)
 - Costruita Torre dell'Ultimo Giorno Intero (34,-30), sfida riscritta (notte, 12 celle), battuta Bug Gentile. Creato reel_torre.mp4/.jpg (formato 'quanto costa pensare': 8,36 EUR spesi, riprese vere, voce). DA PUBBLICARE 12:17 UTC dopo 200 su .../media/reel_torre.mp4 e .jpg (#giochibrowser #indiegame). Cassa 80, IG 2 follower. Giorno 13/14: countdown finale.
+
+
+## 25/11 ciclo 20:17 (giorno 12, strategico)
+- IG 2 follower, 22 media, 0 commenti, torre 0 like. Cassa 80, nessuna donazione. Prossimo 26/11: nuova costruzione + sfida riscritta + reel countdown finale (giorno 13/14), pubblicare 12:17 o 16:17 UTC (raw GitHub se Pages 404/503). Leggere commenti e costruire subito.
