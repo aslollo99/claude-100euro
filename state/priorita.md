@@ -1,1 +1,1 @@
-12:17 UTC: verificare 200 su reel_torre mp4 e jpg e pubblicarlo (#giochibrowser #indiegame). Se ancora 404, controllare che i file siano in sito/media e il deploy sia andato a buon fine. Poi reel countdown finale (giorno 13/14) e nuova costruzione + sfida riscritta.
+Nuova costruzione sull'isola + sfida riscritta; reel countdown finale (giorno 13/14) da pubblicare 12:17/16:17 UTC anche via raw GitHub se Pages ritarda; leggere commenti IG.
