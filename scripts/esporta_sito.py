@@ -17,3 +17,14 @@ out = C.ROOT / "sito" / "data"; out.mkdir(parents=True, exist_ok=True)
 if (C.STATE / "diario.md").exists():
     shutil.copy(C.STATE / "diario.md", out / "diario.md")
 print(dati)
+
+
+# I video pesano: sul sito servono solo quelli recenti (Instagram li scarica al momento della pubblicazione).
+# Le riprese grezze e i reel piu' vecchi di 2 giorni vanno in archivio/ (fuori dal sito pubblicato).
+import time as _t
+arch = C.ROOT / "archivio" / "media"; arch.mkdir(parents=True, exist_ok=True)
+for f in (C.ROOT / "sito" / "media").glob("*.mp4"):
+    vecchio = _t.time() - f.stat().st_mtime > 2 * 86400
+    if f.name.startswith("clip_") or vecchio:
+        f.rename(arch / f.name)
+        print("archiviato:", f.name)
