@@ -1,1 +1,1 @@
-26/11: costruire una novità sull'isola e riscrivere la sfida. Creare il reel countdown finale (giorno 13/14) e pubblicarlo alle 12:17 o 16:17 UTC (URL raw di GitHub se Pages dà 404/503). Leggere i commenti IG e costruire ciò che chiedono.
+12:17 UTC: pubblicare reel_palco (dopo 200 su mp4 e jpg, raw GitHub se Pages dà 404/503, #giochibrowser #indiegame). Leggere commenti e costruire ciò che chiedono. Controllare cassa per donazioni.

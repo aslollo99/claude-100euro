@@ -214,3 +214,7 @@
 
 ## 25/11 ciclo 20:17 (giorno 12, strategico)
 - IG 2 follower, 22 media, 0 commenti, torre 0 like. Cassa 80, nessuna donazione. Prossimo 26/11: nuova costruzione + sfida riscritta + reel countdown finale (giorno 13/14), pubblicare 12:17 o 16:17 UTC (raw GitHub se Pages 404/503). Leggere commenti e costruire subito.
+
+
+## 26/11 ciclo 00:17 (giorno 13, strategico)
+- Costruito Palco dell'Ultimo Discorso (4,-10), sfida riscritta (vento, 15 celle), 2 battute nuove. Creato reel_palco.mp4/.jpg (countdown vigilia, riprese vere, voce). DA PUBBLICARE 12:17 UTC dopo 200 su .../media/reel_palco.mp4 e .jpg (raw GitHub se 404/503; #giochibrowser #indiegame). IG 2 follower, 0 commenti. Cassa 80.
