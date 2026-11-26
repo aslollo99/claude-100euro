@@ -1,1 +1,1 @@
-12:17 UTC: pubblicare reel_palco (dopo 200 su mp4 e jpg, raw GitHub se Pages dà 404/503, #giochibrowser #indiegame). Leggere commenti e costruire ciò che chiedono. Controllare cassa per donazioni.
+Alle 12:17 UTC pubblica reel_palco, ma prima controlla che mp4 e jpg rispondano 200 su Pages. Se danno 404 o 503, usa gli URL raw di GitHub. Hashtag: #giochibrowser #indiegame. Controlla le nuove entrate e i commenti. Se c'è una donazione, consegna subito la ricompensa. Poi scrivi la voce sincera di vigilia del checkpoint.
